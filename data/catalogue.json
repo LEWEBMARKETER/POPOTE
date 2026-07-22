@@ -1,0 +1,44 @@
+{
+  "mois": "Juillet 2026",
+  "cloture": "22 juillet 2026",
+  "dateLimitePaiement": "25 juillet 2026",
+  "note": "Ceci est un aperçu des familles de produits proposées. Les quantités, formats et tarifs exacts du mois sont communiqués uniquement dans le groupe WhatsApp POPOTE, car ils dépendent des prix négociés avec nos fournisseurs partenaires ce mois-ci.",
+  "categories": [
+    {
+      "nom": "Céréales & féculents",
+      "icone": "🌾",
+      "produits": [
+        { "nom": "Riz", "unite": "plusieurs formats disponibles" },
+        { "nom": "Farine de blé", "unite": "plusieurs formats disponibles" },
+        { "nom": "Pâtes alimentaires", "unite": "plusieurs formats disponibles" }
+      ]
+    },
+    {
+      "nom": "Huiles & assaisonnements",
+      "icone": "🫒",
+      "produits": [
+        { "nom": "Huile végétale", "unite": "plusieurs formats disponibles" },
+        { "nom": "Huile de palme", "unite": "plusieurs formats disponibles" },
+        { "nom": "Sucre", "unite": "plusieurs formats disponibles" },
+        { "nom": "Tomates en conserve", "unite": "plusieurs formats disponibles" }
+      ]
+    },
+    {
+      "nom": "Protéines",
+      "icone": "🐟",
+      "produits": [
+        { "nom": "Poulet congelé", "unite": "plusieurs formats disponibles" },
+        { "nom": "Poisson fumé", "unite": "plusieurs formats disponibles" },
+        { "nom": "Poisson séché", "unite": "plusieurs formats disponibles" }
+      ]
+    },
+    {
+      "nom": "Autres essentiels",
+      "icone": "🥛",
+      "produits": [
+        { "nom": "Lait en poudre", "unite": "plusieurs formats disponibles" },
+        { "nom": "Produits de saison", "unite": "selon disponibilité fournisseurs" }
+      ]
+    }
+  ]
+}
