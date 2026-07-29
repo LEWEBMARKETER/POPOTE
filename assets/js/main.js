@@ -35,13 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderCatalogue(data) {
-    var monthBadge = document.getElementById("catalogue-mois");
-    if (monthBadge) monthBadge.textContent = data.mois;
-    var cloture = document.getElementById("catalogue-cloture");
-    if (cloture) cloture.textContent = data.cloture;
-    var paiement = document.getElementById("catalogue-paiement");
-    if (paiement) paiement.textContent = data.dateLimitePaiement;
-
     var html = "";
     data.categories.forEach(function (cat) {
       html += '<div class="cat-card">';

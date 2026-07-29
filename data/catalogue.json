@@ -1,8 +1,5 @@
 {
-  "mois": "Juillet 2026",
-  "cloture": "22 juillet 2026",
-  "dateLimitePaiement": "25 juillet 2026",
-  "note": "Ceci est un aperçu des familles de produits proposées. Les quantités, formats et tarifs exacts du mois sont communiqués uniquement dans le groupe WhatsApp POPOTE, car ils dépendent des prix négociés avec nos fournisseurs partenaires ce mois-ci.",
+  "note": "Ceci est un aperçu des familles de produits proposées. Les quantités, formats et tarifs exacts sont communiqués uniquement dans le groupe WhatsApp POPOTE, car ils dépendent des prix négociés avec nos fournisseurs partenaires du moment.",
   "categories": [
     {
       "nom": "Céréales & féculents",

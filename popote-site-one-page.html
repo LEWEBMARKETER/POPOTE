@@ -5,21 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>POPOTE Libreville — Le groupement d'achat alimentaire des femmes de Libreville</title>
 <meta name="description" content="POPOTE Libreville est un groupement d'achat alimentaire mensuel reserve aux femmes de Libreville. Achetez en gros, economisez, sans effort.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2314512f'/%3E%3Cpath d='M18 40 C18 24 34 14 50 12 C44 24 34 36 20 42 Z' fill='%232d9d57'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23146b30'/%3E%3Cpath d='M18 40 C18 24 34 14 50 12 C44 24 34 36 20 42 Z' fill='%232eb057'/%3E%3C/svg%3E">
 <style>
 /* ===== POPOTE Libreville — styles ===== */
 
 :root {
-  --green-900: #0e3d24;
-  --green-800: #14512f;
-  --green-700: #1c6b3c;
-  --green-600: #237f47;
-  --green-500: #2d9d57;
-  --green-100: #e6f2ea;
-  --green-50: #f3f9f5;
+  --green-logo: #178a3d;
+  --green-900: #0d5225;
+  --green-800: #146b30;
+  --green-700: #178a3d;
+  --green-600: #229a48;
+  --green-500: #2eb057;
+  --green-100: #e3f4e8;
+  --green-50: #f4faf6;
+  --sage: #cfe3d2;
   --cream: #f8f5ee;
-  --terracotta: #d9662c;
-  --terracotta-dark: #b6501f;
+  --gold: #e8a93c;
+  --gold-dark: #c98f27;
+  --gold-deep: #a6690e;
   --ink: #202521;
   --ink-soft: #4a534d;
   --white: #ffffff;
@@ -88,7 +91,7 @@ section { padding: 72px 0; }
 }
 
 .bg-cream { background: var(--cream); }
-.bg-green { background: var(--green-900); color: var(--green-50); }
+.bg-green { background: var(--green-700); color: var(--green-50); }
 .bg-green h1, .bg-green h2, .bg-green h3 { color: var(--white); }
 .bg-green p { color: #cfe6d7; }
 
@@ -182,11 +185,11 @@ section { padding: 72px 0; }
 .btn:hover { transform: translateY(-2px); }
 
 .btn-primary {
-  background: var(--terracotta);
-  color: var(--white);
-  box-shadow: 0 8px 20px rgba(217, 102, 44, 0.35);
+  background: var(--gold);
+  color: var(--green-900);
+  box-shadow: 0 8px 20px rgba(232, 169, 60, 0.4);
 }
-.btn-primary:hover { background: var(--terracotta-dark); }
+.btn-primary:hover { background: var(--gold-dark); }
 
 .btn-green {
   background: var(--green-700);
@@ -210,6 +213,18 @@ section { padding: 72px 0; }
 .btn-outline-green:hover { background: var(--green-100); }
 
 .btn img, .btn svg { height: 20px; width: 20px; }
+
+/* ---- Brand stamp (logo POPOTE) ---- */
+.brand-stamp {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 0;
+}
+.brand-badge {
+  width: 168px;
+  height: 168px;
+  filter: drop-shadow(0 14px 26px rgba(14, 61, 36, 0.28));
+}
 
 /* ---- Hero ---- */
 .hero {
@@ -334,14 +349,14 @@ section { padding: 72px 0; }
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 24px;
-  background: var(--green-900);
+  background: var(--green-700);
   color: var(--white);
   border-radius: var(--radius);
   padding: 32px 36px;
 }
 .founder-banner .badge {
-  background: var(--terracotta);
-  color: var(--white);
+  background: var(--gold);
+  color: var(--green-900);
   font-weight: 800;
   font-family: Cambria, serif;
   font-size: 1.1rem;
@@ -400,14 +415,14 @@ section { padding: 72px 0; }
   display: block;
   font-family: Cambria, serif;
   font-size: 1.5rem;
-  color: var(--terracotta);
+  color: var(--gold-deep);
   margin-bottom: 6px;
 }
 .cost-card span { font-size: 0.85rem; color: var(--ink-soft); }
 
 .timeline {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 20px;
 }
@@ -451,8 +466,8 @@ section { padding: 72px 0; }
   gap: 12px;
 }
 .faq-category h2 .num-badge {
-  background: var(--terracotta);
-  color: var(--white);
+  background: var(--gold);
+  color: var(--green-900);
   font-size: 0.85rem;
   padding: 4px 10px;
   border-radius: 999px;
@@ -547,7 +562,7 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
 
 /* ---- CTA band ---- */
 .cta-band {
-  background: var(--green-900);
+  background: var(--green-700);
   color: var(--white);
   border-radius: var(--radius);
   padding: 48px;
@@ -559,7 +574,7 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
 
 /* ---- Footer ---- */
 .site-footer {
-  background: var(--green-900);
+  background: var(--green-700);
   color: #cfe6d7;
   padding: 56px 0 28px;
 }
@@ -625,7 +640,7 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
 
 .page-hero {
   padding: 56px 0 40px;
-  background: var(--green-900);
+  background: var(--green-700);
   color: var(--white);
 }
 .page-hero h1 { color: var(--white); margin-bottom: 10px; }
@@ -661,12 +676,12 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
   <div class="container">
     <a href="#" data-page="home" class="logo" aria-label="POPOTE Libreville — accueil">
       <svg viewBox="0 0 210 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M20 36 C20 20 40 8 62 6 C56 20 44 34 26 38 Z" fill="#2d9d57"/>
+        <path d="M20 36 C20 20 40 8 62 6 C56 20 44 34 26 38 Z" fill="#2eb057"/>
         <path d="M22 35 C34 26 46 18 58 10" stroke="#f3f9f5" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-        <ellipse cx="16" cy="40" rx="9" ry="7" fill="#1c6b3c" transform="rotate(-20 16 40)"/>
-        <ellipse cx="9" cy="45" rx="7" ry="5.5" fill="#237f47" transform="rotate(-10 9 45)"/>
-        <text x="70" y="40" font-family="Cambria, Georgia, serif" font-size="30" font-weight="700" fill="#14512f">Popote</text>
-        <text x="72" y="52" font-family="Arial, sans-serif" font-size="9" letter-spacing="2.5" fill="#2d9d57">LIBREVILLE</text>
+        <ellipse cx="16" cy="40" rx="9" ry="7" fill="#178a3d" transform="rotate(-20 16 40)"/>
+        <ellipse cx="9" cy="45" rx="7" ry="5.5" fill="#229a48" transform="rotate(-10 9 45)"/>
+        <text x="70" y="40" font-family="Cambria, Georgia, serif" font-size="30" font-weight="700" fill="#146b30">Popote</text>
+        <text x="72" y="52" font-family="Arial, sans-serif" font-size="9" letter-spacing="2.5" fill="#2eb057">LIBREVILLE</text>
       </svg>
     </a>
 
@@ -687,6 +702,20 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
 <main>
   <section class="page-section" data-page-section="home">
 
+
+  <!-- LOGO POPOTE -->
+  <div class="brand-stamp">
+    <svg class="brand-badge" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Popote Libreville">
+      <rect x="0" y="0" width="520" height="520" rx="48" fill="#178a3d"/>
+      <path d="M170 268 C170 196 232 144 322 122 C300 194 250 256 188 278 Z" fill="#cfe3d2"/>
+      <path d="M182 264 C222 234 262 202 302 160" stroke="#178a3d" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <ellipse cx="150" cy="280" rx="42" ry="34" fill="#4fa84f" transform="rotate(-20 150 280)"/>
+      <ellipse cx="108" cy="300" rx="34" ry="26" fill="#79c26b" transform="rotate(-10 108 300)"/>
+      <ellipse cx="92" cy="272" rx="24" ry="19" fill="#63b25a" transform="rotate(-35 92 272)"/>
+      <text x="260" y="392" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="112" font-weight="700" fill="#f7f3e8">Popote</text>
+      <text x="260" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" letter-spacing="7" fill="#cfe3d2">LIBREVILLE</text>
+    </svg>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
@@ -750,17 +779,17 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
         <div class="step-card">
           <div class="step-number">2</div>
           <h3>Commande</h3>
-          <p>Le 20 du mois, recevez la fiche de commande. Indiquez vos produits et quantités avant le 22.</p>
+          <p>Le 20, recevez le catalogue et la fiche de commande dans le groupe WhatsApp. Indiquez vos produits et quantités.</p>
         </div>
         <div class="step-card">
           <div class="step-number">3</div>
           <h3>Paiement</h3>
-          <p>Réglez via Airtel Money avant le 25 et envoyez votre capture d'écran de transaction.</p>
+          <p>Validez votre commande et réglez via Airtel Money jusqu'au 25, puis envoyez votre capture d'écran de transaction.</p>
         </div>
         <div class="step-card">
           <div class="step-number">4</div>
           <h3>Retrait</h3>
-          <p>Récupérez votre commande à domicile (1 500 FCFA) ou gratuitement en point relais.</p>
+          <p>48h après le paiement, récupérez votre commande à domicile (1 500 FCFA) ou gratuitement en point relais.</p>
         </div>
       </div>
     </div>
@@ -887,9 +916,9 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
 
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow" style="background:rgba(255,255,255,0.15); color:#fff;">Catalogue — <span id="catalogue-mois">chargement...</span></span>
+      <span class="eyebrow" style="background:rgba(255,255,255,0.15); color:#fff;">Catalogue</span>
       <h1>Le catalogue mensuel POPOTE</h1>
-      <p>Chaque mois, un catalogue de produits alimentaires de base est proposé aux membres, aux meilleurs prix négociés en gros. Les quantités et tarifs précis sont communiqués dans le groupe WhatsApp, car ils dépendent des disponibilités fournisseurs du mois.</p>
+      <p>Chaque mois, un catalogue de produits alimentaires de base est proposé aux membres, aux meilleurs prix négociés en gros. Les quantités et tarifs précis sont communiqués dans le groupe WhatsApp, car ils dépendent des disponibilités fournisseurs du moment.</p>
     </div>
   </section>
 
@@ -897,20 +926,16 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
     <div class="container">
       <div class="timeline">
         <div class="timeline-item">
-          <div class="day">20</div>
-          <p>Réception de la fiche de commande du mois dans le groupe WhatsApp.</p>
+          <div class="day">Le 20</div>
+          <p>Envoi du catalogue et de la fiche de commande à la communauté, dans le groupe WhatsApp.</p>
         </div>
         <div class="timeline-item">
-          <div class="day" id="catalogue-cloture">22</div>
-          <p>Clôture des commandes, sans exception, pour consolider l'achat groupé.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="day" id="catalogue-paiement">25</div>
-          <p>Date limite de paiement de votre commande via Airtel Money.</p>
+          <div class="day">Jusqu'au 25</div>
+          <p>Validation des commandes et paiement via Airtel Money.</p>
         </div>
         <div class="timeline-item">
           <div class="day">+48h</div>
-          <p>Livraison à domicile ou disponibilité en point relais après la date de remise annoncée.</p>
+          <p>Livraison, après réception du paiement.</p>
         </div>
       </div>
     </div>
@@ -1273,7 +1298,7 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> POPOTE Libreville. Tous droits réservés.</span>
-      <span>Fait avec ❤️ à Libreville</span>
+      <span>Fait avec ❤️ par CREATIVMEDIA</span>
     </div>
   </div>
 </footer>
@@ -1285,9 +1310,8 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  var catalogueData = {"mois": "Juillet 2026", "cloture": "22 juillet 2026", "dateLimitePaiement": "25 juillet 2026", "note": "Ceci est un aperçu des familles de produits proposées. Les quantités, formats et tarifs exacts du mois sont communiqués uniquement dans le groupe WhatsApp POPOTE, car ils dépendent des prix négociés avec nos fournisseurs partenaires ce mois-ci.", "categories": [{"nom": "Céréales & féculents", "icone": "🌾", "produits": [{"nom": "Riz", "unite": "plusieurs formats disponibles"}, {"nom": "Farine de blé", "unite": "plusieurs formats disponibles"}, {"nom": "Pâtes alimentaires", "unite": "plusieurs formats disponibles"}]}, {"nom": "Huiles & assaisonnements", "icone": "🫒", "produits": [{"nom": "Huile végétale", "unite": "plusieurs formats disponibles"}, {"nom": "Huile de palme", "unite": "plusieurs formats disponibles"}, {"nom": "Sucre", "unite": "plusieurs formats disponibles"}, {"nom": "Tomates en conserve", "unite": "plusieurs formats disponibles"}]}, {"nom": "Protéines", "icone": "🐟", "produits": [{"nom": "Poulet congelé", "unite": "plusieurs formats disponibles"}, {"nom": "Poisson fumé", "unite": "plusieurs formats disponibles"}, {"nom": "Poisson séché", "unite": "plusieurs formats disponibles"}]}, {"nom": "Autres essentiels", "icone": "🥛", "produits": [{"nom": "Lait en poudre", "unite": "plusieurs formats disponibles"}, {"nom": "Produits de saison", "unite": "selon disponibilité fournisseurs"}]}]};
+  var catalogueData = {"note": "Ceci est un aperçu des familles de produits proposées. Les quantités, formats et tarifs exacts sont communiqués uniquement dans le groupe WhatsApp POPOTE, car ils dépendent des prix négociés avec nos fournisseurs partenaires du moment.", "categories": [{"nom": "Céréales & féculents", "icone": "🌾", "produits": [{"nom": "Riz", "unite": "plusieurs formats disponibles"}, {"nom": "Farine de blé", "unite": "plusieurs formats disponibles"}, {"nom": "Pâtes alimentaires", "unite": "plusieurs formats disponibles"}]}, {"nom": "Huiles & assaisonnements", "icone": "🫒", "produits": [{"nom": "Huile végétale", "unite": "plusieurs formats disponibles"}, {"nom": "Huile de palme", "unite": "plusieurs formats disponibles"}, {"nom": "Sucre", "unite": "plusieurs formats disponibles"}, {"nom": "Tomates en conserve", "unite": "plusieurs formats disponibles"}]}, {"nom": "Protéines", "icone": "🐟", "produits": [{"nom": "Poulet congelé", "unite": "plusieurs formats disponibles"}, {"nom": "Poisson fumé", "unite": "plusieurs formats disponibles"}, {"nom": "Poisson séché", "unite": "plusieurs formats disponibles"}]}, {"nom": "Autres essentiels", "icone": "🥛", "produits": [{"nom": "Lait en poudre", "unite": "plusieurs formats disponibles"}, {"nom": "Produits de saison", "unite": "selon disponibilité fournisseurs"}]}]};
 
-  // --- Navigation menu mobile ---
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".nav");
   if (toggle && nav) {
@@ -1298,7 +1322,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Changement de page (une seule page HTML, plusieurs sections) ---
   var sections = document.querySelectorAll(".page-section");
   var navLinks = document.querySelectorAll("[data-page]");
 
@@ -1335,7 +1358,6 @@ document.addEventListener("DOMContentLoaded", function () {
     showPage(link.getAttribute("data-page"));
   });
 
-  // Liens d'ancrage internes a la FAQ (onglets de categories)
   document.querySelectorAll('.faq-tabs a[href^="#"]').forEach(function (a) {
     a.addEventListener("click", function (e) {
       e.preventDefault();
@@ -1346,15 +1368,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   showPage("home");
 
-  // --- Rendu du catalogue mensuel (donnees integrees, pas de fetch) ---
   function renderCatalogueFull(data) {
-    var monthBadge = document.getElementById("catalogue-mois");
-    if (monthBadge) monthBadge.textContent = data.mois;
-    var cloture = document.getElementById("catalogue-cloture");
-    if (cloture) cloture.textContent = data.cloture;
-    var paiement = document.getElementById("catalogue-paiement");
-    if (paiement) paiement.textContent = data.dateLimitePaiement;
-
     var root = document.getElementById("catalogue-root");
     if (root) {
       var html = "";

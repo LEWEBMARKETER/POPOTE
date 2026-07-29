@@ -1,16 +1,19 @@
 /* ===== POPOTE Libreville — styles ===== */
 
 :root {
-  --green-900: #0e3d24;
-  --green-800: #14512f;
-  --green-700: #1c6b3c;
-  --green-600: #237f47;
-  --green-500: #2d9d57;
-  --green-100: #e6f2ea;
-  --green-50: #f3f9f5;
+  --green-logo: #178a3d;
+  --green-900: #0d5225;
+  --green-800: #146b30;
+  --green-700: #178a3d;
+  --green-600: #229a48;
+  --green-500: #2eb057;
+  --green-100: #e3f4e8;
+  --green-50: #f4faf6;
+  --sage: #cfe3d2;
   --cream: #f8f5ee;
-  --terracotta: #d9662c;
-  --terracotta-dark: #b6501f;
+  --gold: #e8a93c;
+  --gold-dark: #c98f27;
+  --gold-deep: #a6690e;
   --ink: #202521;
   --ink-soft: #4a534d;
   --white: #ffffff;
@@ -79,7 +82,7 @@ section { padding: 72px 0; }
 }
 
 .bg-cream { background: var(--cream); }
-.bg-green { background: var(--green-900); color: var(--green-50); }
+.bg-green { background: var(--green-700); color: var(--green-50); }
 .bg-green h1, .bg-green h2, .bg-green h3 { color: var(--white); }
 .bg-green p { color: #cfe6d7; }
 
@@ -173,11 +176,11 @@ section { padding: 72px 0; }
 .btn:hover { transform: translateY(-2px); }
 
 .btn-primary {
-  background: var(--terracotta);
-  color: var(--white);
-  box-shadow: 0 8px 20px rgba(217, 102, 44, 0.35);
+  background: var(--gold);
+  color: var(--green-900);
+  box-shadow: 0 8px 20px rgba(232, 169, 60, 0.4);
 }
-.btn-primary:hover { background: var(--terracotta-dark); }
+.btn-primary:hover { background: var(--gold-dark); }
 
 .btn-green {
   background: var(--green-700);
@@ -201,6 +204,18 @@ section { padding: 72px 0; }
 .btn-outline-green:hover { background: var(--green-100); }
 
 .btn img, .btn svg { height: 20px; width: 20px; }
+
+/* ---- Brand stamp (logo POPOTE) ---- */
+.brand-stamp {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 0;
+}
+.brand-badge {
+  width: 168px;
+  height: 168px;
+  filter: drop-shadow(0 14px 26px rgba(14, 61, 36, 0.28));
+}
 
 /* ---- Hero ---- */
 .hero {
@@ -325,14 +340,14 @@ section { padding: 72px 0; }
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 24px;
-  background: var(--green-900);
+  background: var(--green-700);
   color: var(--white);
   border-radius: var(--radius);
   padding: 32px 36px;
 }
 .founder-banner .badge {
-  background: var(--terracotta);
-  color: var(--white);
+  background: var(--gold);
+  color: var(--green-900);
   font-weight: 800;
   font-family: Cambria, serif;
   font-size: 1.1rem;
@@ -391,14 +406,14 @@ section { padding: 72px 0; }
   display: block;
   font-family: Cambria, serif;
   font-size: 1.5rem;
-  color: var(--terracotta);
+  color: var(--gold-deep);
   margin-bottom: 6px;
 }
 .cost-card span { font-size: 0.85rem; color: var(--ink-soft); }
 
 .timeline {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 20px;
 }
@@ -442,8 +457,8 @@ section { padding: 72px 0; }
   gap: 12px;
 }
 .faq-category h2 .num-badge {
-  background: var(--terracotta);
-  color: var(--white);
+  background: var(--gold);
+  color: var(--green-900);
   font-size: 0.85rem;
   padding: 4px 10px;
   border-radius: 999px;
@@ -538,7 +553,7 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
 
 /* ---- CTA band ---- */
 .cta-band {
-  background: var(--green-900);
+  background: var(--green-700);
   color: var(--white);
   border-radius: var(--radius);
   padding: 48px;
@@ -550,7 +565,7 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
 
 /* ---- Footer ---- */
 .site-footer {
-  background: var(--green-900);
+  background: var(--green-700);
   color: #cfe6d7;
   padding: 56px 0 28px;
 }
@@ -616,7 +631,7 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
 
 .page-hero {
   padding: 56px 0 40px;
-  background: var(--green-900);
+  background: var(--green-700);
   color: var(--white);
 }
 .page-hero h1 { color: var(--white); margin-bottom: 10px; }
