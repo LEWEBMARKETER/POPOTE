@@ -26,3 +26,7 @@ Puis ouvrez `http://localhost:8000`.
 ## Mettre à jour le catalogue mensuel
 
 Éditez `data/catalogue.json` (mois, dates de clôture/paiement, catégories et produits). Le contenu est injecté automatiquement sur la page d'accueil et la page catalogue.
+
+## Autres sites
+
+- `creativmedia/` — landing page one-page de l'agence CRÉATIV'MEDIA (offre Rentrée 2026). Site statique indépendant, voir `creativmedia/index.html`.
