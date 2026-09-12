@@ -165,6 +165,8 @@ p{ margin: 0 0 1em; color: var(--text); }
   color: var(--anthracite);
 }
 .logo span{ color: var(--magenta); }
+.logo-img{ height: 34px; width:auto; display:block; }
+.footer-brand .logo-img{ height: 30px; }
 
 .nav-links{
   display:flex;
@@ -253,6 +255,11 @@ p{ margin: 0 0 1em; color: var(--text); }
   font-family: var(--font-script);
   font-size: 2rem;
   color: var(--magenta);
+  margin: 4px 0 20px;
+}
+.hero-signature-img{
+  height: 62px;
+  width: auto;
   margin: 4px 0 20px;
 }
 .hero-text h1{ margin-bottom: 8px; }

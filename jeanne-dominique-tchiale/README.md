@@ -10,7 +10,9 @@ femme entrepreneure depuis 1995 et consultante.
 - `contact.html` — page contact (WhatsApp, email, formulaire)
 - `assets/css/style.css` — tous les styles (palette, typographies, responsive, animations)
 - `assets/js/main.js` — menu mobile, apparition au scroll, formulaire de contact
-- `assets/img/` — visuels du site
+- `assets/img/` — visuels du site (photo et signature réelles de Jeanne Dominique Tchiale)
+- `jeanne-dominique-tchiale-site.html` — variante en un seul fichier autonome (CSS/JS et
+  images encodés en base64), pratique pour un hébergement en un seul upload
 
 ## Hébergement rapide (aucune configuration serveur nécessaire)
 
@@ -29,9 +31,12 @@ Tous les textes sont directement modifiables dans les fichiers `.html` (recherch
 à changer et remplacez-le). Les sections suivantes sont volontairement prévues comme des
 espaces à compléter :
 
-- **Photo professionnelle** : remplacez `assets/img/portrait-placeholder.svg` par la
-  photographie réelle (par ex. `assets/img/jeanne-portrait.jpg`), puis mettez à jour les
-  balises `<img src="...">` correspondantes dans `index.html` et `expertise.html`.
+- **Photo et signature** : la photo professionnelle (`assets/img/jeanne-portrait.jpg`) et la
+  signature (`assets/img/jeanne-signature-dark.png` sur fonds clairs,
+  `assets/img/jeanne-signature-light.png` sur fonds sombres comme le footer) sont déjà en
+  place sur les 3 pages. Pour les changer, remplacez ces fichiers par de nouveaux visuels de
+  mêmes noms (le fichier `jeanne-dominique-tchiale-site.html`, en un seul fichier, embarque
+  ses propres copies en base64 et doit être régénéré séparément si ces visuels changent).
 - **Étape de parcours (page Expertise)** : la timeline contient un élément « Étape à
   compléter » à remplacer par une date et un événement réels.
 - **Domaine d'expertise supplémentaire** (page Expertise) : une carte « + Ajouter un domaine
