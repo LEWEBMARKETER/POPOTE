@@ -1,0 +1,57 @@
+# Site vitrine — Jeanne Dominique Tchiale
+
+Site statique (HTML/CSS/JS pur, sans dépendance ni build) pour Jeanne Dominique Tchiale,
+femme entrepreneure depuis 1995 et consultante.
+
+## Structure
+
+- `index.html` — page d'accueil
+- `expertise.html` — page « Mon expertise »
+- `contact.html` — page contact (WhatsApp, email, formulaire)
+- `assets/css/style.css` — tous les styles (palette, typographies, responsive, animations)
+- `assets/js/main.js` — menu mobile, apparition au scroll, formulaire de contact
+- `assets/img/` — visuels du site
+
+## Hébergement rapide (aucune configuration serveur nécessaire)
+
+Ce site est 100 % statique. Pour le mettre en ligne en quelques minutes :
+
+- **Netlify** : glisser-déposer le dossier `jeanne-dominique-tchiale/` sur [app.netlify.com/drop](https://app.netlify.com/drop)
+- **Vercel** : `vercel deploy` depuis ce dossier
+- **GitHub Pages** : pousser ce dossier dans un dépôt et activer GitHub Pages sur la branche
+- **Tout hébergement mutualisé** : envoyer le contenu du dossier par FTP à la racine du site
+
+Aucune base de données, aucun serveur applicatif n'est requis.
+
+## Modifier les contenus
+
+Tous les textes sont directement modifiables dans les fichiers `.html` (recherchez le texte
+à changer et remplacez-le). Les sections suivantes sont volontairement prévues comme des
+espaces à compléter :
+
+- **Photo professionnelle** : remplacez `assets/img/portrait-placeholder.svg` par la
+  photographie réelle (par ex. `assets/img/jeanne-portrait.jpg`), puis mettez à jour les
+  balises `<img src="...">` correspondantes dans `index.html` et `expertise.html`.
+- **Étape de parcours (page Expertise)** : la timeline contient un élément « Étape à
+  compléter » à remplacer par une date et un événement réels.
+- **Domaine d'expertise supplémentaire** (page Expertise) : une carte « + Ajouter un domaine
+  d'expertise » est prévue pour un 5ᵉ domaine.
+- **Couleurs** : la palette officielle (magenta, turquoise, noir anthracite) est centralisée
+  en haut du fichier `assets/css/style.css` dans le bloc `:root`. Modifier ces variables
+  suffit à adapter l'ensemble du site.
+
+## Coordonnées utilisées sur le site
+
+- WhatsApp : +241 62 70 53 80 (lien `https://wa.me/24162705380`)
+- Email : jeanneproduct_gab@yahoo.fr
+
+## Développement local
+
+Aucun serveur n'est strictement nécessaire (le site fonctionne en ouvrant directement les
+fichiers `.html`), mais pour un rendu fidèle vous pouvez servir le dossier localement :
+
+```bash
+python3 -m http.server 8000
+```
+
+Puis ouvrir `http://localhost:8000`.

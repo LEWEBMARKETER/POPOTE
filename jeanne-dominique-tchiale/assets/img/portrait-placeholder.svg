@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="jdtPortraitTitle">
+  <title id="jdtPortraitTitle">Portrait de Jeanne Dominique Tchiale — visuel à remplacer</title>
+  <defs>
+    <linearGradient id="jdtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B1D28"/>
+      <stop offset="55%" stop-color="#3A2C45"/>
+      <stop offset="100%" stop-color="#0E8C86"/>
+    </linearGradient>
+    <linearGradient id="jdtLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C2185B"/>
+      <stop offset="50%" stop-color="#8A3E73"/>
+      <stop offset="100%" stop-color="#0E8C86"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#jdtBg)"/>
+  <rect x="0" y="0" width="800" height="10" fill="url(#jdtLine)"/>
+  <circle cx="400" cy="430" r="150" fill="none" stroke="#F5EFE7" stroke-opacity="0.25" stroke-width="1.5"/>
+  <circle cx="400" cy="430" r="190" fill="none" stroke="#F5EFE7" stroke-opacity="0.12" stroke-width="1.5"/>
+  <text x="400" y="465" font-family="'Playfair Display', Georgia, serif" font-size="150" font-weight="600" fill="#FBF8F5" text-anchor="middle" letter-spacing="6">JDT</text>
+  <text x="400" y="700" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" fill="#FBF8F5" fill-opacity="0.85" text-anchor="middle" letter-spacing="3">JEANNE DOMINIQUE TCHIALE</text>
+  <text x="400" y="740" font-family="Arial, sans-serif" font-size="18" fill="#FBF8F5" fill-opacity="0.6" text-anchor="middle" letter-spacing="2">PHOTOGRAPHIE À INTÉGRER</text>
+</svg>
