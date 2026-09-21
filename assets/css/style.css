@@ -347,6 +347,48 @@ section { padding: 72px 0; }
 .founder-banner h3 { color: var(--white); margin-bottom: 6px; }
 .founder-banner p { color: #cfe6d7; margin: 0; }
 
+.founder-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+.founder-group h4 {
+  font-family: Cambria, serif;
+  color: var(--green-900);
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}
+.founder-item {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.founder-item:last-child { border-bottom: none; }
+.founder-item .num {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--green-100);
+  color: var(--green-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: Cambria, serif;
+  font-size: 0.9rem;
+}
+.founder-item strong { display: block; margin-bottom: 4px; color: var(--green-900); font-size: 0.98rem; }
+.founder-item p { margin: 0; font-size: 0.9rem; }
+.founder-principle {
+  text-align: center;
+  margin: 28px 0 0;
+  font-weight: 700;
+  color: var(--green-800);
+}
+
 /* ---- Catalogue preview / cards ---- */
 .cat-grid {
   display: grid;
@@ -631,6 +673,7 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
   .hero-media { order: -1; }
   .steps-grid, .benefits-grid, .cat-grid, .cost-grid, .timeline { grid-template-columns: repeat(2, 1fr); }
   .founder-banner { grid-template-columns: 1fr; text-align: center; }
+  .founder-groups { grid-template-columns: 1fr; gap: 24px; }
   .contact-grid, .two-col { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 }
