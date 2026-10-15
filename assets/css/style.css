@@ -393,21 +393,21 @@ section { padding: 72px 0; }
 }
 
 /* ---- Catalogue preview / cards ---- */
-.cat-grid {
+.cat-preview-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-.cat-card {
+.cat-preview-card {
   background: var(--cream);
   border-radius: var(--radius);
   padding: 24px;
   text-align: center;
   border: 1px solid var(--border);
 }
-.cat-card .emoji { font-size: 2rem; margin-bottom: 10px; }
-.cat-card h3 { font-size: 1rem; margin-bottom: 4px; }
-.cat-card p { font-size: 0.85rem; margin: 0; }
+.cat-preview-card .emoji { font-size: 2rem; margin-bottom: 10px; }
+.cat-preview-card h3 { font-size: 1rem; margin-bottom: 4px; }
+.cat-preview-card p { font-size: 0.85rem; margin: 0; }
 
 .product-list { list-style: none; margin: 12px 0 0; padding: 0; }
 .product-list li {
@@ -674,7 +674,7 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
 @media (max-width: 900px) {
   .hero .container { grid-template-columns: 1fr; }
   .hero-media { order: -1; }
-  .steps-grid, .benefits-grid, .cat-grid, .cost-grid, .timeline { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid, .benefits-grid, .cat-preview-grid, .cost-grid, .timeline { grid-template-columns: repeat(2, 1fr); }
   .founder-banner { grid-template-columns: 1fr; text-align: center; }
   .founder-groups { grid-template-columns: 1fr; gap: 24px; }
   .contact-grid, .two-col { grid-template-columns: 1fr; }
@@ -686,7 +686,7 @@ details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
   .nav.open { transform: translateY(0); }
   .nav-toggle { display: block; }
   .nav .btn { width: 100%; justify-content: center; }
-  .steps-grid, .benefits-grid, .cat-grid, .cost-grid, .timeline { grid-template-columns: 1fr; }
+  .steps-grid, .benefits-grid, .cat-preview-grid, .cost-grid, .timeline { grid-template-columns: 1fr; }
   .founder-banner .badge { justify-self: center; }
   section { padding: 48px 0; }
 }

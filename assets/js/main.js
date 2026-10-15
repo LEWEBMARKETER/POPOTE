@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     var html = families.map(function (fam) {
       var icon = FAMILY_ICONS[fam] || "🛍️";
-      return '<div class="cat-card"><div class="emoji">' + icon + "</div><h3>" + fam + "</h3></div>";
+      return '<div class="cat-preview-card"><div class="emoji">' + icon + "</div><h3>" + fam + "</h3></div>";
     }).join("");
     root.innerHTML = html;
   }
