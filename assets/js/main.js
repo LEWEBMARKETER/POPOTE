@@ -15,48 +15,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Chargement du catalogue mensuel (data/catalogue.json)
-  var catRoot = document.getElementById("catalogue-root");
-  if (catRoot) {
-    fetch("data/catalogue.json")
-      .then(function (res) { return res.json(); })
-      .then(renderCatalogue)
-      .catch(function () {
-        catRoot.innerHTML = "<p>Le catalogue du mois est disponible dans le groupe WhatsApp POPOTE.</p>";
-      });
-  }
+  var FAMILY_ICONS = {
+    "Riz": "🌾",
+    "Conserves": "🥫",
+    "Poissons": "🐟",
+    "Volailles": "🍗",
+    "Viandes": "🥩",
+    "Produits d’épicerie": "🛒",
+    "Produits d’entretien": "🧼",
+    "Épices et assaisonnements": "🧂",
+    "Féculents": "🍌"
+  };
 
+  // Aperçu du catalogue sur l'accueil (familles réelles du catalogue du mois)
   var catPreview = document.getElementById("catalogue-preview-root");
   if (catPreview) {
-    fetch("data/catalogue.json")
+    fetch("data/catalogue-produits.json")
       .then(function (res) { return res.json(); })
-      .then(function (data) { renderCataloguePreview(data, catPreview); })
+      .then(function (products) { renderCataloguePreview(products, catPreview); })
       .catch(function () {});
   }
 
-  function renderCatalogue(data) {
-    var html = "";
-    data.categories.forEach(function (cat) {
-      html += '<div class="cat-card">';
-      html += '<div class="emoji">' + cat.icone + "</div>";
-      html += "<h3>" + cat.nom + "</h3>";
-      html += '<ul class="product-list">';
-      cat.produits.forEach(function (p) {
-        html += "<li><span>" + p.nom + '</span><span class="unit">' + p.unite + "</span></li>";
-      });
-      html += "</ul></div>";
+  function renderCataloguePreview(products, root) {
+    products.sort(function (a, b) { return a.ordre_famille - b.ordre_famille; });
+    var families = [];
+    products.forEach(function (p) {
+      if (families.indexOf(p.famille) === -1) families.push(p.famille);
     });
-    catRoot.innerHTML = html;
-
-    var note = document.getElementById("catalogue-note");
-    if (note) note.textContent = data.note;
-  }
-
-  function renderCataloguePreview(data, root) {
-    var html = "";
-    data.categories.slice(0, 4).forEach(function (cat) {
-      html += '<div class="cat-card"><div class="emoji">' + cat.icone + "</div><h3>" + cat.nom + "</h3></div>";
-    });
+    var html = families.map(function (fam) {
+      var icon = FAMILY_ICONS[fam] || "🛍️";
+      return '<div class="cat-card"><div class="emoji">' + icon + "</div><h3>" + fam + "</h3></div>";
+    }).join("");
     root.innerHTML = html;
   }
 
