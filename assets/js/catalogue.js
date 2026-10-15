@@ -3,9 +3,16 @@
   "use strict";
 
   var WA_NUMBER = "24166980927";
+  var PAIEMENT_NUMBER = "+241 74 12 82 48";
   var CATALOGUE_LABEL = "Catalogue Octobre 2026";
+  var CAMPAGNE_LABEL = "Octobre 2026";
   var DATA_URL = "data/catalogue-produits.json";
   var STORAGE_KEY = "popote_ma_liste_octobre_2026";
+  var ADHERENTE_KEY = "popote_adherente_info";
+  var REF_STATE_KEY = "popote_proforma_ref_state";
+  var COMMISSION_RATE = 0.10;
+  var PANIER_MINIMUM = 50000;
+  var ABONNEMENT_STANDARD = 3500;
 
   var FAMILY_SLUGS = {
     "Riz": "riz",
@@ -38,15 +45,29 @@
       "Merci !";
   }
 
-  function listMessage(items) {
+  function listMessage(items, info, refInfo) {
+    var totals = computeTotals(items);
     var lines = items.map(function (it, i) {
       var ref = it.reference || "Référence à attribuer";
       return (i + 1) + ". " + it.nom + " — Réf. " + ref + " — " + it.option + " — Qté : " + it.quantite;
     });
-    return "Bonjour POPOTE 👋\n" +
-      "Voici ma liste de précommande (" + CATALOGUE_LABEL + ") :\n" +
-      lines.join("\n") + "\n" +
-      "Merci de me confirmer le montant de mon panier.";
+    var refLabel = refInfo.ref + (refInfo.version > 1 ? " (v" + refInfo.version + ")" : "");
+    var budget = "Budget estimatif : " + formatPrice(totals.total) + " FCFA" +
+      (totals.unpriced > 0 ? " (partiel)" : "");
+    var lignesInfo = [
+      "NOUVELLE PRÉCOMMANDE POPOTE",
+      "Référence : " + refLabel,
+      "Nom : " + info.nom,
+      "Téléphone : " + info.tel,
+      "Quartier : " + info.quartier
+    ];
+    if (info.adresse) lignesInfo.push("Adresse / repère : " + info.adresse);
+    if (info.obs) lignesInfo.push("Observations : " + info.obs);
+    return lignesInfo.join("\n") + "\n\n" +
+      "Produits commandés :\n" + lines.join("\n") + "\n\n" +
+      budget + "\n" +
+      "Produits à confirmer : " + totals.unpriced + "\n" +
+      "Statut : En attente de validation.";
   }
 
   function generalMessage() {
@@ -54,12 +75,10 @@
   }
 
   function pad2(n) { return n < 10 ? "0" + n : String(n); }
-
-  function proformaRef() {
-    var now = new Date();
-    var stamp = String(now.getFullYear()).slice(2) + pad2(now.getMonth() + 1) + pad2(now.getDate());
-    var rand = Math.floor(1000 + Math.random() * 9000);
-    return "PRO-" + stamp + "-" + rand;
+  function padN(n, width) {
+    var s = String(n);
+    while (s.length < width) s = "0" + s;
+    return s;
   }
 
   function lineAmount(it) {
@@ -67,8 +86,90 @@
     return it.prix_gros_fcfa * it.quantite;
   }
 
+  function computeTotals(items) {
+    var subtotal = 0;
+    var unpriced = 0;
+    items.forEach(function (it) {
+      var amt = lineAmount(it);
+      if (amt === null) { unpriced += 1; } else { subtotal += amt; }
+    });
+    var commission = Math.ceil(subtotal * COMMISSION_RATE);
+    var total = subtotal + commission;
+    return { subtotal: subtotal, commission: commission, total: total, unpriced: unpriced };
+  }
+
+  // --- Validation du numéro de téléphone gabonais (avec ou sans +241) ---
+  function validatePhoneGabon(raw) {
+    var digits = (raw || "").replace(/\D/g, "");
+    if (digits.indexOf("241") === 0 && digits.length > 8) digits = digits.slice(3);
+    if (digits.charAt(0) === "0" && digits.length === 9) digits = digits.slice(1);
+    return /^\d{8}$/.test(digits);
+  }
+
+  // --- Numérotation des proformas (POP-PRO-AAAAMM-NNNN), best-effort côté navigateur ---
+  // Remarque technique : sans serveur, cette numérotation est séquentielle par appareil,
+  // pas garantie unique entre adhérentes différentes (voir section 4 du cahier des charges).
+  function currentYearMonth() {
+    var now = new Date();
+    return String(now.getFullYear()) + pad2(now.getMonth() + 1);
+  }
+
+  function listHash(list) {
+    return list.map(function (it) {
+      return (it.reference || it.nom) + ":" + it.option + ":" + it.quantite;
+    }).join("|");
+  }
+
+  function loadRefState() {
+    if (!storageAvailable) return null;
+    try {
+      var raw = window.localStorage.getItem(REF_STATE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
+  function saveRefState(state) {
+    if (!storageAvailable) return;
+    try {
+      if (state === null) {
+        window.localStorage.removeItem(REF_STATE_KEY);
+      } else {
+        window.localStorage.setItem(REF_STATE_KEY, JSON.stringify(state));
+      }
+    } catch (e) { /* ignore */ }
+  }
+
+  function getOrCreateProformaRef() {
+    var ym = currentYearMonth();
+    var hash = listHash(maListe);
+    var state = loadRefState();
+
+    if (state && state.yearMonth === ym && state.listHash === hash) {
+      return { ref: state.ref, version: state.version };
+    }
+    if (state && state.yearMonth === ym && state.ref) {
+      state.version += 1;
+      state.listHash = hash;
+      saveRefState(state);
+      return { ref: state.ref, version: state.version };
+    }
+
+    var counterKey = "popote_ref_counter_" + ym;
+    var counter = 1;
+    try {
+      var rawCounter = window.localStorage.getItem(counterKey);
+      counter = rawCounter ? parseInt(rawCounter, 10) + 1 : 1;
+    } catch (e) { /* ignore */ }
+    try { window.localStorage.setItem(counterKey, String(counter)); } catch (e) { /* ignore */ }
+
+    var ref = "POP-PRO-" + ym + "-" + padN(counter, 4);
+    saveRefState({ yearMonth: ym, ref: ref, version: 1, listHash: hash });
+    return { ref: ref, version: 1 };
+  }
+
   function generateProformaPDF() {
     if (!maListe.length) return;
+    if (!adherenteInfo || !adherenteInfo.nom || !adherenteInfo.tel || !adherenteInfo.quartier) return;
     if (!window.jspdf || !window.jspdf.jsPDF) {
       alert("Le générateur de PDF n'a pas pu se charger. Réessayez ou contactez-nous sur WhatsApp.");
       return;
@@ -78,65 +179,101 @@
     var pageWidth = doc.internal.pageSize.getWidth();
     var pageHeight = doc.internal.pageSize.getHeight();
     var margin = 15;
-    var ref = proformaRef();
+    var refInfo = getOrCreateProformaRef();
+    var refLabel = refInfo.ref + (refInfo.version > 1 ? " — Version " + refInfo.version : "");
+    var totals = computeTotals(maListe);
 
     function header() {
       doc.setFillColor(9, 128, 44);
-      doc.rect(0, 0, pageWidth, 30, "F");
+      doc.rect(0, 0, pageWidth, 32, "F");
       doc.setTextColor(255, 255, 255);
       doc.setFont("helvetica", "bold");
       doc.setFontSize(17);
-      doc.text("POPOTE LIBREVILLE", margin, 13);
-      doc.setFont("helvetica", "normal");
-      doc.setFontSize(10.5);
-      doc.text("Proforma de précommande — " + CATALOGUE_LABEL, margin, 21);
+      doc.text("POPOTE LIBREVILLE", margin, 11);
+      doc.setFont("helvetica", "italic");
+      doc.setFontSize(9);
+      doc.text("Ensemble achetons mieux !", margin, 17);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(11);
+      doc.text("PROFORMA DE PRÉCOMMANDE", margin, 26);
     }
 
     header();
-    var y = 40;
+    var y = 42;
     doc.setTextColor(19, 34, 26);
-    doc.setFont("helvetica", "normal");
+    doc.setFont("helvetica", "bold");
     doc.setFontSize(9.5);
-    doc.text("Référence : " + ref, margin, y);
+    doc.text("Référence : " + refLabel, margin, y);
+    doc.setFont("helvetica", "normal");
     doc.text("Date : " + new Date().toLocaleDateString("fr-FR"), pageWidth - margin, y, { align: "right" });
-    y += 9;
+    y += 6;
+    doc.text("Campagne : " + CAMPAGNE_LABEL, margin, y);
+    doc.text("Statut : Estimation — en attente de validation.", pageWidth - margin, y, { align: "right" });
+    y += 10;
 
-    // Colonnes
-    var colProduit = margin;
-    var colQte = pageWidth - margin - 70;
-    var colPu = pageWidth - margin - 48;
-    var colTotal = pageWidth - margin - 10;
-    var produitWidth = colQte - colProduit - 4;
+    // Identification de l'adhérente
+    doc.setFillColor(234, 244, 236);
+    var idBoxLines = 3 + (adherenteInfo.adresse ? 1 : 0);
+    var idBoxH = idBoxLines * 5.5 + 6;
+    doc.roundedRect(margin, y, pageWidth - margin * 2, idBoxH, 2, 2, "F");
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(8);
+    doc.setTextColor(6, 83, 29);
+    doc.text("IDENTIFICATION DE L'ADHÉRENTE", margin + 4, y + 6);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9);
+    doc.setTextColor(19, 34, 26);
+    var idY = y + 12;
+    doc.text("Nom et prénom : " + adherenteInfo.nom, margin + 4, idY);
+    idY += 5.5;
+    doc.text("Téléphone / WhatsApp : " + adherenteInfo.tel, margin + 4, idY);
+    idY += 5.5;
+    doc.text("Quartier : " + adherenteInfo.quartier, margin + 4, idY);
+    if (adherenteInfo.adresse) {
+      idY += 5.5;
+      doc.text("Adresse / repère : " + adherenteInfo.adresse, margin + 4, idY);
+    }
+    y += idBoxH + 8;
+
+    // Colonnes du tableau
+    var colRef = margin;
+    var colProduit = margin + 20;
+    var colMode = margin + 84;
+    var colQte = margin + 108;
+    var colPu = margin + 140;
+    var colTotal = pageWidth - margin;
+    var produitWidth = colMode - colProduit - 3;
+    var modeWidth = colQte - colMode - 2;
 
     function tableHeader() {
       doc.setFillColor(234, 244, 236);
       doc.rect(margin, y - 5, pageWidth - margin * 2, 7, "F");
       doc.setFont("helvetica", "bold");
-      doc.setFontSize(8.5);
+      doc.setFontSize(7.5);
       doc.setTextColor(6, 83, 29);
-      doc.text("PRODUIT", colProduit + 1, y);
+      doc.text("RÉF.", colRef + 1, y);
+      doc.text("PRODUIT", colProduit, y);
+      doc.text("MODE", colMode, y);
       doc.text("QTÉ", colQte, y, { align: "right" });
-      doc.text("PRIX GROS", colPu, y, { align: "right" });
-      doc.text("SOUS-TOTAL*", colTotal, y, { align: "right" });
+      doc.text("PRIX EST.", colPu, y, { align: "right" });
+      doc.text("SOUS-TOTAL", colTotal, y, { align: "right" });
       y += 7;
       doc.setTextColor(19, 34, 26);
     }
 
     tableHeader();
 
-    var total = 0;
-    var hasUnpriced = false;
     var hasFromPrice = false;
 
     maListe.forEach(function (it, idx) {
-      var ref2 = it.reference || "Référence à attribuer";
-      var subLine = "Réf. " + ref2 + " · " + it.conditionnement + " · " + it.option;
+      var refTxt = it.reference || "À attribuer";
       doc.setFont("helvetica", "normal");
-      doc.setFontSize(9.5);
+      doc.setFontSize(8.5);
       var nomLines = doc.splitTextToSize(it.nom, produitWidth);
-      doc.setFontSize(7.8);
-      var subLines = doc.splitTextToSize(subLine, produitWidth);
-      var rowH = Math.max(9, nomLines.length * 4.4 + subLines.length * 3.6 + 2);
+      doc.setFontSize(7);
+      var condLines = doc.splitTextToSize(it.conditionnement, produitWidth);
+      var modeLines = doc.splitTextToSize(it.option, modeWidth);
+      var rowH = Math.max(10, nomLines.length * 4 + condLines.length * 3.3 + 3, modeLines.length * 3.3 + 6);
 
       if (y + rowH > pageHeight - 45) {
         doc.addPage();
@@ -150,54 +287,83 @@
       }
 
       doc.setFont("helvetica", "normal");
-      doc.setFontSize(9.5);
-      doc.setTextColor(19, 34, 26);
-      doc.text(nomLines, colProduit + 1, y);
-      doc.setFontSize(7.8);
+      doc.setFontSize(7.5);
       doc.setTextColor(90, 100, 94);
-      doc.text(subLines, colProduit + 1, y + nomLines.length * 4.4);
+      doc.text(refTxt, colRef + 1, y);
 
-      doc.setFontSize(9);
+      doc.setFontSize(8.5);
       doc.setTextColor(19, 34, 26);
+      doc.text(nomLines, colProduit, y);
+      doc.setFontSize(7);
+      doc.setTextColor(90, 100, 94);
+      doc.text(condLines, colProduit, y + nomLines.length * 4);
+
+      doc.setFontSize(7.5);
+      doc.setTextColor(19, 34, 26);
+      doc.text(modeLines, colMode, y);
+
+      doc.setFontSize(8.5);
       doc.text(String(it.quantite), colQte, y, { align: "right" });
 
       var amount = lineAmount(it);
       if (amount === null) {
         doc.text("Sur demande", colPu, y, { align: "right" });
         doc.text("—", colTotal, y, { align: "right" });
-        hasUnpriced = true;
       } else {
         var prefix = it.prix_a_partir_de ? "~" : "";
         if (it.prix_a_partir_de) hasFromPrice = true;
         doc.text(prefix + formatPrice(it.prix_gros_fcfa) + " F", colPu, y, { align: "right" });
         doc.text(prefix + formatPrice(amount) + " F", colTotal, y, { align: "right" });
-        total += amount;
       }
 
       y += rowH;
     });
 
-    // Total indicatif
+    // Récapitulatif financier
     y += 2;
     doc.setDrawColor(219, 230, 222);
     doc.line(margin, y, pageWidth - margin, y);
     y += 7;
+
+    var totalLabel = totals.unpriced > 0 ? "Total partiel estimatif" : "Total estimatif";
+
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9);
+    doc.setTextColor(19, 34, 26);
+    doc.text("Sous-total produits (prix de gros)", colPu, y, { align: "right" });
+    doc.text(formatPrice(totals.subtotal) + " FCFA", colTotal, y, { align: "right" });
+    y += 6;
+    doc.text("Commission POPOTE (10%)", colPu, y, { align: "right" });
+    doc.text(formatPrice(totals.commission) + " FCFA", colTotal, y, { align: "right" });
+    y += 6;
+    if (totals.unpriced > 0) {
+      doc.text("Références à confirmer", colPu, y, { align: "right" });
+      doc.text(String(totals.unpriced), colTotal, y, { align: "right" });
+      y += 6;
+    }
     doc.setFont("helvetica", "bold");
     doc.setFontSize(11);
     doc.setTextColor(6, 83, 29);
-    doc.text("Total indicatif", colPu, y, { align: "right" });
-    doc.text(formatPrice(total) + " FCFA", colTotal, y, { align: "right" });
+    doc.text(totalLabel, colPu, y, { align: "right" });
+    doc.text(formatPrice(totals.total) + " FCFA", colTotal, y, { align: "right" });
+    y += 9;
+
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(8.5);
+    doc.setTextColor(19, 34, 26);
+    doc.text("Panier minimum : " + formatPrice(PANIER_MINIMUM) + " FCFA", margin, y);
+    y += 5;
+    doc.text("Abonnement POPOTE : " + formatPrice(ABONNEMENT_STANDARD) + " FCFA (statut non renseigné — distinct du panier)", margin, y);
     y += 10;
 
-    // Avertissement
+    // Mentions obligatoires
     var warnLines = [
-      "Ce document est une estimation indicative, pas une facture ni un engagement de paiement.",
-      "Les prix affichés sont les prix de gros fournisseurs" + (hasFromPrice ? " (~ = à partir de)" : "") + ".",
-      "Le montant définitif — incluant la commission de 10% sur le groupage et les éventuels ajustements" +
-      " de prix fournisseurs — vous sera communiqué par POPOTE avant toute confirmation et paiement.",
-      "Montant minimum de commande : 50 000 FCFA."
+      "Cette proforma constitue une estimation budgétaire. Elle ne représente ni une facture définitive ni une demande de paiement. " +
+      "Les prix définitifs seront communiqués après consolidation des commandes et validation des conditions fournisseurs.",
+      "Aucun paiement n'est exigé sur la base de cette estimation."
     ];
-    if (hasUnpriced) warnLines.splice(2, 0, "Certains produits sont au prix sur demande et ne sont pas inclus dans le total ci-dessus.");
+    if (hasFromPrice) warnLines.push("Le symbole ~ signifie « à partir de ».");
+    if (totals.unpriced > 0) warnLines.push("Certains produits sont au prix sur demande et ne sont pas inclus dans le total ci-dessus.");
 
     var warnTextWidth = pageWidth - margin * 2 - 10;
     var warnWrapped = [];
@@ -215,15 +381,20 @@
     y += warnH + 10;
 
     // Pied de page
-    if (y > pageHeight - 20) { doc.addPage(); y = 20; }
+    if (y > pageHeight - 24) { doc.addPage(); y = 20; }
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(8.5);
+    doc.setTextColor(6, 83, 29);
+    doc.text("POPOTE LIBREVILLE", margin, pageHeight - 20);
     doc.setFont("helvetica", "normal");
     doc.setFontSize(8);
     doc.setTextColor(90, 100, 94);
-    doc.text("Tarifs de gros négociés sur la base d'un groupage de 100 personnes minimum.", margin, pageHeight - 16);
-    doc.text("Commandes et assistance : WhatsApp +241 66 98 09 27", margin, pageHeight - 11);
-    doc.text("© POPOTE LIBREVILLE 2026", margin, pageHeight - 6);
+    doc.text("Paiement : " + PAIEMENT_NUMBER, margin, pageHeight - 15);
+    doc.text("Assistance : +241 66 98 09 27", margin, pageHeight - 10);
+    doc.setFont("helvetica", "italic");
+    doc.text("Ensemble achetons mieux !", margin, pageHeight - 5);
 
-    doc.save(ref + ".pdf");
+    doc.save(refInfo.ref + ".pdf");
   }
 
   // --- Ma liste (localStorage) ---
@@ -257,6 +428,20 @@
 
   var maListe = loadList();
 
+  // --- Identification de l'adhérente (localStorage, jamais transmise à un serveur) ---
+  function loadAdherente() {
+    if (!storageAvailable) return null;
+    try {
+      var raw = window.localStorage.getItem(ADHERENTE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+  function saveAdherente(info) {
+    if (!storageAvailable) return;
+    try { window.localStorage.setItem(ADHERENTE_KEY, JSON.stringify(info)); } catch (e) { /* ignore */ }
+  }
+  var adherenteInfo = loadAdherente();
+
   function findInList(reference, nom) {
     var key = reference || nom;
     return maListe.find(function (it) { return (it.reference || it.nom) === key; });
@@ -285,6 +470,7 @@
   function removeFromList(index) {
     maListe.splice(index, 1);
     saveList(maListe);
+    if (!maListe.length) saveRefState(null);
     renderListUI();
   }
 
@@ -331,10 +517,6 @@
           "</div>";
       }).join("");
     }
-
-    if (sendBtn) {
-      sendBtn.href = waLink(listMessage(maListe));
-    }
   }
 
   if (itemsRoot) {
@@ -365,7 +547,112 @@
   if (floatBtn) floatBtn.addEventListener("click", openPanel);
   if (closeBtn) closeBtn.addEventListener("click", closePanel);
   if (overlay) overlay.addEventListener("click", closePanel);
-  if (pdfBtn) pdfBtn.addEventListener("click", generateProformaPDF);
+
+  // ---- Identification de l'adhérente (avant proforma PDF ou envoi WhatsApp) ----
+  var idOverlay = document.getElementById("cat-id-overlay");
+  var idPanel = document.getElementById("cat-id-panel");
+  var idCloseBtn = document.getElementById("cat-id-closebtn");
+  var idForm = document.getElementById("cat-id-form");
+  var idError = document.getElementById("cat-id-error");
+  var idNom = document.getElementById("cat-id-nom");
+  var idTel = document.getElementById("cat-id-tel");
+  var idQuartier = document.getElementById("cat-id-quartier");
+  var idAdresse = document.getElementById("cat-id-adresse");
+  var idEmail = document.getElementById("cat-id-email");
+  var idObs = document.getElementById("cat-id-obs");
+  var idConsent = document.getElementById("cat-id-consent");
+  var pendingAction = null;
+
+  function hasValidIdentification() {
+    return !!(adherenteInfo && adherenteInfo.nom && adherenteInfo.tel && adherenteInfo.quartier);
+  }
+
+  function openIdPanel(action) {
+    pendingAction = action;
+    if (adherenteInfo) {
+      idNom.value = adherenteInfo.nom || "";
+      idTel.value = adherenteInfo.tel || "";
+      idQuartier.value = adherenteInfo.quartier || "";
+      idAdresse.value = adherenteInfo.adresse || "";
+      idEmail.value = adherenteInfo.email || "";
+      idObs.value = adherenteInfo.obs || "";
+      idConsent.checked = !!adherenteInfo.consent;
+    }
+    idError.hidden = true;
+    closePanel();
+    idPanel.classList.add("open");
+    idOverlay.classList.add("open");
+  }
+  function closeIdPanel() {
+    idPanel.classList.remove("open");
+    idOverlay.classList.remove("open");
+    pendingAction = null;
+  }
+  if (idCloseBtn) idCloseBtn.addEventListener("click", closeIdPanel);
+  if (idOverlay) idOverlay.addEventListener("click", closeIdPanel);
+
+  function sendListWhatsApp() {
+    var refInfo = getOrCreateProformaRef();
+    var msg = listMessage(maListe, adherenteInfo, refInfo);
+    window.open(waLink(msg), "_blank", "noopener");
+  }
+
+  if (idForm) {
+    idForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var nom = idNom.value.trim();
+      var tel = idTel.value.trim();
+      var quartier = idQuartier.value.trim();
+
+      if (!nom || !tel || !quartier) {
+        idError.textContent = "Merci de renseigner votre nom, votre téléphone et votre quartier.";
+        idError.hidden = false;
+        return;
+      }
+      if (!validatePhoneGabon(tel)) {
+        idError.textContent = "Ce numéro ne semble pas valide. Utilisez un numéro gabonais, avec ou sans +241.";
+        idError.hidden = false;
+        return;
+      }
+      if (!idConsent.checked) {
+        idError.textContent = "Merci de cocher la case de consentement pour continuer.";
+        idError.hidden = false;
+        return;
+      }
+
+      adherenteInfo = {
+        nom: nom,
+        tel: tel,
+        quartier: quartier,
+        adresse: idAdresse.value.trim(),
+        email: idEmail.value.trim(),
+        obs: idObs.value.trim(),
+        consent: true
+      };
+      saveAdherente(adherenteInfo);
+      idError.hidden = true;
+
+      var action = pendingAction;
+      closeIdPanel();
+      if (action === "pdf") generateProformaPDF();
+      else if (action === "whatsapp") sendListWhatsApp();
+    });
+  }
+
+  if (pdfBtn) {
+    pdfBtn.addEventListener("click", function () {
+      if (!maListe.length) return;
+      if (hasValidIdentification()) generateProformaPDF();
+      else openIdPanel("pdf");
+    });
+  }
+  if (sendBtn) {
+    sendBtn.addEventListener("click", function () {
+      if (!maListe.length) return;
+      if (hasValidIdentification()) sendListWhatsApp();
+      else openIdPanel("whatsapp");
+    });
+  }
 
   document.addEventListener("DOMContentLoaded", function () {
     var grid = document.getElementById("cat-products-root");

@@ -227,13 +227,49 @@
   <div id="cat-list-items" class="cat-list-items"></div>
   <div class="cat-list-footer">
     <p class="cat-list-note">Ceci n'est pas un panier d'achat : aucun paiement n'est effectué sur le site. Le montant définitif de votre panier vous sera communiqué avant confirmation.</p>
-    <button type="button" id="cat-list-pdfbtn" class="cat-list-pdf" aria-label="Télécharger ma proforma en PDF">
-      📄 Télécharger ma proforma (PDF)
+    <button type="button" id="cat-list-pdfbtn" class="cat-list-pdf" aria-label="Générer ma proforma en PDF">
+      📄 Générer ma proforma (PDF)
     </button>
-    <a id="cat-list-sendbtn" class="cat-list-send" href="#" target="_blank" rel="noopener" aria-label="Envoyer ma liste de précommande sur WhatsApp">
+    <button type="button" id="cat-list-sendbtn" class="cat-list-send" aria-label="Envoyer ma liste de précommande sur WhatsApp">
       <img src="assets/img/whatsapp-icon.png" alt=""> Envoyer ma liste sur WhatsApp
-    </a>
+    </button>
   </div>
+</aside>
+
+<!-- IDENTIFICATION DE L'ADHÉRENTE (avant génération de la proforma) -->
+<div id="cat-id-overlay" class="cat-list-overlay"></div>
+<aside id="cat-id-panel" class="cat-id-panel" aria-label="Vos informations de précommande">
+  <div class="cat-list-header">
+    <h3>Vos informations de précommande</h3>
+    <button type="button" id="cat-id-closebtn" class="cat-list-close" aria-label="Fermer">×</button>
+  </div>
+  <form id="cat-id-form" class="cat-id-form">
+    <label class="cat-id-label">Nom et prénom *
+      <input type="text" id="cat-id-nom" class="cat-id-input" required>
+    </label>
+    <label class="cat-id-label">Téléphone / WhatsApp *
+      <input type="tel" id="cat-id-tel" class="cat-id-input" placeholder="Ex. 066 98 09 27 ou +241 66 98 09 27" required>
+    </label>
+    <label class="cat-id-label">Quartier / zone de livraison *
+      <input type="text" id="cat-id-quartier" class="cat-id-input" required>
+    </label>
+    <label class="cat-id-label">Adresse ou point de repère (facultatif)
+      <input type="text" id="cat-id-adresse" class="cat-id-input">
+    </label>
+    <label class="cat-id-label">E-mail (facultatif)
+      <input type="email" id="cat-id-email" class="cat-id-input">
+    </label>
+    <label class="cat-id-label">Observations particulières (facultatif)
+      <textarea id="cat-id-obs" class="cat-id-input" rows="2"></textarea>
+    </label>
+    <p id="cat-id-error" class="cat-id-error" hidden></p>
+    <label class="cat-id-checkbox">
+      <input type="checkbox" id="cat-id-consent" required>
+      J'accepte que mes informations soient utilisées par POPOTE LIBREVILLE pour le traitement et le suivi de ma précommande.
+    </label>
+    <p class="cat-id-privacy">Ces informations restent sur votre appareil et ne sont transmises qu'au moment où vous envoyez vous-même votre message sur WhatsApp. Elles ne sont jamais publiées ni partagées ailleurs.</p>
+    <button type="submit" class="btn btn-green cat-id-submit">Valider et continuer</button>
+  </form>
 </aside>
 
 <a href="https://wa.me/24166980927?text=Bonjour%20POPOTE%20!" class="wa-float" target="_blank" rel="noopener" aria-label="Contacter POPOTE sur WhatsApp">

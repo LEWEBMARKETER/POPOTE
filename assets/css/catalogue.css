@@ -407,9 +407,13 @@
   background: #25D366;
   color: var(--white);
   font-weight: 700;
+  font-size: 0.95rem;
+  font-family: inherit;
   padding: 13px;
+  border: none;
   border-radius: 999px;
   text-decoration: none;
+  cursor: pointer;
   min-height: 44px;
 }
 .cat-list-send img { width: 20px; height: 20px; }
@@ -432,6 +436,65 @@
   margin-bottom: 10px;
 }
 .cat-list-pdf:hover { background: var(--green-100); }
+
+/* ---- Identification de l'adhérente ---- */
+.cat-id-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(440px, 92vw);
+  background: var(--white);
+  z-index: 95;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.cat-id-panel.open { transform: translateX(0); }
+.cat-id-form { padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+.cat-id-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--green-900);
+}
+.cat-id-input {
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--ink);
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  min-height: 44px;
+  resize: vertical;
+}
+.cat-id-input:focus { outline: 2px solid var(--green-500); outline-offset: 1px; }
+.cat-id-checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.cat-id-checkbox input { margin-top: 3px; flex-shrink: 0; width: 18px; height: 18px; }
+.cat-id-privacy { font-size: 0.76rem; color: var(--ink-soft); margin: 0; }
+.cat-id-error {
+  background: #fde8e6;
+  color: #b94a3a;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 0;
+}
+.cat-id-submit { width: 100%; justify-content: center; min-height: 44px; }
 
 /* ---- Fonctionnement des achats groupés ---- */
 .cat-fonctionnement { background: var(--cat-bg-section); padding: 56px 0; }
