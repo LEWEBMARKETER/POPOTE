@@ -1,5 +1,7 @@
 /* ===== POPOTE — Page Catalogue (générée depuis le JSON) ===== */
 
+.cat-family-section { scroll-margin-top: 150px; }
+
 /* ---- Hero catalogue ---- */
 .cat-hero {
   background: var(--green-logo);
@@ -150,6 +152,7 @@
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 .cat-tab.active, .cat-tab:hover { background: var(--green-logo); color: var(--white); }
 
