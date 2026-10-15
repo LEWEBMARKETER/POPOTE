@@ -414,6 +414,25 @@
 }
 .cat-list-send img { width: 20px; height: 20px; }
 
+.cat-list-pdf {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1.5px solid var(--green-logo);
+  color: var(--green-logo);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  min-height: 44px;
+  margin-bottom: 10px;
+}
+.cat-list-pdf:hover { background: var(--green-100); }
+
 /* ---- Fonctionnement des achats groupés ---- */
 .cat-fonctionnement { background: var(--cat-bg-section); padding: 56px 0; }
 .cat-fct-grid {

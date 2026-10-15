@@ -227,6 +227,9 @@
   <div id="cat-list-items" class="cat-list-items"></div>
   <div class="cat-list-footer">
     <p class="cat-list-note">Ceci n'est pas un panier d'achat : aucun paiement n'est effectué sur le site. Le montant définitif de votre panier vous sera communiqué avant confirmation.</p>
+    <button type="button" id="cat-list-pdfbtn" class="cat-list-pdf" aria-label="Télécharger ma proforma en PDF">
+      📄 Télécharger ma proforma (PDF)
+    </button>
     <a id="cat-list-sendbtn" class="cat-list-send" href="#" target="_blank" rel="noopener" aria-label="Envoyer ma liste de précommande sur WhatsApp">
       <img src="assets/img/whatsapp-icon.png" alt=""> Envoyer ma liste sur WhatsApp
     </a>
@@ -237,6 +240,7 @@
   <img src="assets/img/whatsapp-icon.png" alt="">
 </a>
 
+<script src="assets/js/vendor/jspdf.umd.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/catalogue.js"></script>
 </body>

@@ -53,6 +53,179 @@
     return "Bonjour POPOTE 👋 J'ai consulté le catalogue d'octobre 2026 et je souhaite passer une précommande.";
   }
 
+  function pad2(n) { return n < 10 ? "0" + n : String(n); }
+
+  function proformaRef() {
+    var now = new Date();
+    var stamp = String(now.getFullYear()).slice(2) + pad2(now.getMonth() + 1) + pad2(now.getDate());
+    var rand = Math.floor(1000 + Math.random() * 9000);
+    return "PRO-" + stamp + "-" + rand;
+  }
+
+  function lineAmount(it) {
+    if (it.prix_gros_fcfa === null || it.prix_gros_fcfa === undefined) return null;
+    return it.prix_gros_fcfa * it.quantite;
+  }
+
+  function generateProformaPDF() {
+    if (!maListe.length) return;
+    if (!window.jspdf || !window.jspdf.jsPDF) {
+      alert("Le générateur de PDF n'a pas pu se charger. Réessayez ou contactez-nous sur WhatsApp.");
+      return;
+    }
+    var jsPDFlib = window.jspdf.jsPDF;
+    var doc = new jsPDFlib({ unit: "mm", format: "a4" });
+    var pageWidth = doc.internal.pageSize.getWidth();
+    var pageHeight = doc.internal.pageSize.getHeight();
+    var margin = 15;
+    var ref = proformaRef();
+
+    function header() {
+      doc.setFillColor(9, 128, 44);
+      doc.rect(0, 0, pageWidth, 30, "F");
+      doc.setTextColor(255, 255, 255);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(17);
+      doc.text("POPOTE LIBREVILLE", margin, 13);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(10.5);
+      doc.text("Proforma de précommande — " + CATALOGUE_LABEL, margin, 21);
+    }
+
+    header();
+    var y = 40;
+    doc.setTextColor(19, 34, 26);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9.5);
+    doc.text("Référence : " + ref, margin, y);
+    doc.text("Date : " + new Date().toLocaleDateString("fr-FR"), pageWidth - margin, y, { align: "right" });
+    y += 9;
+
+    // Colonnes
+    var colProduit = margin;
+    var colQte = pageWidth - margin - 70;
+    var colPu = pageWidth - margin - 48;
+    var colTotal = pageWidth - margin - 10;
+    var produitWidth = colQte - colProduit - 4;
+
+    function tableHeader() {
+      doc.setFillColor(234, 244, 236);
+      doc.rect(margin, y - 5, pageWidth - margin * 2, 7, "F");
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(8.5);
+      doc.setTextColor(6, 83, 29);
+      doc.text("PRODUIT", colProduit + 1, y);
+      doc.text("QTÉ", colQte, y, { align: "right" });
+      doc.text("PRIX GROS", colPu, y, { align: "right" });
+      doc.text("SOUS-TOTAL*", colTotal, y, { align: "right" });
+      y += 7;
+      doc.setTextColor(19, 34, 26);
+    }
+
+    tableHeader();
+
+    var total = 0;
+    var hasUnpriced = false;
+    var hasFromPrice = false;
+
+    maListe.forEach(function (it, idx) {
+      var ref2 = it.reference || "Référence à attribuer";
+      var subLine = "Réf. " + ref2 + " · " + it.conditionnement + " · " + it.option;
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(9.5);
+      var nomLines = doc.splitTextToSize(it.nom, produitWidth);
+      doc.setFontSize(7.8);
+      var subLines = doc.splitTextToSize(subLine, produitWidth);
+      var rowH = Math.max(9, nomLines.length * 4.4 + subLines.length * 3.6 + 2);
+
+      if (y + rowH > pageHeight - 45) {
+        doc.addPage();
+        y = 20;
+        tableHeader();
+      }
+
+      if (idx % 2 === 1) {
+        doc.setFillColor(248, 250, 248);
+        doc.rect(margin, y - 5, pageWidth - margin * 2, rowH, "F");
+      }
+
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(9.5);
+      doc.setTextColor(19, 34, 26);
+      doc.text(nomLines, colProduit + 1, y);
+      doc.setFontSize(7.8);
+      doc.setTextColor(90, 100, 94);
+      doc.text(subLines, colProduit + 1, y + nomLines.length * 4.4);
+
+      doc.setFontSize(9);
+      doc.setTextColor(19, 34, 26);
+      doc.text(String(it.quantite), colQte, y, { align: "right" });
+
+      var amount = lineAmount(it);
+      if (amount === null) {
+        doc.text("Sur demande", colPu, y, { align: "right" });
+        doc.text("—", colTotal, y, { align: "right" });
+        hasUnpriced = true;
+      } else {
+        var prefix = it.prix_a_partir_de ? "~" : "";
+        if (it.prix_a_partir_de) hasFromPrice = true;
+        doc.text(prefix + formatPrice(it.prix_gros_fcfa) + " F", colPu, y, { align: "right" });
+        doc.text(prefix + formatPrice(amount) + " F", colTotal, y, { align: "right" });
+        total += amount;
+      }
+
+      y += rowH;
+    });
+
+    // Total indicatif
+    y += 2;
+    doc.setDrawColor(219, 230, 222);
+    doc.line(margin, y, pageWidth - margin, y);
+    y += 7;
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(11);
+    doc.setTextColor(6, 83, 29);
+    doc.text("Total indicatif", colPu, y, { align: "right" });
+    doc.text(formatPrice(total) + " FCFA", colTotal, y, { align: "right" });
+    y += 10;
+
+    // Avertissement
+    var warnLines = [
+      "Ce document est une estimation indicative, pas une facture ni un engagement de paiement.",
+      "Les prix affichés sont les prix de gros fournisseurs" + (hasFromPrice ? " (~ = à partir de)" : "") + ".",
+      "Le montant définitif — incluant la commission de 10% sur le groupage et les éventuels ajustements" +
+      " de prix fournisseurs — vous sera communiqué par POPOTE avant toute confirmation et paiement.",
+      "Montant minimum de commande : 50 000 FCFA."
+    ];
+    if (hasUnpriced) warnLines.splice(2, 0, "Certains produits sont au prix sur demande et ne sont pas inclus dans le total ci-dessus.");
+
+    var warnTextWidth = pageWidth - margin * 2 - 10;
+    var warnWrapped = [];
+    warnLines.forEach(function (l) {
+      warnWrapped = warnWrapped.concat(doc.splitTextToSize("• " + l, warnTextWidth));
+    });
+    var warnH = warnWrapped.length * 4.2 + 8;
+    if (y + warnH > pageHeight - 30) { doc.addPage(); y = 20; }
+    doc.setFillColor(255, 199, 39);
+    doc.roundedRect(margin, y, pageWidth - margin * 2, warnH, 2, 2, "F");
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(8.3);
+    doc.setTextColor(19, 34, 26);
+    doc.text(warnWrapped, margin + 5, y + 6);
+    y += warnH + 10;
+
+    // Pied de page
+    if (y > pageHeight - 20) { doc.addPage(); y = 20; }
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(8);
+    doc.setTextColor(90, 100, 94);
+    doc.text("Tarifs de gros négociés sur la base d'un groupage de 100 personnes minimum.", margin, pageHeight - 16);
+    doc.text("Commandes et assistance : WhatsApp +241 66 98 09 27", margin, pageHeight - 11);
+    doc.text("© POPOTE LIBREVILLE 2026", margin, pageHeight - 6);
+
+    doc.save(ref + ".pdf");
+  }
+
   // --- Ma liste (localStorage) ---
   var storageAvailable = (function () {
     try {
@@ -98,6 +271,9 @@
         reference: p.reference,
         nom: p.nom,
         conditionnement: p.conditionnement,
+        unite_prix: p.unite_prix,
+        prix_gros_fcfa: p.prix_gros_fcfa,
+        prix_a_partir_de: !!p.prix_a_partir_de,
         option: "Lot complet",
         quantite: 1
       });
@@ -125,6 +301,7 @@
   var itemsRoot = document.getElementById("cat-list-items");
   var closeBtn = document.getElementById("cat-list-closebtn");
   var sendBtn = document.getElementById("cat-list-sendbtn");
+  var pdfBtn = document.getElementById("cat-list-pdfbtn");
 
   function renderListUI() {
     if (!floatBtn) return;
@@ -188,6 +365,7 @@
   if (floatBtn) floatBtn.addEventListener("click", openPanel);
   if (closeBtn) closeBtn.addEventListener("click", closePanel);
   if (overlay) overlay.addEventListener("click", closePanel);
+  if (pdfBtn) pdfBtn.addEventListener("click", generateProformaPDF);
 
   document.addEventListener("DOMContentLoaded", function () {
     var grid = document.getElementById("cat-products-root");
