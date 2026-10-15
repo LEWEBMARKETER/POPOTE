@@ -478,9 +478,10 @@
       }
       var amount = formatPrice(p.prix_gros_fcfa) + " FCFA";
       var prefix = p.prix_a_partir_de ? "À partir de " : "";
+      var unitLine = unit ? '<div class="cat-price-unit">/ ' + unit + "</div>" : "";
       return '<div class="cat-price-box"><span class="cat-price-label">PRIX DE GROS</span>' +
         '<div class="cat-price-amount">' + prefix + amount + '</div>' +
-        '<div class="cat-price-unit">/ ' + unit + "</div></div>";
+        unitLine + "</div>";
     }
 
     function productCard(p) {
