@@ -10,7 +10,6 @@
   var STORAGE_KEY = "popote_ma_liste_octobre_2026";
   var ADHERENTE_KEY = "popote_adherente_info";
   var REF_STATE_KEY = "popote_proforma_ref_state";
-  var COMMISSION_RATE = 0.10;
   var PANIER_MINIMUM = 50000;
   var ABONNEMENT_STANDARD = 3500;
 
@@ -116,9 +115,10 @@
       var amt = lineAmount(it);
       if (amt === null) { unpriced += 1; } else { subtotal += amt; }
     });
-    var commission = Math.ceil(subtotal * COMMISSION_RATE);
-    var total = subtotal + commission;
-    return { subtotal: subtotal, commission: commission, total: total, unpriced: unpriced };
+    // La commission POPOTE ne figure plus sur la facture (elle n'est plus
+    // ajoutée au total) ; seul l'abonnement mensuel y est intégré.
+    var total = subtotal + ABONNEMENT_STANDARD;
+    return { subtotal: subtotal, abonnement: ABONNEMENT_STANDARD, total: total, unpriced: unpriced };
   }
 
   // --- Validation du numéro de téléphone gabonais (avec ou sans +241) ---
@@ -356,8 +356,8 @@
     doc.text("Sous-total produits (prix de gros)", colPu, y, { align: "right" });
     doc.text(formatPrice(totals.subtotal) + " FCFA", colTotal, y, { align: "right" });
     y += 6;
-    doc.text("Commission POPOTE (10%)", colPu, y, { align: "right" });
-    doc.text(formatPrice(totals.commission) + " FCFA", colTotal, y, { align: "right" });
+    doc.text("Abonnement POPOTE (mensuel)", colPu, y, { align: "right" });
+    doc.text(formatPrice(totals.abonnement) + " FCFA", colTotal, y, { align: "right" });
     y += 6;
     if (totals.unpriced > 0) {
       doc.text("Références à confirmer", colPu, y, { align: "right" });
@@ -374,9 +374,7 @@
     doc.setFont("helvetica", "normal");
     doc.setFontSize(8.5);
     doc.setTextColor(19, 34, 26);
-    doc.text("Panier minimum : " + formatPrice(PANIER_MINIMUM) + " FCFA", margin, y);
-    y += 5;
-    doc.text("Abonnement POPOTE : " + formatPrice(ABONNEMENT_STANDARD) + " FCFA (statut non renseigné — distinct du panier)", margin, y);
+    doc.text("Panier minimum (produits) : " + formatPrice(PANIER_MINIMUM) + " FCFA", margin, y);
     y += 10;
 
     // Mentions obligatoires
