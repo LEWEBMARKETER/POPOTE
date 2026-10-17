@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Aperçu du catalogue sur l'accueil (familles réelles du catalogue du mois)
   var catPreview = document.getElementById("catalogue-preview-root");
   if (catPreview) {
-    fetch("data/catalogue-produits.json")
+    fetch("data/catalogue-produits.json?v=20261017")
       .then(function (res) { return res.json(); })
       .then(function (products) { renderCataloguePreview(products, catPreview); })
       .catch(function () {});
