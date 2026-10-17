@@ -867,7 +867,8 @@
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/oignon-rouge.webp",
     "designation_referentiel": "Oignon rouge",
-    "lot_partage_unites": null
+    "lot_partage_unites": 25,
+    "lot_partage_unite_label": "kg"
   },
   {
     "reference": "ASS-014",
@@ -882,7 +883,8 @@
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/caisse-poivrons.webp",
     "designation_referentiel": "Poivron vert",
-    "lot_partage_unites": null
+    "lot_partage_unites": 80,
+    "lot_partage_unite_label": "kg"
   },
   {
     "reference": "ASS-024",
@@ -897,7 +899,8 @@
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/caisse-tomates.webp",
     "designation_referentiel": "Tomates en fruit",
-    "lot_partage_unites": null
+    "lot_partage_unites": 80,
+    "lot_partage_unite_label": "kg"
   },
   {
     "reference": "ASS-018",
@@ -927,7 +930,8 @@
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/arachide.webp",
     "designation_referentiel": "Patte d’arachide",
-    "lot_partage_unites": null
+    "lot_partage_unites": 5,
+    "lot_partage_unite_label": "kg"
   },
   {
     "reference": "ASS-017",
@@ -942,7 +946,8 @@
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/arachide.webp",
     "designation_referentiel": "Patte d’arachide",
-    "lot_partage_unites": null
+    "lot_partage_unites": 10,
+    "lot_partage_unite_label": "kg"
   },
   {
     "reference": "ASS-011",
@@ -957,7 +962,8 @@
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/persil.webp",
     "designation_referentiel": "Persil",
-    "lot_partage_unites": null
+    "lot_partage_unites": 6,
+    "lot_partage_unite_label": "kg"
   },
   {
     "reference": "ASS-012",
@@ -972,7 +978,8 @@
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/basilic.webp",
     "designation_referentiel": "Basilic",
-    "lot_partage_unites": null
+    "lot_partage_unites": 6,
+    "lot_partage_unite_label": "kg"
   },
   {
     "reference": "ASS-010",
@@ -987,7 +994,8 @@
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/celeri.webp",
     "designation_referentiel": "Cèleri",
-    "lot_partage_unites": null
+    "lot_partage_unites": 6,
+    "lot_partage_unite_label": "kg"
   },
   {
     "reference": "ASS-025",
@@ -1002,7 +1010,8 @@
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/poireaux.webp",
     "designation_referentiel": "Poireaux",
-    "lot_partage_unites": null
+    "lot_partage_unites": 6,
+    "lot_partage_unite_label": "kg"
   },
   {
     "reference": "FEC-001",
