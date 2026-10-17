@@ -49,7 +49,8 @@
     var totals = computeTotals(items);
     var lines = items.map(function (it, i) {
       var ref = it.reference || "Référence à attribuer";
-      return (i + 1) + ". " + it.nom + " — Réf. " + ref + " — " + it.option + " — Qté : " + it.quantite;
+      var qteUnit = it.option === "Lot partagé" ? "pièce(s)" : "lot(s)";
+      return (i + 1) + ". " + it.nom + " — Réf. " + ref + " — " + it.option + " — Qté : " + it.quantite + " " + qteUnit;
     });
     var refLabel = refInfo.ref + (refInfo.version > 1 ? " (v" + refInfo.version + ")" : "");
     var budget = "Budget estimatif : " + formatPrice(totals.total) + " FCFA" +
@@ -81,9 +82,24 @@
     return s;
   }
 
-  function lineAmount(it) {
+  // Prix applicable à une unité de quantité : prix du lot complet en mode
+  // "Lot complet", ou prix d'une seule pièce (prix du lot / nombre de pièces
+  // du lot) en mode "Lot partagé" — uniquement pour les produits divisibles
+  // (it.lot_partage_unites renseigné). Les produits non divisibles (sacs de
+  // riz 22/45kg, cartons de volailles/viandes/poissons au poids, etc.) ne
+  // proposent pas le mode "Lot partagé" et se commandent toujours au lot complet.
+  function unitPrice(it) {
     if (it.prix_gros_fcfa === null || it.prix_gros_fcfa === undefined) return null;
-    return it.prix_gros_fcfa * it.quantite;
+    if (it.option === "Lot partagé" && it.lot_partage_unites) {
+      return it.prix_gros_fcfa / it.lot_partage_unites;
+    }
+    return it.prix_gros_fcfa;
+  }
+
+  function lineAmount(it) {
+    var pu = unitPrice(it);
+    if (pu === null) return null;
+    return Math.round(pu * it.quantite);
   }
 
   function computeTotals(items) {
@@ -312,7 +328,7 @@
       } else {
         var prefix = it.prix_a_partir_de ? "~" : "";
         if (it.prix_a_partir_de) hasFromPrice = true;
-        doc.text(prefix + formatPrice(it.prix_gros_fcfa) + " F", colPu, y, { align: "right" });
+        doc.text(prefix + formatPrice(Math.round(unitPrice(it))) + " F", colPu, y, { align: "right" });
         doc.text(prefix + formatPrice(amount) + " F", colTotal, y, { align: "right" });
       }
 
@@ -459,6 +475,7 @@
         unite_prix: p.unite_prix,
         prix_gros_fcfa: p.prix_gros_fcfa,
         prix_a_partir_de: !!p.prix_a_partir_de,
+        lot_partage_unites: p.lot_partage_unites || null,
         option: "Lot complet",
         quantite: 1
       });
@@ -475,7 +492,11 @@
   }
 
   function updateListItem(index, field, value) {
-    maListe[index][field] = value;
+    var it = maListe[index];
+    if (field === "option" && value === "Lot partagé" && !it.lot_partage_unites) {
+      value = "Lot complet";
+    }
+    it[field] = value;
     saveList(maListe);
     renderListUI();
   }
@@ -503,6 +524,16 @@
       itemsRoot.innerHTML = '<p class="cat-list-empty">Votre liste est vide. Ajoutez des produits depuis le catalogue.</p>';
     } else {
       itemsRoot.innerHTML = maListe.map(function (it, i) {
+        var divisible = !!it.lot_partage_unites;
+        var optionsHtml = divisible
+          ? '<label><input type="radio" name="opt-' + i + '" value="Lot complet" ' + (it.option === "Lot complet" ? "checked" : "") + '> Lot complet</label>' +
+            '<label><input type="radio" name="opt-' + i + '" value="Lot partagé" ' + (it.option === "Lot partagé" ? "checked" : "") + '> Lot partagé</label>'
+          : '<span class="cat-list-mode-fixed">Lot complet (produit non divisible)</span>';
+        var qtyLabel = it.option === "Lot partagé" ? "Qté (pièces)" : "Qté (lots)";
+        var amount = lineAmount(it);
+        var amountHtml = amount === null
+          ? '<span class="cat-list-item-price">Prix sur demande</span>'
+          : '<span class="cat-list-item-price">' + (it.prix_a_partir_de ? "~ " : "") + formatPrice(amount) + " FCFA</span>";
         return '' +
           '<div class="cat-list-item">' +
             '<div class="cat-list-item-head">' +
@@ -510,10 +541,10 @@
               '<button type="button" class="cat-list-remove" data-i="' + i + '">Retirer</button>' +
             "</div>" +
             '<div class="cat-list-options">' +
-              '<label><input type="radio" name="opt-' + i + '" value="Lot complet" ' + (it.option === "Lot complet" ? "checked" : "") + '> Lot complet</label>' +
-              '<label><input type="radio" name="opt-' + i + '" value="Lot partagé" ' + (it.option === "Lot partagé" ? "checked" : "") + '> Lot partagé</label>' +
-              '<label>Qté <input type="number" min="1" class="cat-list-qty" value="' + it.quantite + '" data-i="' + i + '"></label>' +
+              optionsHtml +
+              '<label>' + qtyLabel + ' <input type="number" min="1" class="cat-list-qty" value="' + it.quantite + '" data-i="' + i + '"></label>' +
             "</div>" +
+            amountHtml +
           "</div>";
       }).join("");
     }

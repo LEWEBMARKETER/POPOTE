@@ -11,7 +11,8 @@
     "badge_format": "4 × 11 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/riz-elephant.webp",
-    "designation_referentiel": "Sac de Riz Éléphant lot de 4"
+    "designation_referentiel": "Sac de Riz Éléphant lot de 4",
+    "lot_partage_unites": 4
   },
   {
     "reference": "RIZ-004",
@@ -25,7 +26,8 @@
     "badge_format": "22 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/riz-elephant.webp",
-    "designation_referentiel": "Sac de Riz Éléphant"
+    "designation_referentiel": "Sac de Riz Éléphant",
+    "lot_partage_unites": null
   },
   {
     "reference": "RIZ-007",
@@ -39,7 +41,8 @@
     "badge_format": "45 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/riz-elephant.webp",
-    "designation_referentiel": "Sac de Riz Éléphant"
+    "designation_referentiel": "Sac de Riz Éléphant",
+    "lot_partage_unites": null
   },
   {
     "reference": "RIZ-002",
@@ -53,7 +56,8 @@
     "badge_format": "4 × 11 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/riz-dragon.webp",
-    "designation_referentiel": "Sac de Riz Dragon lot de 4"
+    "designation_referentiel": "Sac de Riz Dragon lot de 4",
+    "lot_partage_unites": 4
   },
   {
     "reference": "RIZ-005",
@@ -67,7 +71,8 @@
     "badge_format": "22 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/riz-dragon.webp",
-    "designation_referentiel": "Sac de Riz Dragon"
+    "designation_referentiel": "Sac de Riz Dragon",
+    "lot_partage_unites": null
   },
   {
     "reference": "RIZ-008",
@@ -81,7 +86,8 @@
     "badge_format": "45 kg",
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/riz-dragon.webp",
-    "designation_referentiel": "Sac de Riz Dragon"
+    "designation_referentiel": "Sac de Riz Dragon",
+    "lot_partage_unites": null
   },
   {
     "reference": "RIZ-003",
@@ -95,7 +101,8 @@
     "badge_format": "4 × 11 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/panthere.webp",
-    "designation_referentiel": "Sac de Riz Panthère lot de 4"
+    "designation_referentiel": "Sac de Riz Panthère lot de 4",
+    "lot_partage_unites": 4
   },
   {
     "reference": "RIZ-006",
@@ -109,7 +116,8 @@
     "badge_format": "22 kg",
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/panthere.webp",
-    "designation_referentiel": "Sac de Riz Panthère"
+    "designation_referentiel": "Sac de Riz Panthère",
+    "lot_partage_unites": null
   },
   {
     "reference": "RIZ-009",
@@ -123,7 +131,8 @@
     "badge_format": "45 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/panthere.webp",
-    "designation_referentiel": "Sac de Riz Panthère"
+    "designation_referentiel": "Sac de Riz Panthère",
+    "lot_partage_unites": null
   },
   {
     "reference": "CNS-001",
@@ -137,7 +146,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/sardine-belma.webp",
-    "designation_referentiel": "Boites de sardines BELMA"
+    "designation_referentiel": "Boites de sardines BELMA",
+    "lot_partage_unites": 50
   },
   {
     "reference": "CNS-004",
@@ -151,7 +161,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/africa-queen.webp",
-    "designation_referentiel": "Maquereaux AFRICA QUEEN"
+    "designation_referentiel": "Maquereaux AFRICA QUEEN",
+    "lot_partage_unites": 24
   },
   {
     "reference": "CNS-005",
@@ -165,7 +176,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/cassoulet.webp",
-    "designation_referentiel": "Boite de Cassoulet"
+    "designation_referentiel": "Boite de Cassoulet",
+    "lot_partage_unites": 50
   },
   {
     "reference": "CNS-006",
@@ -179,7 +191,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/royal.webp",
-    "designation_referentiel": "Petits Poids Royal"
+    "designation_referentiel": "Petits Poids Royal",
+    "lot_partage_unites": 12
   },
   {
     "reference": "CNS-007",
@@ -193,7 +206,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/macedoine.webp",
-    "designation_referentiel": "Macédoine"
+    "designation_referentiel": "Macédoine",
+    "lot_partage_unites": 12
   },
   {
     "reference": "CNS-008",
@@ -207,7 +221,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/pp-carottes.webp",
-    "designation_referentiel": "Petit Poids Carottes"
+    "designation_referentiel": "Petit Poids Carottes",
+    "lot_partage_unites": 12
   },
   {
     "reference": "CNS-009",
@@ -221,7 +236,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/mais.webp",
-    "designation_referentiel": "Boite de Mais"
+    "designation_referentiel": "Boite de Mais",
+    "lot_partage_unites": 12
   },
   {
     "reference": "CNS-010",
@@ -235,7 +251,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/lentilles.webp",
-    "designation_referentiel": "Lentilles"
+    "designation_referentiel": "Lentilles",
+    "lot_partage_unites": 12
   },
   {
     "reference": "POI-001",
@@ -249,7 +266,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/bar.webp",
-    "designation_referentiel": "Bar M"
+    "designation_referentiel": "Bar M",
+    "lot_partage_unites": null
   },
   {
     "reference": "POI-003",
@@ -263,7 +281,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/maquereaux-frais.webp",
-    "designation_referentiel": "Maquereaux Frais 500G+"
+    "designation_referentiel": "Maquereaux Frais 500G+",
+    "lot_partage_unites": null
   },
   {
     "reference": "VOL-001",
@@ -277,7 +296,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/cuisse.webp",
-    "designation_referentiel": "Cuisse de Poulet BRESIL"
+    "designation_referentiel": "Cuisse de Poulet BRESIL",
+    "lot_partage_unites": null
   },
   {
     "reference": "VOL-002",
@@ -291,7 +311,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/cuisse.webp",
-    "designation_referentiel": "Cuisse de Poulet USA"
+    "designation_referentiel": "Cuisse de Poulet USA",
+    "lot_partage_unites": null
   },
   {
     "reference": "VOL-003",
@@ -305,7 +326,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/pilons.webp",
-    "designation_referentiel": "Pilons de Poulets USA"
+    "designation_referentiel": "Pilons de Poulets USA",
+    "lot_partage_unites": null
   },
   {
     "reference": "VOL-004",
@@ -319,7 +341,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/pilons.webp",
-    "designation_referentiel": "Pilons de Poulets BRESIL"
+    "designation_referentiel": "Pilons de Poulets BRESIL",
+    "lot_partage_unites": null
   },
   {
     "reference": "VOL-005",
@@ -333,7 +356,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/ailes-dinde.webp",
-    "designation_referentiel": "Ailes de Dindes USA"
+    "designation_referentiel": "Ailes de Dindes USA",
+    "lot_partage_unites": null
   },
   {
     "reference": "VOL-006",
@@ -347,7 +371,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/caille.webp",
-    "designation_referentiel": "Chaire de caille entière"
+    "designation_referentiel": "Chaire de caille entière",
+    "lot_partage_unites": null
   },
   {
     "reference": "VIA-001",
@@ -361,7 +386,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/queue-boeuf.webp",
-    "designation_referentiel": "Queue de Bœuf"
+    "designation_referentiel": "Queue de Bœuf",
+    "lot_partage_unites": null
   },
   {
     "reference": "VIA-002",
@@ -375,7 +401,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/ragout-avant.webp",
-    "designation_referentiel": "Ragout avant supérieur"
+    "designation_referentiel": "Ragout avant supérieur",
+    "lot_partage_unites": null
   },
   {
     "reference": "VIA-003",
@@ -389,7 +416,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/ragout-arriere.webp",
-    "designation_referentiel": "Ragout arrière"
+    "designation_referentiel": "Ragout arrière",
+    "lot_partage_unites": null
   },
   {
     "reference": "VIA-004",
@@ -403,7 +431,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/rognons.webp",
-    "designation_referentiel": "Rognons de Bœuf"
+    "designation_referentiel": "Rognons de Bœuf",
+    "lot_partage_unites": null
   },
   {
     "reference": "EPI-002",
@@ -417,7 +446,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/nido.webp",
-    "designation_referentiel": "Lait en Poudre NIDO 400g"
+    "designation_referentiel": "Lait en Poudre NIDO 400g",
+    "lot_partage_unites": 12
   },
   {
     "reference": "EPI-005",
@@ -431,7 +461,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/cebon.webp",
-    "designation_referentiel": "Lait concentré sucré Cebon"
+    "designation_referentiel": "Lait concentré sucré Cebon",
+    "lot_partage_unites": 24
   },
   {
     "reference": "EPI-004",
@@ -445,7 +476,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/bonnet-rouge.webp",
-    "designation_referentiel": "Lait Concentré Non sucré"
+    "designation_referentiel": "Lait Concentré Non sucré",
+    "lot_partage_unites": 24
   },
   {
     "reference": "EPI-006",
@@ -459,7 +491,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/quaker.webp",
-    "designation_referentiel": "Flocons d’Avoine QUAKER"
+    "designation_referentiel": "Flocons d’Avoine QUAKER",
+    "lot_partage_unites": 24
   },
   {
     "reference": "EPI-007",
@@ -473,7 +506,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/oeufs.webp",
-    "designation_referentiel": "Œufs"
+    "designation_referentiel": "Œufs",
+    "lot_partage_unites": null
   },
   {
     "reference": "EPI-008",
@@ -487,7 +521,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/oeufs-caille.webp",
-    "designation_referentiel": "Œufs de caille"
+    "designation_referentiel": "Œufs de caille",
+    "lot_partage_unites": null
   },
   {
     "reference": "EPI-009",
@@ -501,7 +536,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/saucisse.webp",
-    "designation_referentiel": "Saucisses"
+    "designation_referentiel": "Saucisses",
+    "lot_partage_unites": 24
   },
   {
     "reference": "EPI-011",
@@ -515,7 +551,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/familia.webp",
-    "designation_referentiel": "Beurre FAMILIA 250g"
+    "designation_referentiel": "Beurre FAMILIA 250g",
+    "lot_partage_unites": 12
   },
   {
     "reference": "EPI-013",
@@ -529,7 +566,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/sucre.webp",
-    "designation_referentiel": "Sucre Blanc TATY"
+    "designation_referentiel": "Sucre Blanc TATY",
+    "lot_partage_unites": 25
   },
   {
     "reference": "EPI-014",
@@ -543,7 +581,8 @@
     "badge_format": "1 L",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/huile.webp",
-    "designation_referentiel": "Huile Cuisin’Or 1L"
+    "designation_referentiel": "Huile Cuisin’Or 1L",
+    "lot_partage_unites": 12
   },
   {
     "reference": "EPI-016",
@@ -557,7 +596,8 @@
     "badge_format": "2 L",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/huile.webp",
-    "designation_referentiel": "Huile Cuisin’Or 2L"
+    "designation_referentiel": "Huile Cuisin’Or 2L",
+    "lot_partage_unites": 6
   },
   {
     "reference": "EPI-027",
@@ -571,7 +611,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/oki.webp",
-    "designation_referentiel": "Huile OKI 1L"
+    "designation_referentiel": "Huile OKI 1L",
+    "lot_partage_unites": 12
   },
   {
     "reference": "EPI-017",
@@ -585,7 +626,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/cube-maggi.webp",
-    "designation_referentiel": "Cube"
+    "designation_referentiel": "Cube",
+    "lot_partage_unites": 24
   },
   {
     "reference": "EPI-018",
@@ -599,7 +641,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/sel.webp",
-    "designation_referentiel": "Sel"
+    "designation_referentiel": "Sel",
+    "lot_partage_unites": 25
   },
   {
     "reference": "EPI-019",
@@ -613,7 +656,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/tomate.webp",
-    "designation_referentiel": "Tomates en boites 400g"
+    "designation_referentiel": "Tomates en boites 400g",
+    "lot_partage_unites": 24
   },
   {
     "reference": "EPI-021",
@@ -627,7 +671,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/tomate-entiere.webp",
-    "designation_referentiel": "Tomates entière Pelées SALSA"
+    "designation_referentiel": "Tomates entière Pelées SALSA",
+    "lot_partage_unites": 24
   },
   {
     "reference": "EPI-022",
@@ -641,7 +686,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/spaghetti.webp",
-    "designation_referentiel": "Spaghetti 500g"
+    "designation_referentiel": "Spaghetti 500g",
+    "lot_partage_unites": 20
   },
   {
     "reference": "EPI-024",
@@ -655,7 +701,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/moutarde.webp",
-    "designation_referentiel": "Moutarde"
+    "designation_referentiel": "Moutarde",
+    "lot_partage_unites": 12
   },
   {
     "reference": "EPI-025",
@@ -669,7 +716,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/mayonnaise.webp",
-    "designation_referentiel": "Mayonnaise"
+    "designation_referentiel": "Mayonnaise",
+    "lot_partage_unites": 12
   },
   {
     "reference": "EPI-026",
@@ -683,7 +731,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/vinaigre.webp",
-    "designation_referentiel": "Vinaigre"
+    "designation_referentiel": "Vinaigre",
+    "lot_partage_unites": 12
   },
   {
     "reference": "ENT-002",
@@ -697,7 +746,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/mrshine.webp",
-    "designation_referentiel": "Bidon d’entretien Mr Shyne"
+    "designation_referentiel": "Bidon d’entretien Mr Shyne",
+    "lot_partage_unites": 3
   },
   {
     "reference": "ENT-004",
@@ -711,7 +761,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/javel.webp",
-    "designation_referentiel": "Eau de javel"
+    "designation_referentiel": "Eau de javel",
+    "lot_partage_unites": 12
   },
   {
     "reference": "ENT-005",
@@ -725,7 +776,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/papier.webp",
-    "designation_referentiel": "Papier Toilette"
+    "designation_referentiel": "Papier Toilette",
+    "lot_partage_unites": 12
   },
   {
     "reference": "ENT-006",
@@ -739,7 +791,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/savon.webp",
-    "designation_referentiel": "Savon"
+    "designation_referentiel": "Savon",
+    "lot_partage_unites": 60
   },
   {
     "reference": "ASS-001",
@@ -753,7 +806,8 @@
     "badge_format": null,
     "visuel_illustratif": false,
     "image": "assets/img/catalogue/poivre-noir.webp",
-    "designation_referentiel": "Poivre Noir"
+    "designation_referentiel": "Poivre Noir",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-003",
@@ -767,7 +821,8 @@
     "badge_format": "1 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/gingembre-poudre.webp",
-    "designation_referentiel": "Gingembre en poudre"
+    "designation_referentiel": "Gingembre en poudre",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-005",
@@ -781,7 +836,8 @@
     "badge_format": "1 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/oignon-poudre.webp",
-    "designation_referentiel": "Oignons en poudre"
+    "designation_referentiel": "Oignons en poudre",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-023",
@@ -795,7 +851,8 @@
     "badge_format": "1 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/curry.webp",
-    "designation_referentiel": "Curry en poudre"
+    "designation_referentiel": "Curry en poudre",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-013",
@@ -809,7 +866,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/oignon-rouge.webp",
-    "designation_referentiel": "Oignon rouge"
+    "designation_referentiel": "Oignon rouge",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-014",
@@ -823,7 +881,8 @@
     "badge_format": "80 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/caisse-poivrons.webp",
-    "designation_referentiel": "Poivron vert"
+    "designation_referentiel": "Poivron vert",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-024",
@@ -837,7 +896,8 @@
     "badge_format": "80 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/caisse-tomates.webp",
-    "designation_referentiel": "Tomates en fruit"
+    "designation_referentiel": "Tomates en fruit",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-018",
@@ -851,7 +911,8 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/oseille.webp",
-    "designation_referentiel": "Feuilles d’Oseille"
+    "designation_referentiel": "Feuilles d’Oseille",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-016",
@@ -865,7 +926,8 @@
     "badge_format": "5 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/arachide.webp",
-    "designation_referentiel": "Patte d’arachide"
+    "designation_referentiel": "Patte d’arachide",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-017",
@@ -879,7 +941,8 @@
     "badge_format": "10 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/arachide.webp",
-    "designation_referentiel": "Patte d’arachide"
+    "designation_referentiel": "Patte d’arachide",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-011",
@@ -893,7 +956,8 @@
     "badge_format": "6 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/persil.webp",
-    "designation_referentiel": "Persil"
+    "designation_referentiel": "Persil",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-012",
@@ -907,7 +971,8 @@
     "badge_format": "6 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/basilic.webp",
-    "designation_referentiel": "Basilic"
+    "designation_referentiel": "Basilic",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-010",
@@ -921,7 +986,8 @@
     "badge_format": "6 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/celeri.webp",
-    "designation_referentiel": "Cèleri"
+    "designation_referentiel": "Cèleri",
+    "lot_partage_unites": null
   },
   {
     "reference": "ASS-025",
@@ -935,7 +1001,8 @@
     "badge_format": "6 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/poireaux.webp",
-    "designation_referentiel": "Poireaux"
+    "designation_referentiel": "Poireaux",
+    "lot_partage_unites": null
   },
   {
     "reference": "FEC-001",
@@ -949,6 +1016,7 @@
     "badge_format": null,
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/banane.webp",
-    "designation_referentiel": "Banane Plantin"
+    "designation_referentiel": "Banane Plantin",
+    "lot_partage_unites": null
   }
 ]

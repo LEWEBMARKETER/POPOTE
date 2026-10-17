@@ -398,6 +398,14 @@
   border: 1px solid var(--border);
   font-size: 0.85rem;
 }
+.cat-list-mode-fixed { font-size: 0.82rem; color: var(--ink-soft); font-style: italic; }
+.cat-list-item-price {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--green-800);
+}
 .cat-list-empty { padding: 30px 20px; text-align: center; color: var(--ink-soft); font-size: 0.9rem; }
 .cat-list-footer { padding: 16px 20px 20px; border-top: 1px solid var(--border); }
 .cat-list-note { font-size: 0.78rem; color: var(--ink-soft); margin: 0 0 12px; }
