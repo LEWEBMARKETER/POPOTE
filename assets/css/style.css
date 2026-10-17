@@ -532,6 +532,8 @@ details.faq-item .faq-answer {
   font-size: 0.96rem;
 }
 details.faq-item .faq-answer ul { margin: 8px 0 0; padding-left: 20px; }
+details.faq-item .faq-answer p { margin: 8px 0 0; }
+details.faq-item .faq-answer p:first-child { margin-top: 0; }
 
 /* ---- Contact ---- */
 .contact-grid {
