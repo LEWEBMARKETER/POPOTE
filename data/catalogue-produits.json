@@ -514,15 +514,16 @@
     "nom": "Œufs de caille",
     "famille": "Produits d’épicerie",
     "ordre_famille": 6,
-    "conditionnement": "La palette",
-    "prix_gros_fcfa": 3800,
+    "conditionnement": "Carton de 12 palettes",
+    "prix_gros_fcfa": 45600,
     "prix_a_partir_de": false,
-    "unite_prix": "PALETTE",
-    "badge_format": null,
+    "unite_prix": "CARTON",
+    "badge_format": "12 palettes",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/oeufs-caille.webp",
     "designation_referentiel": "Œufs de caille",
-    "lot_partage_unites": null
+    "lot_partage_unites": 12,
+    "lot_partage_unite_label": "palette"
   },
   {
     "reference": "EPI-009",

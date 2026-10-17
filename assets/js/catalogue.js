@@ -45,11 +45,18 @@
       "Merci !";
   }
 
+  // Libellé de l'unité de quantité en mode "Lot partagé" (kg, palette, pièce...).
+  // "kg" ne se pluralise pas ; les autres unités prennent un "(s)".
+  function shareUnitLabel(it) {
+    var label = it.lot_partage_unite_label || "pièce";
+    return label === "kg" ? "kg" : label + "(s)";
+  }
+
   function listMessage(items, info, refInfo) {
     var totals = computeTotals(items);
     var lines = items.map(function (it, i) {
       var ref = it.reference || "Référence à attribuer";
-      var qteUnit = it.option === "Lot partagé" ? (it.lot_partage_unite_label === "kg" ? "kg" : "pièce(s)") : "lot(s)";
+      var qteUnit = it.option === "Lot partagé" ? shareUnitLabel(it) : "lot(s)";
       return (i + 1) + ". " + it.nom + " — Réf. " + ref + " — " + it.option + " — Qté : " + it.quantite + " " + qteUnit;
     });
     var refLabel = refInfo.ref + (refInfo.version > 1 ? " (v" + refInfo.version + ")" : "");
@@ -531,7 +538,7 @@
             '<label><input type="radio" name="opt-' + i + '" value="Lot partagé" ' + (it.option === "Lot partagé" ? "checked" : "") + '> Lot partagé</label>'
           : '<span class="cat-list-mode-fixed">Lot complet (produit non divisible)</span>';
         var qtyLabel = it.option === "Lot partagé"
-          ? (it.lot_partage_unite_label === "kg" ? "Qté (kg)" : "Qté (pièces)")
+          ? "Qté (" + shareUnitLabel(it).replace("(s)", "s") + ")"
           : "Qté (lots)";
         var amount = lineAmount(it);
         var amountHtml = amount === null
