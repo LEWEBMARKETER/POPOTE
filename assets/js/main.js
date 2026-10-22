@@ -15,40 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  var FAMILY_ICONS = {
-    "Riz": "🌾",
-    "Conserves": "🥫",
-    "Poissons": "🐟",
-    "Volailles": "🍗",
-    "Viandes": "🥩",
-    "Produits d’épicerie": "🛒",
-    "Produits d’entretien": "🧼",
-    "Épices et assaisonnements": "🧂",
-    "Féculents": "🍌"
-  };
-
-  // Aperçu du catalogue sur l'accueil (familles réelles du catalogue du mois)
-  var catPreview = document.getElementById("catalogue-preview-root");
-  if (catPreview) {
-    fetch("data/catalogue-produits.json?v=20261022")
-      .then(function (res) { return res.json(); })
-      .then(function (products) { renderCataloguePreview(products, catPreview); })
-      .catch(function () {});
-  }
-
-  function renderCataloguePreview(products, root) {
-    products.sort(function (a, b) { return a.ordre_famille - b.ordre_famille; });
-    var families = [];
-    products.forEach(function (p) {
-      if (families.indexOf(p.famille) === -1) families.push(p.famille);
-    });
-    var html = families.map(function (fam) {
-      var icon = FAMILY_ICONS[fam] || "🛍️";
-      return '<div class="cat-preview-card"><div class="emoji">' + icon + "</div><h3>" + fam + "</h3></div>";
-    }).join("");
-    root.innerHTML = html;
-  }
-
   // Année dynamique dans le footer
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
