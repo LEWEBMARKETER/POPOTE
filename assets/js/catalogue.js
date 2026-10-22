@@ -7,6 +7,7 @@
   var CATALOGUE_LABEL = "Catalogue Octobre 2026";
   var CAMPAGNE_LABEL = "Octobre 2026";
   var DATA_URL = "data/catalogue-produits.json?v=20261022";
+  var PACKS_URL = "data/packs-alimentaires.json?v=20261022";
   var STORAGE_KEY = "popote_ma_liste_octobre_2026";
   var ADHERENTE_KEY = "popote_adherente_info";
   var REF_STATE_KEY = "popote_proforma_ref_state";
@@ -457,6 +458,7 @@
   }
 
   var maListe = loadList();
+  var catalogueProducts = null;
 
   // --- Identification de l'adhérente (localStorage, jamais transmise à un serveur) ---
   function loadAdherente() {
@@ -497,6 +499,42 @@
     }
     saveList(maListe);
     renderListUI();
+  }
+
+  // Ajoute l'ensemble des produits d'un pack alimentaire à Ma liste en une
+  // fois, en respectant la quantité et le mode (lot complet/partagé) prévus
+  // par la composition du pack. Un article déjà présent dans Ma liste avec
+  // exactement la même référence et le même mode voit sa quantité augmentée
+  // (plutôt que dupliqué) ; un même produit dans un mode différent crée une
+  // ligne distincte, pour ne jamais mélanger des quantités de nature différente.
+  function addPackToList(items) {
+    if (!catalogueProducts) return;
+    items.forEach(function (it) {
+      var product = catalogueProducts.find(function (p) { return p.reference === it.reference; });
+      if (!product) return;
+      var existing = maListe.find(function (x) {
+        return (x.reference || x.nom) === it.reference && x.option === it.option;
+      });
+      if (existing) {
+        existing.quantite += it.quantite;
+      } else {
+        maListe.push({
+          reference: product.reference,
+          nom: product.nom,
+          conditionnement: product.conditionnement,
+          unite_prix: product.unite_prix,
+          prix_gros_fcfa: product.prix_gros_fcfa,
+          prix_a_partir_de: !!product.prix_a_partir_de,
+          lot_partage_unites: product.lot_partage_unites || null,
+          lot_partage_unite_label: product.lot_partage_unite_label || null,
+          option: it.option,
+          quantite: it.quantite
+        });
+      }
+    });
+    saveList(maListe);
+    renderListUI();
+    openPanel();
   }
 
   function removeFromList(index) {
@@ -761,6 +799,7 @@
 
     function init(products) {
       products.sort(function (a, b) { return a.ordre_famille - b.ordre_famille; });
+      catalogueProducts = products;
 
       var families = [];
       products.forEach(function (p) {
@@ -770,6 +809,7 @@
       renderTabs(families);
       renderGrid(products, families);
       renderListUI();
+      renderPacks();
 
       searchInput.addEventListener("input", function () {
         renderGrid(products, families, searchInput.value.trim().toLowerCase());
@@ -912,6 +952,112 @@
               btn.textContent = "+ Ajouter à ma liste";
             }, 1400);
           }
+        });
+      });
+    }
+
+    // ---- Packs alimentaires (data/packs-alimentaires.json) ----
+    var packsData = null;
+    var activePackBudget = null;
+    var packsTabsRoot = document.getElementById("cat-packs-tabs-root");
+    var packsGridRoot = document.getElementById("cat-packs-grid-root");
+
+    function renderPacks() {
+      if (!packsTabsRoot || !packsGridRoot) return;
+      fetch(PACKS_URL)
+        .then(function (res) { return res.json(); })
+        .then(function (packs) {
+          packsData = packs;
+          var budgets = [];
+          packs.forEach(function (p) {
+            if (budgets.indexOf(p.budget) === -1) budgets.push(p.budget);
+          });
+          budgets.sort(function (a, b) { return a - b; });
+          activePackBudget = budgets[0];
+          renderPackTabs(budgets);
+          renderPackGrid();
+        })
+        .catch(function () { /* section simplement absente si indisponible */ });
+    }
+
+    function renderPackTabs(budgets) {
+      packsTabsRoot.innerHTML = budgets.map(function (b) {
+        return '<button type="button" class="cat-pack-tab' + (b === activePackBudget ? " active" : "") +
+          '" data-budget="' + b + '">' + formatPrice(b) + ' FCFA</button>';
+      }).join("");
+
+      packsTabsRoot.addEventListener("click", function (e) {
+        var btn = e.target.closest(".cat-pack-tab");
+        if (!btn) return;
+        activePackBudget = parseInt(btn.getAttribute("data-budget"), 10);
+        packsTabsRoot.querySelectorAll(".cat-pack-tab").forEach(function (b) {
+          b.classList.toggle("active", parseInt(b.getAttribute("data-budget"), 10) === activePackBudget);
+        });
+        renderPackGrid();
+      });
+    }
+
+    function packItemAmount(it) {
+      var product = catalogueProducts.find(function (p) { return p.reference === it.reference; });
+      if (!product) return 0;
+      return lineAmount({
+        prix_gros_fcfa: product.prix_gros_fcfa,
+        lot_partage_unites: product.lot_partage_unites,
+        option: it.option,
+        quantite: it.quantite
+      }) || 0;
+    }
+
+    function packCard(pack) {
+      var subtotal = pack.items.reduce(function (sum, it) { return sum + packItemAmount(it); }, 0);
+      var imagesHtml = pack.images.map(function (src) {
+        return '<img src="' + src + '" alt="" loading="lazy">';
+      }).join("");
+      var itemsHtml = pack.items.map(function (it) {
+        var qteUnit = it.option === "Lot partagé"
+          ? (function () {
+              var product = catalogueProducts.find(function (p) { return p.reference === it.reference; });
+              var label = (product && product.lot_partage_unite_label) || "pièce";
+              return label === "kg" ? "kg" : label + "(s)";
+            })()
+          : "lot(s)";
+        return '<li>' + it.nom + ' — ' + it.option + ' — Qté ' + it.quantite + ' ' + qteUnit +
+          ' — <strong>' + formatPrice(packItemAmount(it)) + ' F</strong></li>';
+      }).join("");
+
+      return '' +
+        '<article class="cat-pack-card">' +
+          '<div class="cat-pack-images">' + imagesHtml + '</div>' +
+          '<div class="cat-pack-body">' +
+            '<span class="cat-pack-letter">' + pack.lettre + '</span>' +
+            '<h3>' + pack.titre + '</h3>' +
+            '<p class="cat-pack-price">Budget : <strong>' + formatPrice(pack.budget) + ' FCFA</strong></p>' +
+            '<p class="cat-pack-sub">≈ ' + formatPrice(subtotal) + ' FCFA de produits, commission POPOTE incluse dans le budget</p>' +
+            '<details class="cat-pack-detail">' +
+              '<summary>Voir le détail (' + pack.items.length + ' produits)</summary>' +
+              '<ul>' + itemsHtml + '</ul>' +
+            '</details>' +
+            '<button type="button" class="btn btn-green cat-pack-add" data-pack-id="' + pack.id + '">Ajouter ce pack à Ma liste</button>' +
+          '</div>' +
+        '</article>';
+    }
+
+    function renderPackGrid() {
+      var packs = packsData.filter(function (p) { return p.budget === activePackBudget; });
+      packs.sort(function (a, b) { return a.proposition - b.proposition; });
+      packsGridRoot.innerHTML = packs.map(packCard).join("");
+
+      packsGridRoot.querySelectorAll(".cat-pack-add").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var pack = packsData.find(function (p) { return p.id === btn.getAttribute("data-pack-id"); });
+          if (!pack) return;
+          addPackToList(pack.items);
+          btn.classList.add("added");
+          btn.textContent = "✓ Ajouté à Ma liste";
+          setTimeout(function () {
+            btn.classList.remove("added");
+            btn.textContent = "Ajouter ce pack à Ma liste";
+          }, 1600);
         });
       });
     }

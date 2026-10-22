@@ -860,15 +860,15 @@
     "nom": "Oignons rouges",
     "famille": "Épices et assaisonnements",
     "ordre_famille": 8,
-    "conditionnement": "Le sac",
+    "conditionnement": "Sac de 20 kg",
     "prix_gros_fcfa": 19000,
     "prix_a_partir_de": false,
     "unite_prix": "SAC",
-    "badge_format": null,
+    "badge_format": "20 kg",
     "visuel_illustratif": true,
     "image": "assets/img/catalogue/oignon-rouge.webp",
     "designation_referentiel": "Oignon rouge",
-    "lot_partage_unites": 25,
+    "lot_partage_unites": 20,
     "lot_partage_unite_label": "kg"
   },
   {
