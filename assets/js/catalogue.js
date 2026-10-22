@@ -190,12 +190,15 @@
     return { ref: ref, version: 1 };
   }
 
-  function generateProformaPDF() {
-    if (!maListe.length) return;
-    if (!adherenteInfo || !adherenteInfo.nom || !adherenteInfo.tel || !adherenteInfo.quartier) return;
+  // Construit le document PDF de la proforma et le renvoie, sans l'enregistrer
+  // ni le transmettre nulle part — à charge de l'appelant (téléchargement direct
+  // ou partage WhatsApp) de décider quoi en faire.
+  function buildProformaDoc() {
+    if (!maListe.length) return null;
+    if (!adherenteInfo || !adherenteInfo.nom || !adherenteInfo.tel || !adherenteInfo.quartier) return null;
     if (!window.jspdf || !window.jspdf.jsPDF) {
       alert("Le générateur de PDF n'a pas pu se charger. Réessayez ou contactez-nous sur WhatsApp.");
-      return;
+      return null;
     }
     var jsPDFlib = window.jspdf.jsPDF;
     var doc = new jsPDFlib({ unit: "mm", format: "a4" });
@@ -415,7 +418,13 @@
     doc.setFont("helvetica", "italic");
     doc.text("Ensemble achetons mieux !", margin, pageHeight - 5);
 
-    doc.save(refInfo.ref + ".pdf");
+    return { doc: doc, refInfo: refInfo };
+  }
+
+  function generateProformaPDF() {
+    var result = buildProformaDoc();
+    if (!result) return;
+    result.doc.save(result.refInfo.ref + ".pdf");
   }
 
   // --- Ma liste (localStorage) ---
@@ -630,10 +639,46 @@
   if (idCloseBtn) idCloseBtn.addEventListener("click", closeIdPanel);
   if (idOverlay) idOverlay.addEventListener("click", closeIdPanel);
 
+  // Envoie la précommande sur WhatsApp. Quand le téléphone le permet (partage
+  // natif avec fichier), ouvre directement le menu de partage du système avec
+  // la proforma PDF déjà jointe et le message prérempli : l'adhérente choisit
+  // WhatsApp et envoie, sans avoir à télécharger puis rattacher le fichier
+  // elle-même. Sur les navigateurs qui ne supportent pas le partage de
+  // fichiers (essentiellement le desktop), on retombe sur l'ancien
+  // comportement : ouverture d'un lien WhatsApp avec le texte seul.
   function sendListWhatsApp() {
-    var refInfo = getOrCreateProformaRef();
+    var result = buildProformaDoc();
+    var refInfo = result ? result.refInfo : getOrCreateProformaRef();
     var msg = listMessage(maListe, adherenteInfo, refInfo);
-    window.open(waLink(msg), "_blank", "noopener");
+
+    function openTextOnlyLink() {
+      window.open(waLink(msg), "_blank", "noopener");
+    }
+
+    if (!result || !navigator.share || !navigator.canShare) {
+      openTextOnlyLink();
+      return;
+    }
+
+    var blob = result.doc.output("blob");
+    var file;
+    try {
+      file = new File([blob], refInfo.ref + ".pdf", { type: "application/pdf" });
+    } catch (e) {
+      openTextOnlyLink();
+      return;
+    }
+
+    if (!navigator.canShare({ files: [file] })) {
+      openTextOnlyLink();
+      return;
+    }
+
+    navigator.share({ files: [file], text: msg }).catch(function (err) {
+      // L'adhérente a annulé le partage : ce n'est pas une erreur, on ne force rien.
+      if (err && err.name === "AbortError") return;
+      openTextOnlyLink();
+    });
   }
 
   if (idForm) {
