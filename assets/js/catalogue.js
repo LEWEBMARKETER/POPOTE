@@ -781,6 +781,8 @@
     var tabsRoot = document.getElementById("cat-tabs-root");
     var countRoot = document.getElementById("cat-count-root");
     var searchInput = document.getElementById("cat-search-input");
+    var packsTabsRoot = document.getElementById("cat-packs-tabs-root");
+    var packsGridRoot = document.getElementById("cat-packs-grid-root");
 
     if (!grid) return;
 
@@ -959,8 +961,6 @@
     // ---- Packs alimentaires (data/packs-alimentaires.json) ----
     var packsData = null;
     var activePackBudget = null;
-    var packsTabsRoot = document.getElementById("cat-packs-tabs-root");
-    var packsGridRoot = document.getElementById("cat-packs-grid-root");
 
     function renderPacks() {
       if (!packsTabsRoot || !packsGridRoot) return;
