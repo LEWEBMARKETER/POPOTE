@@ -1,0 +1,1592 @@
+[
+  {
+    "id": "pack-50000-1",
+    "budget": 50000,
+    "proposition": 1,
+    "lettre": "A",
+    "titre": "Poisson et essentiels",
+    "images": [
+      "assets/img/catalogue/maquereaux-frais.webp",
+      "assets/img/catalogue/huile.webp",
+      "assets/img/catalogue/panthere.webp"
+    ],
+    "items": [
+      {
+        "reference": "POI-003",
+        "nom": "Maquereaux frais 500 g+",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "RIZ-003",
+        "nom": "Riz Panthère — lot de 4 sacs",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 10,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-019",
+        "nom": "Tomates en boîte 400 g",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-001",
+        "nom": "Sardines BELMA",
+        "quantite": 6,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-006",
+        "nom": "Petits pois ROYAL",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-007",
+        "nom": "Macédoine",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-005",
+        "nom": "Cassoulet",
+        "quantite": 2,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-50000-2",
+    "budget": 50000,
+    "proposition": 2,
+    "lettre": "B",
+    "titre": "Volaille, légumes et conserves",
+    "images": [
+      "assets/img/catalogue/pilons.webp",
+      "assets/img/catalogue/cuisse.webp",
+      "assets/img/catalogue/panthere.webp"
+    ],
+    "items": [
+      {
+        "reference": "VOL-002",
+        "nom": "Cuisses de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-003",
+        "nom": "Pilons de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "RIZ-003",
+        "nom": "Riz Panthère — lot de 4 sacs",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-007",
+        "nom": "Macédoine",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-006",
+        "nom": "Petits pois ROYAL",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-005",
+        "nom": "Cassoulet",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 10,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-001",
+        "nom": "Sardines BELMA",
+        "quantite": 3,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-50000-3",
+    "budget": 50000,
+    "proposition": 3,
+    "lettre": "C",
+    "titre": "Caille, œufs et épicerie",
+    "images": [
+      "assets/img/catalogue/ailes-dinde.webp",
+      "assets/img/catalogue/panthere.webp",
+      "assets/img/catalogue/oeufs.webp"
+    ],
+    "items": [
+      {
+        "reference": "VOL-005",
+        "nom": "Ailes de dinde — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-006",
+        "nom": "Caille entière",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-007",
+        "nom": "Œufs",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "RIZ-003",
+        "nom": "Riz Panthère — lot de 4 sacs",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 9,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-025",
+        "nom": "Mayonnaise",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-019",
+        "nom": "Tomates en boîte 400 g",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-006",
+        "nom": "Petits pois ROYAL",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-007",
+        "nom": "Macédoine",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-005",
+        "nom": "Cassoulet",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-006",
+        "nom": "Savon",
+        "quantite": 1,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-80000-1",
+    "budget": 80000,
+    "proposition": 1,
+    "lettre": "A",
+    "titre": "Deux protéines et banane",
+    "images": [
+      "assets/img/catalogue/ailes-dinde.webp",
+      "assets/img/catalogue/maquereaux-frais.webp",
+      "assets/img/catalogue/panthere.webp"
+    ],
+    "items": [
+      {
+        "reference": "POI-003",
+        "nom": "Maquereaux frais 500 g+",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-005",
+        "nom": "Ailes de dinde — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "RIZ-006",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "FEC-001",
+        "nom": "Banane plantain",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 11,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-006",
+        "nom": "Petits pois ROYAL",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-007",
+        "nom": "Macédoine",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-019",
+        "nom": "Tomates en boîte 400 g",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-005",
+        "nom": "Cassoulet",
+        "quantite": 1,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-80000-2",
+    "budget": 80000,
+    "proposition": 2,
+    "lettre": "B",
+    "titre": "Volaille et maison",
+    "images": [
+      "assets/img/catalogue/panthere.webp",
+      "assets/img/catalogue/pilons.webp",
+      "assets/img/catalogue/cuisse.webp"
+    ],
+    "items": [
+      {
+        "reference": "VOL-002",
+        "nom": "Cuisses de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-003",
+        "nom": "Pilons de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "RIZ-006",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-007",
+        "nom": "Œufs",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 13,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-004",
+        "nom": "Eau de javel",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-006",
+        "nom": "Savon",
+        "quantite": 9,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-005",
+        "nom": "Papier toilette",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-024",
+        "nom": "Moutarde",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-025",
+        "nom": "Mayonnaise",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-007",
+        "nom": "Macédoine",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-019",
+        "nom": "Tomates en boîte 400 g",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-005",
+        "nom": "Cassoulet",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-014",
+        "nom": "Poivrons verts — caisse 80 kg",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-013",
+        "nom": "Sucre blanc TATY",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-018",
+        "nom": "Sel",
+        "quantite": 2,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-80000-3",
+    "budget": 80000,
+    "proposition": 3,
+    "lettre": "C",
+    "titre": "Poisson, cailles et conserves",
+    "images": [
+      "assets/img/catalogue/bar.webp",
+      "assets/img/catalogue/maquereaux-frais.webp",
+      "assets/img/catalogue/panthere.webp"
+    ],
+    "items": [
+      {
+        "reference": "POI-001",
+        "nom": "Bar M",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "POI-003",
+        "nom": "Maquereaux frais 500 g+",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-006",
+        "nom": "Caille entière",
+        "quantite": 2,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-008",
+        "nom": "Œufs de caille",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "RIZ-003",
+        "nom": "Riz Panthère — lot de 4 sacs",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-001",
+        "nom": "Sardines BELMA",
+        "quantite": 6,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-005",
+        "nom": "Cassoulet",
+        "quantite": 9,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-007",
+        "nom": "Macédoine",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-019",
+        "nom": "Tomates en boîte 400 g",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-014",
+        "nom": "Poivrons verts — caisse 80 kg",
+        "quantite": 1,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-90000-1",
+    "budget": 90000,
+    "proposition": 1,
+    "lettre": "A",
+    "titre": "Banane et protéines",
+    "images": [
+      "assets/img/catalogue/ailes-dinde.webp",
+      "assets/img/catalogue/panthere.webp",
+      "assets/img/catalogue/pilons.webp"
+    ],
+    "items": [
+      {
+        "reference": "FEC-001",
+        "nom": "Banane plantain",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-005",
+        "nom": "Ailes de dinde — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-003",
+        "nom": "Pilons de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "RIZ-006",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "ASS-023",
+        "nom": "Curry en poudre",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 12,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 6,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 6,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-006",
+        "nom": "Petits pois ROYAL",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-005",
+        "nom": "Cassoulet",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-014",
+        "nom": "Poivrons verts — caisse 80 kg",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-006",
+        "nom": "Savon",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-013",
+        "nom": "Sucre blanc TATY",
+        "quantite": 1,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-90000-2",
+    "budget": 90000,
+    "proposition": 2,
+    "lettre": "B",
+    "titre": "Riz, poisson et entretien",
+    "images": [
+      "assets/img/catalogue/panthere.webp",
+      "assets/img/catalogue/maquereaux-frais.webp",
+      "assets/img/catalogue/huile.webp"
+    ],
+    "items": [
+      {
+        "reference": "RIZ-009",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "POI-003",
+        "nom": "Maquereaux frais 500 g+",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-007",
+        "nom": "Œufs",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 13,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-005",
+        "nom": "Papier toilette",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-004",
+        "nom": "Eau de javel",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-006",
+        "nom": "Savon",
+        "quantite": 11,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-019",
+        "nom": "Tomates en boîte 400 g",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-014",
+        "nom": "Poivrons verts — caisse 80 kg",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-013",
+        "nom": "Sucre blanc TATY",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-018",
+        "nom": "Sel",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-005",
+        "nom": "Lait concentré sucré CEBON",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-009",
+        "nom": "Saucisses",
+        "quantite": 1,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-90000-3",
+    "budget": 90000,
+    "proposition": 3,
+    "lettre": "C",
+    "titre": "Caille et variété",
+    "images": [
+      "assets/img/catalogue/bar.webp",
+      "assets/img/catalogue/panthere.webp",
+      "assets/img/catalogue/cuisse.webp"
+    ],
+    "items": [
+      {
+        "reference": "POI-001",
+        "nom": "Bar M",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-002",
+        "nom": "Cuisses de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-008",
+        "nom": "Œufs de caille",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-006",
+        "nom": "Caille entière",
+        "quantite": 2,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "RIZ-006",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-001",
+        "nom": "Sardines BELMA",
+        "quantite": 8,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-007",
+        "nom": "Macédoine",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-006",
+        "nom": "Petits pois ROYAL",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-025",
+        "nom": "Mayonnaise",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-014",
+        "nom": "Poivrons verts — caisse 80 kg",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-006",
+        "nom": "Savon",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-013",
+        "nom": "Sucre blanc TATY",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-018",
+        "nom": "Sel",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-005",
+        "nom": "Lait concentré sucré CEBON",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-009",
+        "nom": "Saucisses",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-026",
+        "nom": "Vinaigre",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-018",
+        "nom": "Feuilles d’oseille",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 1,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-100000-1",
+    "budget": 100000,
+    "proposition": 1,
+    "lettre": "A",
+    "titre": "Stock familial complet",
+    "images": [
+      "assets/img/catalogue/panthere.webp",
+      "assets/img/catalogue/ailes-dinde.webp",
+      "assets/img/catalogue/maquereaux-frais.webp"
+    ],
+    "items": [
+      {
+        "reference": "RIZ-009",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-005",
+        "nom": "Ailes de dinde — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "POI-003",
+        "nom": "Maquereaux frais 500 g+",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-007",
+        "nom": "Œufs",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 14,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-019",
+        "nom": "Tomates en boîte 400 g",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-014",
+        "nom": "Poivrons verts — caisse 80 kg",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-006",
+        "nom": "Savon",
+        "quantite": 3,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-100000-2",
+    "budget": 100000,
+    "proposition": 2,
+    "lettre": "B",
+    "titre": "Banane et deux volailles",
+    "images": [
+      "assets/img/catalogue/bar.webp",
+      "assets/img/catalogue/panthere.webp",
+      "assets/img/catalogue/pilons.webp"
+    ],
+    "items": [
+      {
+        "reference": "FEC-001",
+        "nom": "Banane plantain",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-002",
+        "nom": "Cuisses de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-003",
+        "nom": "Pilons de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "POI-001",
+        "nom": "Bar M",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "RIZ-006",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 16,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-024",
+        "nom": "Moutarde",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-025",
+        "nom": "Mayonnaise",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-004",
+        "nom": "Eau de javel",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-005",
+        "nom": "Papier toilette",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-006",
+        "nom": "Savon",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-013",
+        "nom": "Sucre blanc TATY",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-018",
+        "nom": "Sel",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-005",
+        "nom": "Lait concentré sucré CEBON",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-009",
+        "nom": "Saucisses",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-026",
+        "nom": "Vinaigre",
+        "quantite": 1,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-100000-3",
+    "budget": 100000,
+    "proposition": 3,
+    "lettre": "C",
+    "titre": "Épicerie et cailles",
+    "images": [
+      "assets/img/catalogue/ailes-dinde.webp",
+      "assets/img/catalogue/panthere.webp",
+      "assets/img/catalogue/huile.webp"
+    ],
+    "items": [
+      {
+        "reference": "RIZ-006",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-005",
+        "nom": "Ailes de dinde — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-006",
+        "nom": "Caille entière",
+        "quantite": 3,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-008",
+        "nom": "Œufs de caille",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-002",
+        "nom": "Lait en poudre NIDO 400 g",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-005",
+        "nom": "Lait concentré sucré CEBON",
+        "quantite": 6,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-001",
+        "nom": "Sardines BELMA",
+        "quantite": 12,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-005",
+        "nom": "Cassoulet",
+        "quantite": 8,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-006",
+        "nom": "Petits pois ROYAL",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-019",
+        "nom": "Tomates en boîte 400 g",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-013",
+        "nom": "Sucre blanc TATY",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-018",
+        "nom": "Sel",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-009",
+        "nom": "Saucisses",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-026",
+        "nom": "Vinaigre",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-025",
+        "nom": "Mayonnaise",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-024",
+        "nom": "Moutarde",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-018",
+        "nom": "Feuilles d’oseille",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 2,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-150000-1",
+    "budget": 150000,
+    "proposition": 1,
+    "lettre": "A",
+    "titre": "Grande réserve familiale",
+    "images": [
+      "assets/img/catalogue/panthere.webp",
+      "assets/img/catalogue/ailes-dinde.webp",
+      "assets/img/catalogue/maquereaux-frais.webp"
+    ],
+    "items": [
+      {
+        "reference": "RIZ-009",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-005",
+        "nom": "Ailes de dinde — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "POI-003",
+        "nom": "Maquereaux frais 500 g+",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-003",
+        "nom": "Pilons de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-007",
+        "nom": "Œufs",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 8,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 22,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-001",
+        "nom": "Sardines BELMA",
+        "quantite": 11,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-005",
+        "nom": "Cassoulet",
+        "quantite": 10,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-019",
+        "nom": "Tomates en boîte 400 g",
+        "quantite": 6,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-004",
+        "nom": "Eau de javel",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-006",
+        "nom": "Savon",
+        "quantite": 10,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-018",
+        "nom": "Sel",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-005",
+        "nom": "Lait concentré sucré CEBON",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-009",
+        "nom": "Saucisses",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-026",
+        "nom": "Vinaigre",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-025",
+        "nom": "Mayonnaise",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-024",
+        "nom": "Moutarde",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-018",
+        "nom": "Feuilles d’oseille",
+        "quantite": 1,
+        "option": "Lot complet"
+      }
+    ]
+  },
+  {
+    "id": "pack-150000-2",
+    "budget": 150000,
+    "proposition": 2,
+    "lettre": "B",
+    "titre": "Viandes et cuisine variée",
+    "images": [
+      "assets/img/catalogue/queue-boeuf.webp",
+      "assets/img/catalogue/bar.webp",
+      "assets/img/catalogue/panthere.webp"
+    ],
+    "items": [
+      {
+        "reference": "VIA-001",
+        "nom": "Queue de bœuf",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "POI-001",
+        "nom": "Bar M",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-002",
+        "nom": "Cuisses de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "RIZ-006",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-008",
+        "nom": "Œufs de caille",
+        "quantite": 2,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-006",
+        "nom": "Caille entière",
+        "quantite": 2,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 6,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 21,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-025",
+        "nom": "Mayonnaise",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-024",
+        "nom": "Moutarde",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-007",
+        "nom": "Macédoine",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-006",
+        "nom": "Petits pois ROYAL",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-014",
+        "nom": "Poivrons verts — caisse 80 kg",
+        "quantite": 3,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-005",
+        "nom": "Lait concentré sucré CEBON",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-009",
+        "nom": "Saucisses",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-026",
+        "nom": "Vinaigre",
+        "quantite": 1,
+        "option": "Lot partagé"
+      }
+    ]
+  },
+  {
+    "id": "pack-150000-3",
+    "budget": 150000,
+    "proposition": 3,
+    "lettre": "C",
+    "titre": "Épicerie, entretien et protéines",
+    "images": [
+      "assets/img/catalogue/panthere.webp",
+      "assets/img/catalogue/ailes-dinde.webp",
+      "assets/img/catalogue/maquereaux-frais.webp"
+    ],
+    "items": [
+      {
+        "reference": "RIZ-009",
+        "nom": "Riz Panthère — sac",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-005",
+        "nom": "Ailes de dinde — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "POI-003",
+        "nom": "Maquereaux frais 500 g+",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "VOL-002",
+        "nom": "Cuisses de poulet — USA",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
+        "reference": "EPI-007",
+        "nom": "Œufs",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-016",
+        "nom": "Huile Cuisin’Or 2 L",
+        "quantite": 6,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-022",
+        "nom": "Spaghetti 500 g",
+        "quantite": 21,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-002",
+        "nom": "Lait en poudre NIDO 400 g",
+        "quantite": 2,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-005",
+        "nom": "Lait concentré sucré CEBON",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "CNS-001",
+        "nom": "Sardines BELMA",
+        "quantite": 12,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-005",
+        "nom": "Papier toilette",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-004",
+        "nom": "Eau de javel",
+        "quantite": 4,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ENT-006",
+        "nom": "Savon",
+        "quantite": 10,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-013",
+        "nom": "Oignons rouges",
+        "quantite": 5,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "ASS-024",
+        "nom": "Tomates fraîches — caisse 80 kg",
+        "quantite": 5,
+        "option": "Lot partagé"
+      }
+    ]
+  }
+]

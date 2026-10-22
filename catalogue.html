@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalogue Octobre 2026 — POPOTE Libreville | Achats groupés alimentaires</title>
+<meta name="description" content="Catalogue complet d'octobre 2026 de POPOTE Libreville : 64 produits aux prix de gros négociés. Précommandez sur WhatsApp, sans paiement en ligne.">
+<meta property="og:title" content="Catalogue Octobre 2026 — POPOTE Libreville">
+<meta property="og:description" content="64 produits aux prix de gros, pour les achats groupés alimentaires de Libreville. Ensemble achetons mieux !">
+<meta property="og:image" content="assets/img/catalogue/logo-popote.webp">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2306531c'/%3E%3Cpath d='M18 40 C18 24 34 14 50 12 C44 24 34 36 20 42 Z' fill='%231cb04c'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css?v=20261022">
+<link rel="stylesheet" href="assets/css/catalogue.css?v=20261022">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="POPOTE Libreville — accueil">
+      <img src="assets/img/logo-header.png" alt="Popote Libreville" width="167" height="80">
+    </a>
+
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="catalogue.html" aria-current="page">Catalogue</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://chat.whatsapp.com/FhwOE2wJzHiBa1dlqMgFWb?s=cl&amp;p=a&amp;mlu=1" class="btn btn-primary" target="_blank" rel="noopener">Rejoindre POPOTE</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO CATALOGUE -->
+  <section class="cat-hero">
+    <div class="container">
+      <img class="cat-logo" src="assets/img/catalogue/logo-popote.webp" alt="Popote Libreville" width="220" height="113">
+      <h1>Catalogue Octobre 2026</h1>
+      <p class="slogan">Ensemble achetons mieux !</p>
+      <div class="cat-hero-actions">
+        <a class="btn btn-yellow" href="assets/pdf/POPOTE_Catalogue_Octobre_2026.pdf?v=20261022" target="_blank" rel="noopener">📄 Télécharger le catalogue PDF</a>
+        <a class="btn btn-green" data-wa-general href="#" target="_blank" rel="noopener" aria-label="Commander sur WhatsApp">
+          <img src="assets/img/whatsapp-icon.png" alt="" aria-hidden="true"> Commander sur WhatsApp
+        </a>
+      </div>
+      <span class="cat-callout">Tarifs de gros négociés sur la base d'un groupage de 100 personnes minimum.</span>
+    </div>
+  </section>
+
+  <!-- COMMENT COMMANDER -->
+  <section class="cat-how">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Comment commander ?</span>
+        <h2>Lot complet ou lot partagé</h2>
+      </div>
+      <div class="cat-how-grid">
+        <div class="cat-how-card">
+          <span class="letter">A</span>
+          <h3>Lot complet</h3>
+          <p>Le membre commande le carton ou le lot entier.</p>
+        </div>
+        <div class="cat-how-card">
+          <span class="letter">B</span>
+          <h3>Lot partagé</h3>
+          <p>Le membre commande une partie du lot ; POPOTE la regroupe avec les commandes d'autres membres pour constituer un lot complet.</p>
+        </div>
+      </div>
+      <p class="cat-minimum">Panier minimum : 50 000 FCFA par ménage.</p>
+
+      <div class="cat-timeline">
+        <div class="cat-timeline-item">
+          <div class="step-no">1</div>
+          <p>Précommandes jusqu'au 25 du mois.</p>
+        </div>
+        <div class="cat-timeline-item">
+          <div class="step-no">2</div>
+          <p>Consolidation et négociation après la clôture.</p>
+        </div>
+        <div class="cat-timeline-item">
+          <div class="step-no">3</div>
+          <p>Tarifs définitifs, confirmation et paiement du 25 au 30.</p>
+        </div>
+        <div class="cat-timeline-item">
+          <div class="step-no">4</div>
+          <p>Livraison après validation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKS ALIMENTAIRES (générés depuis data/packs-alimentaires.json) -->
+  <section class="cat-packs">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Paniers prêts à commander</span>
+        <h2>Packs alimentaires</h2>
+        <p>15 propositions de paniers pour 5 budgets, composées à partir du catalogue du mois. Le budget affiché inclut la commission POPOTE (10 %) ; l'abonnement mensuel reste à ajouter séparément.</p>
+      </div>
+      <div class="cat-packs-tabs" id="cat-packs-tabs-root"></div>
+      <div class="cat-packs-grid" id="cat-packs-grid-root"></div>
+      <p class="cat-packs-note">Compositions indicatives à partir des tarifs de gros du catalogue d'octobre 2026. Les prix définitifs et la disponibilité sont confirmés à la consolidation du groupage ; vous pouvez ajuster chaque pack avant de l'envoyer.</p>
+    </div>
+  </section>
+
+  <!-- BARRE DE FILTRES -->
+  <div class="cat-filterbar">
+    <div class="container">
+      <div class="cat-tabs" id="cat-tabs-root"></div>
+      <div class="cat-search-row">
+        <input type="search" id="cat-search-input" class="cat-search" placeholder="Rechercher un produit ou une référence…" aria-label="Rechercher dans le catalogue">
+        <span class="cat-count" id="cat-count-root">64 produits</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRILLE PRODUITS (générée depuis data/catalogue-produits.json) -->
+  <section class="cat-products">
+    <div class="container" id="cat-products-root">
+      <p class="cat-empty">Chargement du catalogue…</p>
+    </div>
+  </section>
+
+  <!-- FONCTIONNEMENT DES ACHATS GROUPES -->
+  <section class="cat-fonctionnement">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">À propos</span>
+        <h2>Fonctionnement des achats groupés</h2>
+      </div>
+      <div class="cat-fct-grid">
+        <div class="cat-fct-card">
+          <h3>1. Qui sommes-nous</h3>
+          <p>Une initiative d'achats groupés alimentaires : l'objectif est de réunir au moins 100 ménages pour renforcer le pouvoir de négociation et réduire le coût du panier.</p>
+        </div>
+        <div class="cat-fct-card">
+          <h3>2. Comment ça marche</h3>
+          <p>Deux façons de commander : le lot complet (carton ou lot entier) ou le lot partagé, regroupé avec d'autres membres pour atteindre un lot complet.</p>
+        </div>
+        <div class="cat-fct-card">
+          <h3>3. Exemple</h3>
+          <p>1 carton de sardines BELMA = 50 boîtes (prix de gros fournisseur 26 500 FCFA).</p>
+          <p class="cat-fct-example">5 femmes × 10 boîtes = 1 carton complet.</p>
+        </div>
+        <div class="cat-fct-card">
+          <h3>4. Calendrier et conditions</h3>
+          <p>Panier minimum de 50 000 FCFA. Si un lot partagé n'est pas complet, POPOTE informe les membres des solutions possibles avant toute confirmation.</p>
+        </div>
+        <div class="cat-fct-card">
+          <h3>5. Comment sont fixés les prix</h3>
+          <ul>
+            <li>Les prix de gros fournisseurs servent de base de calcul.</li>
+            <li>Le prix membre tient compte des volumes, des remises négociées et des frais de préparation.</li>
+            <li>Le montant définitif est communiqué avant confirmation et paiement.</li>
+            <li>Le regroupement ne garantit pas une remise sur tous les produits.</li>
+          </ul>
+        </div>
+        <div class="cat-fct-card">
+          <h3>6. Notre engagement</h3>
+          <p>Transparence des prix membres, organisation des commandes, solidarité entre les ménages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="cat-contacts">
+    <div class="container cat-contacts-grid">
+      <div class="cat-contact-item">
+        <span class="icon">💳</span>
+        <div>
+          <h4>Numéro de paiement</h4>
+          <p>+241 74 12 82 48<br>(information affichée uniquement — aucun paiement sur le site)</p>
+        </div>
+      </div>
+      <div class="cat-contact-item">
+        <span class="icon">📞</span>
+        <div>
+          <h4>Assistance &amp; commandes</h4>
+          <p>+241 66 98 09 27</p>
+          <a class="btn btn-primary" data-wa-general href="#" target="_blank" rel="noopener" aria-label="Contacter l'assistance POPOTE sur WhatsApp">
+            <img src="assets/img/whatsapp-icon.png" alt="" aria-hidden="true"> Écrire sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<p class="cat-tag-footer">Tarifs de gros négociés sur la base d'un groupage de 100 personnes minimum. · © POPOTE LIBREVILLE 2026</p>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="assets/img/logo-footer.png" alt="Popote Libreville" width="167" height="80">
+        </div>
+        <p>Le groupement d'achat alimentaire mensuel des femmes de Libreville.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="catalogue.html">Catalogue</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/24166980927" target="_blank" rel="noopener">WhatsApp : +241 66 98 09 27</a></li>
+          <li>Libreville, Gabon</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> POPOTE Libreville. Tous droits réservés.</span>
+      <span><a href="cgu.html">CGU/CGV</a> · <a href="confidentialite.html">Confidentialité</a></span>
+      <span>Fait avec ❤️ par CREATIVMEDIA</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MA LISTE : bouton flottant + panneau -->
+<button type="button" id="cat-list-floatbtn" class="cat-list-float" aria-label="Ouvrir ma liste de précommande">🛒 Ma liste (0)</button>
+<div id="cat-list-overlay" class="cat-list-overlay"></div>
+<aside id="cat-list-panel" class="cat-list-panel" aria-label="Ma liste de précommande">
+  <div class="cat-list-header">
+    <h3>Ma liste de précommande</h3>
+    <button type="button" id="cat-list-closebtn" class="cat-list-close" aria-label="Fermer ma liste">×</button>
+  </div>
+  <div id="cat-list-items" class="cat-list-items"></div>
+  <div class="cat-list-footer">
+    <p class="cat-list-note">Ceci n'est pas un panier d'achat : aucun paiement n'est effectué sur le site. Le montant définitif de votre panier vous sera communiqué avant confirmation.</p>
+    <button type="button" id="cat-list-pdfbtn" class="cat-list-pdf" aria-label="Générer ma proforma en PDF">
+      📄 Générer ma proforma (PDF)
+    </button>
+    <button type="button" id="cat-list-sendbtn" class="cat-list-send" aria-label="Envoyer ma liste de précommande sur WhatsApp">
+      <img src="assets/img/whatsapp-icon.png" alt=""> Envoyer ma liste sur WhatsApp
+    </button>
+  </div>
+</aside>
+
+<!-- IDENTIFICATION DE L'ADHÉRENTE (avant génération de la proforma) -->
+<div id="cat-id-overlay" class="cat-list-overlay"></div>
+<aside id="cat-id-panel" class="cat-id-panel" aria-label="Vos informations de précommande">
+  <div class="cat-list-header">
+    <h3>Vos informations de précommande</h3>
+    <button type="button" id="cat-id-closebtn" class="cat-list-close" aria-label="Fermer">×</button>
+  </div>
+  <form id="cat-id-form" class="cat-id-form">
+    <label class="cat-id-label">Nom et prénom *
+      <input type="text" id="cat-id-nom" class="cat-id-input" required>
+    </label>
+    <label class="cat-id-label">Téléphone / WhatsApp *
+      <input type="tel" id="cat-id-tel" class="cat-id-input" placeholder="Ex. 066 98 09 27 ou +241 66 98 09 27" required>
+    </label>
+    <label class="cat-id-label">Quartier / zone de livraison *
+      <input type="text" id="cat-id-quartier" class="cat-id-input" required>
+    </label>
+    <label class="cat-id-label">Adresse ou point de repère (facultatif)
+      <input type="text" id="cat-id-adresse" class="cat-id-input">
+    </label>
+    <label class="cat-id-label">E-mail (facultatif)
+      <input type="email" id="cat-id-email" class="cat-id-input">
+    </label>
+    <label class="cat-id-label">Observations particulières (facultatif)
+      <textarea id="cat-id-obs" class="cat-id-input" rows="2"></textarea>
+    </label>
+    <p id="cat-id-error" class="cat-id-error" hidden></p>
+    <label class="cat-id-checkbox">
+      <input type="checkbox" id="cat-id-consent" required>
+      J'accepte que mes informations soient utilisées par POPOTE LIBREVILLE pour le traitement et le suivi de ma précommande.
+    </label>
+    <p class="cat-id-privacy">Ces informations restent sur votre appareil et ne sont transmises qu'au moment où vous envoyez vous-même votre message sur WhatsApp. Elles ne sont jamais publiées ni partagées ailleurs. En savoir plus : <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>.</p>
+    <button type="submit" class="btn btn-green cat-id-submit">Valider et continuer</button>
+  </form>
+</aside>
+
+<a href="https://wa.me/24166980927?text=Bonjour%20POPOTE%20!" class="wa-float" target="_blank" rel="noopener" aria-label="Contacter POPOTE sur WhatsApp">
+  <img src="assets/img/whatsapp-icon.png" alt="">
+</a>
+
+<script src="assets/js/vendor/jspdf.umd.min.js?v=20261022"></script>
+<script src="assets/js/main.js?v=20261022"></script>
+<script src="assets/js/catalogue.js?v=20261022"></script>
+</body>
+</html>
