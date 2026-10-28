@@ -1,4 +1,4 @@
-// Page Catalogue POPOTE — générée entièrement depuis data/popote_catalogue_octobre_2026.json
+// Page Catalogue POPOTE — générée entièrement depuis data/catalogue-produits.json et data/packs-alimentaires.json
 (function () {
   "use strict";
 
