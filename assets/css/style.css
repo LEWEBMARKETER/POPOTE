@@ -210,17 +210,27 @@ section { padding: 72px 0; }
 
 /* ---- Hero ---- */
 .hero {
-  padding: 60px 0 80px;
+  position: relative;
+  padding: 80px 0 100px;
   background: linear-gradient(180deg, var(--green-50) 0%, var(--white) 100%);
   overflow: hidden;
 }
-
-.hero .container {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
-  align-items: center;
+/* Photo en arrière-plan, fondue vers la gauche (texte) et vers le bas */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  background: url("../img/caddie-produits.webp?v=20261110") center 70% / cover no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%), linear-gradient(0deg, transparent 0%, #000 22%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 45%), linear-gradient(0deg, transparent 0%, #000 22%);
+  mask-composite: intersect;
 }
+.hero .container { position: relative; z-index: 1; }
+.hero .container > div { max-width: 600px; }
 
 .hero h1 { margin-bottom: 18px; }
 .hero-lead { font-size: 1.15rem; max-width: 520px; }
@@ -245,31 +255,6 @@ section { padding: 72px 0; }
   color: var(--green-800);
 }
 .hero-stats div span { font-size: 0.85rem; color: var(--ink-soft); }
-
-.hero-media {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-.hero-media::before {
-  content: "";
-  position: absolute;
-  inset: 6% 10%;
-  background: var(--green-500);
-  border-radius: 40% 60% 55% 45% / 50% 40% 60% 50%;
-  opacity: 0.18;
-  z-index: 0;
-}
-.hero-media img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(14,61,36,0.25);
-}
 
 /* ---- Steps ---- */
 .steps-grid {
@@ -713,8 +698,16 @@ details.faq-item .faq-answer p:first-child { margin-top: 0; }
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
-  .hero .container { grid-template-columns: 1fr; }
-  .hero-media { order: -1; }
+  .hero { padding-top: 280px; }
+  .hero::before {
+    left: 0;
+    bottom: auto;
+    width: 100%;
+    height: 340px;
+    background-position: center 75%;
+    -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
+  }
   .steps-grid, .benefits-grid, .cat-preview-grid, .cost-grid, .timeline { grid-template-columns: repeat(2, 1fr); }
   .founder-banner { grid-template-columns: 1fr; text-align: center; }
   .founder-groups { grid-template-columns: 1fr; gap: 24px; }
@@ -726,7 +719,6 @@ details.faq-item .faq-answer p:first-child { margin-top: 0; }
   .nav { position: fixed; top: 70px; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: flex-start; padding: 20px 24px; gap: 18px; border-bottom: 1px solid var(--border); transform: translateY(-130%); transition: transform 0.25s ease; }
   .nav.open { transform: translateY(0); }
   .nav-toggle { display: block; }
-  .hero-media img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center 75%; }
   .nav .btn { width: 100%; justify-content: center; }
   .steps-grid, .benefits-grid, .cat-preview-grid, .cost-grid, .timeline { grid-template-columns: 1fr; }
   .founder-banner .badge { justify-self: center; }
