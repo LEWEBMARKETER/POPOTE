@@ -464,6 +464,8 @@ section { padding: 72px 0; }
   font-weight: 700;
 }
 .timeline-item p { margin: 6px 0 0; font-size: 0.88rem; }
+.timeline-5 { grid-template-columns: repeat(5, 1fr); }
+.timeline-5 .timeline-item .day { font-size: 1.25rem; }
 
 /* ---- FAQ ---- */
 .faq-tabs {

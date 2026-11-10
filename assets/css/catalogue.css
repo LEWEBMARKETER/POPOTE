@@ -87,9 +87,14 @@
   font-size: 1.05rem;
 }
 
+.cat-timeline-title {
+  text-align: center;
+  color: var(--green-900);
+  margin: 32px 0 0;
+}
 .cat-timeline {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   margin-top: 28px;
 }
@@ -114,6 +119,7 @@
   margin: 0 auto 10px;
 }
 .cat-timeline-item p { margin: 0; font-size: 0.88rem; }
+.cat-timeline-item .cat-timeline-date { font-weight: 700; color: var(--green-900); margin-bottom: 4px; }
 
 /* ---- Packs alimentaires ---- */
 .cat-packs { padding-top: 0; }
