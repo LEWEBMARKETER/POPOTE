@@ -6,8 +6,8 @@
   var PAIEMENT_NUMBER = "+241 74 12 82 48";
   var CATALOGUE_LABEL = "Catalogue Novembre 2026";
   var CAMPAGNE_LABEL = "Novembre 2026";
-  var DATA_URL = "data/catalogue-produits.json?v=20261120";
-  var PACKS_URL = "data/packs-alimentaires.json?v=20261120";
+  var DATA_URL = "data/catalogue-produits.json?v=20261121";
+  var PACKS_URL = "data/packs-alimentaires.json?v=20261121";
   var STORAGE_KEY = "popote_ma_liste_novembre_2026";
   var ADHERENTE_KEY = "popote_adherente_info";
   var REF_STATE_KEY = "popote_proforma_ref_state";
@@ -1032,7 +1032,7 @@
             '<span class="cat-pack-letter">' + pack.lettre + '</span>' +
             '<h3>' + pack.titre + '</h3>' +
             '<p class="cat-pack-price">Budget : <strong>' + formatPrice(pack.budget) + ' FCFA</strong></p>' +
-            '<p class="cat-pack-sub">≈ ' + formatPrice(subtotal) + ' FCFA de produits, commission POPOTE incluse dans le budget</p>' +
+            '<p class="cat-pack-sub">' + formatPrice(subtotal) + ' FCFA de produits + abonnement ' + formatPrice(ABONNEMENT_STANDARD) + ' FCFA = ' + formatPrice(subtotal + ABONNEMENT_STANDARD) + ' FCFA à payer</p>' +
             '<details class="cat-pack-detail">' +
               '<summary>Voir le détail (' + pack.items.length + ' produits)</summary>' +
               '<ul>' + itemsHtml + '</ul>' +
