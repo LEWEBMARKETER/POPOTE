@@ -55,7 +55,7 @@
     "unite_prix": "SAC",
     "badge_format": "20 kg",
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/riz-famille-nombreuse.webp",
+    "image": "assets/img/catalogue/riz-famille-nombreuse-v2.webp",
     "designation_referentiel": "Sac de Riz La Famille Nombreuse",
     "lot_partage_unites": null
   },
@@ -205,7 +205,7 @@
     "unite_prix": "LOT",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/sardines-cebon.webp",
+    "image": "assets/img/catalogue/sardines-cebon-v2.webp",
     "designation_referentiel": "Boite de sardines Cébon",
     "lot_partage_unites": 50
   },
@@ -250,7 +250,7 @@
     "unite_prix": "LOT",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/maquereaux-alix.webp",
+    "image": "assets/img/catalogue/maquereaux-alix-v2.webp",
     "designation_referentiel": "Boite de Maquereaux ALIX 425g",
     "lot_partage_unites": 24
   },
@@ -700,7 +700,7 @@
     "unite_prix": "CARTON",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/lait-alix.webp",
+    "image": "assets/img/catalogue/lait-alix-v2.webp",
     "designation_referentiel": "Lait Concentré sucré ALIX",
     "lot_partage_unites": 24
   },
@@ -1136,7 +1136,7 @@
     "unite_prix": "CARTON",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/mais-sabormix.webp",
+    "image": "assets/img/catalogue/mais-sabormix-v2.webp",
     "designation_referentiel": "Maïs doux Sabormix",
     "lot_partage_unites": 12
   },
@@ -1335,7 +1335,7 @@
     "unite_prix": null,
     "badge_format": "5 L",
     "visuel_illustratif": true,
-    "image": "assets/img/catalogue/liquide-vaisselle.webp",
+    "image": "assets/img/catalogue/liquide-vaisselle-v2.webp",
     "designation_referentiel": "Liquide vaisselle Citron STAR",
     "lot_partage_unites": null
   },
@@ -1350,7 +1350,7 @@
     "unite_prix": null,
     "badge_format": "5 L",
     "visuel_illustratif": true,
-    "image": "assets/img/catalogue/javel-5l.webp",
+    "image": "assets/img/catalogue/javel-5l-v2.webp",
     "designation_referentiel": "Eau de javel STAR",
     "lot_partage_unites": null
   },
@@ -1628,8 +1628,8 @@
     "prix_a_partir_de": false,
     "unite_prix": "LOT",
     "badge_format": null,
-    "visuel_illustratif": true,
-    "image": "assets/img/catalogue/manioc-obamba.webp",
+    "visuel_illustratif": false,
+    "image": "assets/img/catalogue/manioc-obamba-v2.webp",
     "designation_referentiel": "Manioc Obamba",
     "lot_partage_unites": 10,
     "lot_partage_unite_label": "bâton"

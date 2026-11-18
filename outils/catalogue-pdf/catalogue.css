@@ -29,7 +29,7 @@ b { font-weight: 700; }
 .card-body { flex: 1; display: grid; grid-template-columns: 37mm 1fr; gap: 3mm; padding: 3mm 4mm 3mm 4mm; min-height: 0; }
 .photo { display: flex; flex-direction: column; min-height: 0; }
 .photo-box { position: relative; flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
-.photo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.photo-box img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
 .badge { position: absolute; top: 0; left: 0; background: var(--dark); color: var(--yellow); font-weight: 800; font-size: 8pt; padding: .9mm 2mm; border-radius: 1.4mm; white-space: nowrap; }
 .note { font-size: 6.4pt; font-style: italic; font-weight: 600; color: var(--muted); text-align: center; margin-top: 1mm; }
 .info { display: flex; flex-direction: column; min-width: 0; }
