@@ -4,11 +4,11 @@
 
   var WA_NUMBER = "24166980927";
   var PAIEMENT_NUMBER = "+241 74 12 82 48";
-  var CATALOGUE_LABEL = "Catalogue Octobre 2026";
-  var CAMPAGNE_LABEL = "Octobre 2026";
-  var DATA_URL = "data/catalogue-produits.json?v=20261110";
-  var PACKS_URL = "data/packs-alimentaires.json?v=20261110";
-  var STORAGE_KEY = "popote_ma_liste_octobre_2026";
+  var CATALOGUE_LABEL = "Catalogue Novembre 2026";
+  var CAMPAGNE_LABEL = "Novembre 2026";
+  var DATA_URL = "data/catalogue-produits.json?v=20261118";
+  var PACKS_URL = "data/packs-alimentaires.json?v=20261118";
+  var STORAGE_KEY = "popote_ma_liste_novembre_2026";
   var ADHERENTE_KEY = "popote_adherente_info";
   var REF_STATE_KEY = "popote_proforma_ref_state";
   var PANIER_MINIMUM = 50000;
@@ -79,7 +79,7 @@
   }
 
   function generalMessage() {
-    return "Bonjour POPOTE 👋 J'ai consulté le catalogue d'octobre 2026 et je souhaite passer une précommande.";
+    return "Bonjour POPOTE 👋 J'ai consulté le catalogue de novembre 2026 et je souhaite passer une précommande.";
   }
 
   function pad2(n) { return n < 10 ? "0" + n : String(n); }
@@ -1079,7 +1079,8 @@
     function productCard(p) {
       var ref = p.reference || "Référence à attribuer";
       var badge = p.badge_format ? '<span class="cat-badge-format">' + p.badge_format + "</span>" : "";
-      var illustratif = p.visuel_illustratif ? '<p class="cat-illustratif">Visuel illustratif</p>' : "";
+      var illustratif = p.visuel_a_venir ? '<p class="cat-illustratif">Visuel à venir</p>'
+        : p.visuel_illustratif ? '<p class="cat-illustratif">Visuel illustratif</p>' : "";
       return '' +
         '<article class="cat-card">' +
           '<div class="cat-card-banner">' + p.nom.toUpperCase() + "</div>" +

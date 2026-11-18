@@ -30,14 +30,14 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
-        "quantite": 10,
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
+        "quantite": 7,
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-019",
-        "nom": "Tomates en boîte 400 g",
+        "reference": "EPI-040",
+        "nom": "Tomates entières pelées BRUCE",
         "quantite": 4,
         "option": "Lot partagé"
       },
@@ -73,8 +73,8 @@
       },
       {
         "reference": "CNS-005",
-        "nom": "Cassoulet",
-        "quantite": 2,
+        "nom": "Cassoulet ABC",
+        "quantite": 1,
         "option": "Lot partagé"
       }
     ]
@@ -129,8 +129,8 @@
       },
       {
         "reference": "CNS-005",
-        "nom": "Cassoulet",
-        "quantite": 4,
+        "nom": "Cassoulet ABC",
+        "quantite": 1,
         "option": "Lot partagé"
       },
       {
@@ -146,9 +146,9 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
-        "quantite": 10,
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
+        "quantite": 9,
         "option": "Lot partagé"
       },
       {
@@ -202,21 +202,21 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
-        "quantite": 9,
-        "option": "Lot partagé"
-      },
-      {
-        "reference": "EPI-025",
-        "nom": "Mayonnaise",
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
         "quantite": 1,
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-019",
-        "nom": "Tomates en boîte 400 g",
-        "quantite": 4,
+        "reference": "EPI-025",
+        "nom": "Mayonnaise LESIEUR grand format",
+        "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-040",
+        "nom": "Tomates entières pelées BRUCE",
+        "quantite": 1,
         "option": "Lot partagé"
       },
       {
@@ -233,13 +233,13 @@
       },
       {
         "reference": "CNS-005",
-        "nom": "Cassoulet",
+        "nom": "Cassoulet ABC",
         "quantite": 1,
         "option": "Lot partagé"
       },
       {
         "reference": "ENT-006",
-        "nom": "Savon",
+        "nom": "Savon de Marseille blanc",
         "quantite": 1,
         "option": "Lot partagé"
       }
@@ -288,9 +288,9 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
-        "quantite": 11,
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
+        "quantite": 7,
         "option": "Lot partagé"
       },
       {
@@ -318,14 +318,14 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-019",
-        "nom": "Tomates en boîte 400 g",
+        "reference": "EPI-040",
+        "nom": "Tomates entières pelées BRUCE",
         "quantite": 1,
         "option": "Lot partagé"
       },
       {
         "reference": "CNS-005",
-        "nom": "Cassoulet",
+        "nom": "Cassoulet ABC",
         "quantite": 1,
         "option": "Lot partagé"
       }
@@ -374,20 +374,20 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
-        "quantite": 13,
-        "option": "Lot partagé"
-      },
-      {
-        "reference": "ENT-004",
-        "nom": "Eau de javel",
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
         "quantite": 2,
         "option": "Lot partagé"
       },
       {
+        "reference": "ENT-004",
+        "nom": "Eau de javel STAR 5 L",
+        "quantite": 1,
+        "option": "Lot complet"
+      },
+      {
         "reference": "ENT-006",
-        "nom": "Savon",
+        "nom": "Savon de Marseille blanc",
         "quantite": 9,
         "option": "Lot partagé"
       },
@@ -405,7 +405,7 @@
       },
       {
         "reference": "EPI-025",
-        "nom": "Mayonnaise",
+        "nom": "Mayonnaise LESIEUR grand format",
         "quantite": 1,
         "option": "Lot partagé"
       },
@@ -422,15 +422,15 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-019",
-        "nom": "Tomates en boîte 400 g",
+        "reference": "EPI-040",
+        "nom": "Tomates entières pelées BRUCE",
         "quantite": 2,
         "option": "Lot partagé"
       },
       {
         "reference": "CNS-005",
-        "nom": "Cassoulet",
-        "quantite": 3,
+        "nom": "Cassoulet ABC",
+        "quantite": 1,
         "option": "Lot partagé"
       },
       {
@@ -515,8 +515,8 @@
       },
       {
         "reference": "CNS-005",
-        "nom": "Cassoulet",
-        "quantite": 9,
+        "nom": "Cassoulet ABC",
+        "quantite": 1,
         "option": "Lot partagé"
       },
       {
@@ -526,8 +526,8 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-019",
-        "nom": "Tomates en boîte 400 g",
+        "reference": "EPI-040",
+        "nom": "Tomates entières pelées BRUCE",
         "quantite": 5,
         "option": "Lot partagé"
       },
@@ -535,6 +535,12 @@
         "reference": "ASS-014",
         "nom": "Poivrons verts — caisse 80 kg",
         "quantite": 1,
+        "option": "Lot partagé"
+      },
+      {
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
+        "quantite": 4,
         "option": "Lot partagé"
       }
     ]
@@ -588,8 +594,8 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
         "quantite": 12,
         "option": "Lot partagé"
       },
@@ -613,8 +619,8 @@
       },
       {
         "reference": "CNS-005",
-        "nom": "Cassoulet",
-        "quantite": 3,
+        "nom": "Cassoulet ABC",
+        "quantite": 1,
         "option": "Lot partagé"
       },
       {
@@ -625,7 +631,7 @@
       },
       {
         "reference": "ENT-006",
-        "nom": "Savon",
+        "nom": "Savon de Marseille blanc",
         "quantite": 3,
         "option": "Lot partagé"
       },
@@ -674,9 +680,9 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
-        "quantite": 13,
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
+        "quantite": 14,
         "option": "Lot partagé"
       },
       {
@@ -687,19 +693,19 @@
       },
       {
         "reference": "ENT-004",
-        "nom": "Eau de javel",
-        "quantite": 2,
-        "option": "Lot partagé"
+        "nom": "Eau de javel STAR 5 L",
+        "quantite": 1,
+        "option": "Lot complet"
       },
       {
         "reference": "ENT-006",
-        "nom": "Savon",
+        "nom": "Savon de Marseille blanc",
         "quantite": 11,
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-019",
-        "nom": "Tomates en boîte 400 g",
+        "reference": "EPI-040",
+        "nom": "Tomates entières pelées BRUCE",
         "quantite": 4,
         "option": "Lot partagé"
       },
@@ -737,12 +743,6 @@
         "reference": "EPI-005",
         "nom": "Lait concentré sucré CEBON",
         "quantite": 2,
-        "option": "Lot partagé"
-      },
-      {
-        "reference": "EPI-009",
-        "nom": "Saucisses",
-        "quantite": 1,
         "option": "Lot partagé"
       }
     ]
@@ -815,7 +815,7 @@
       },
       {
         "reference": "EPI-025",
-        "nom": "Mayonnaise",
+        "nom": "Mayonnaise LESIEUR grand format",
         "quantite": 1,
         "option": "Lot partagé"
       },
@@ -839,8 +839,8 @@
       },
       {
         "reference": "ENT-006",
-        "nom": "Savon",
-        "quantite": 3,
+        "nom": "Savon de Marseille blanc",
+        "quantite": 1,
         "option": "Lot partagé"
       },
       {
@@ -862,12 +862,6 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-009",
-        "nom": "Saucisses",
-        "quantite": 2,
-        "option": "Lot partagé"
-      },
-      {
         "reference": "EPI-026",
         "nom": "Vinaigre",
         "quantite": 1,
@@ -880,8 +874,8 @@
         "option": "Lot complet"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
         "quantite": 1,
         "option": "Lot partagé"
       }
@@ -930,14 +924,14 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
         "quantite": 14,
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-019",
-        "nom": "Tomates en boîte 400 g",
+        "reference": "EPI-040",
+        "nom": "Tomates entières pelées BRUCE",
         "quantite": 4,
         "option": "Lot partagé"
       },
@@ -961,7 +955,7 @@
       },
       {
         "reference": "ENT-006",
-        "nom": "Savon",
+        "nom": "Savon de Marseille blanc",
         "quantite": 3,
         "option": "Lot partagé"
       }
@@ -1016,8 +1010,8 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
         "quantite": 16,
         "option": "Lot partagé"
       },
@@ -1029,15 +1023,15 @@
       },
       {
         "reference": "EPI-025",
-        "nom": "Mayonnaise",
-        "quantite": 2,
+        "nom": "Mayonnaise LESIEUR grand format",
+        "quantite": 1,
         "option": "Lot partagé"
       },
       {
         "reference": "ENT-004",
-        "nom": "Eau de javel",
-        "quantite": 2,
-        "option": "Lot partagé"
+        "nom": "Eau de javel STAR 5 L",
+        "quantite": 1,
+        "option": "Lot complet"
       },
       {
         "reference": "ENT-005",
@@ -1059,7 +1053,7 @@
       },
       {
         "reference": "ENT-006",
-        "nom": "Savon",
+        "nom": "Savon de Marseille blanc",
         "quantite": 3,
         "option": "Lot partagé"
       },
@@ -1078,12 +1072,6 @@
       {
         "reference": "EPI-005",
         "nom": "Lait concentré sucré CEBON",
-        "quantite": 2,
-        "option": "Lot partagé"
-      },
-      {
-        "reference": "EPI-009",
-        "nom": "Saucisses",
         "quantite": 2,
         "option": "Lot partagé"
       },
@@ -1157,8 +1145,8 @@
       },
       {
         "reference": "CNS-005",
-        "nom": "Cassoulet",
-        "quantite": 8,
+        "nom": "Cassoulet ABC",
+        "quantite": 1,
         "option": "Lot partagé"
       },
       {
@@ -1168,8 +1156,8 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-019",
-        "nom": "Tomates en boîte 400 g",
+        "reference": "EPI-040",
+        "nom": "Tomates entières pelées BRUCE",
         "quantite": 4,
         "option": "Lot partagé"
       },
@@ -1186,12 +1174,6 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-009",
-        "nom": "Saucisses",
-        "quantite": 2,
-        "option": "Lot partagé"
-      },
-      {
         "reference": "EPI-026",
         "nom": "Vinaigre",
         "quantite": 1,
@@ -1199,7 +1181,7 @@
       },
       {
         "reference": "EPI-025",
-        "nom": "Mayonnaise",
+        "nom": "Mayonnaise LESIEUR grand format",
         "quantite": 1,
         "option": "Lot partagé"
       },
@@ -1216,8 +1198,8 @@
         "option": "Lot complet"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
         "quantite": 2,
         "option": "Lot partagé"
       }
@@ -1272,9 +1254,9 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
-        "quantite": 22,
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
+        "quantite": 18,
         "option": "Lot partagé"
       },
       {
@@ -1285,13 +1267,13 @@
       },
       {
         "reference": "CNS-005",
-        "nom": "Cassoulet",
-        "quantite": 10,
+        "nom": "Cassoulet ABC",
+        "quantite": 2,
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-019",
-        "nom": "Tomates en boîte 400 g",
+        "reference": "EPI-040",
+        "nom": "Tomates entières pelées BRUCE",
         "quantite": 6,
         "option": "Lot partagé"
       },
@@ -1309,13 +1291,13 @@
       },
       {
         "reference": "ENT-004",
-        "nom": "Eau de javel",
-        "quantite": 2,
-        "option": "Lot partagé"
+        "nom": "Eau de javel STAR 5 L",
+        "quantite": 1,
+        "option": "Lot complet"
       },
       {
         "reference": "ENT-006",
-        "nom": "Savon",
+        "nom": "Savon de Marseille blanc",
         "quantite": 10,
         "option": "Lot partagé"
       },
@@ -1332,12 +1314,6 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-009",
-        "nom": "Saucisses",
-        "quantite": 2,
-        "option": "Lot partagé"
-      },
-      {
         "reference": "EPI-026",
         "nom": "Vinaigre",
         "quantite": 1,
@@ -1345,7 +1321,7 @@
       },
       {
         "reference": "EPI-025",
-        "nom": "Mayonnaise",
+        "nom": "Mayonnaise LESIEUR grand format",
         "quantite": 1,
         "option": "Lot partagé"
       },
@@ -1418,15 +1394,15 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
         "quantite": 21,
         "option": "Lot partagé"
       },
       {
         "reference": "EPI-025",
-        "nom": "Mayonnaise",
-        "quantite": 3,
+        "nom": "Mayonnaise LESIEUR grand format",
+        "quantite": 1,
         "option": "Lot partagé"
       },
       {
@@ -1468,12 +1444,6 @@
       {
         "reference": "EPI-005",
         "nom": "Lait concentré sucré CEBON",
-        "quantite": 2,
-        "option": "Lot partagé"
-      },
-      {
-        "reference": "EPI-009",
-        "nom": "Saucisses",
         "quantite": 2,
         "option": "Lot partagé"
       },
@@ -1534,9 +1504,9 @@
         "option": "Lot partagé"
       },
       {
-        "reference": "EPI-022",
-        "nom": "Spaghetti 500 g",
-        "quantite": 21,
+        "reference": "EPI-032",
+        "nom": "Spaghetti ALIX 500 g",
+        "quantite": 24,
         "option": "Lot partagé"
       },
       {
@@ -1565,13 +1535,13 @@
       },
       {
         "reference": "ENT-004",
-        "nom": "Eau de javel",
-        "quantite": 4,
-        "option": "Lot partagé"
+        "nom": "Eau de javel STAR 5 L",
+        "quantite": 1,
+        "option": "Lot complet"
       },
       {
         "reference": "ENT-006",
-        "nom": "Savon",
+        "nom": "Savon de Marseille blanc",
         "quantite": 10,
         "option": "Lot partagé"
       },
