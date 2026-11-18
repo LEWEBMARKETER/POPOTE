@@ -99,7 +99,7 @@ body = []
 # --- Couverture ---
 somm = ''.join(f'<li><span class="num">{i}</span><span class="t">{e(f)}</span><span class="dots"></span><span class="pg">p.&nbsp;{first_page[f]:02d}</span></li>' for i, f in enumerate(FAMILIES, 1))
 somm += f'<li><span class="num">i</span><span class="t">Fonctionnement et contacts</span><span class="dots"></span><span class="pg">p.&nbsp;{TOTAL:02d}</span></li>'
-nb_vis = sum(1 for p in products if not p.get('visuel_a_venir'))
+a_venir = ' · « Visuel à venir » : photo en cours d’ajout' if any(p.get('visuel_a_venir') for p in products) else ''
 body.append(f'''
 <section class="page cover">
   <div class="cv-top"><div class="cv-circle"></div><div class="cv-ring"></div>
@@ -118,7 +118,7 @@ body.append(f'''
       </div>
       <div class="somm"><h3>Au sommaire</h3><ol>{somm}</ol></div>
     </div>
-    <p class="cv-foot"><b>{len(products)}</b> produits · prix de gros en FCFA · « Visuel illustratif » : photo représentative, l’emballage livré peut différer · « Visuel à venir » : photo en cours d’ajout.</p>
+    <p class="cv-foot"><b>{len(products)}</b> produits · prix de gros en FCFA · « Visuel illustratif » : photo représentative, l’emballage livré peut différer{a_venir}.</p>
   </div>
   {footer(1)}
 </section>''')

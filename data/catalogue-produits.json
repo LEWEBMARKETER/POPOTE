@@ -190,10 +190,9 @@
     "unite_prix": "LOT",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "image": "assets/img/catalogue/sardines-golden-sails.webp",
     "designation_referentiel": "Boites de sardines GOLDEN SAILS",
-    "lot_partage_unites": 50,
-    "visuel_a_venir": true
+    "lot_partage_unites": 50
   },
   {
     "reference": "CNS-011",
@@ -266,10 +265,9 @@
     "unite_prix": "LOT",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "image": "assets/img/catalogue/maquereaux-sibon.webp",
     "designation_referentiel": "Boite de Maquereaux SIBON",
-    "lot_partage_unites": 24,
-    "visuel_a_venir": true
+    "lot_partage_unites": 24
   },
   {
     "reference": "CNS-005",
@@ -405,22 +403,6 @@
     "image": "assets/img/catalogue/poisson-mademoiselle.webp",
     "designation_referentiel": "Poisson Mademoiselle",
     "lot_partage_unites": null
-  },
-  {
-    "reference": "POI-010",
-    "nom": "Poisson Yara",
-    "famille": "Poissons",
-    "ordre_famille": 3,
-    "conditionnement": "Carton 10kg",
-    "prix_gros_fcfa": 14500,
-    "prix_a_partir_de": false,
-    "unite_prix": "CARTON",
-    "badge_format": null,
-    "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
-    "designation_referentiel": "Poisson Yara",
-    "lot_partage_unites": null,
-    "visuel_a_venir": true
   },
   {
     "reference": "VOL-001",
@@ -642,11 +624,10 @@
     "prix_a_partir_de": false,
     "unite_prix": "CARTON",
     "badge_format": null,
-    "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "visuel_illustratif": true,
+    "image": "assets/img/catalogue/cotis-porc.webp",
     "designation_referentiel": "Cotis de Porc Viande",
-    "lot_partage_unites": null,
-    "visuel_a_venir": true
+    "lot_partage_unites": null
   },
   {
     "reference": "VIA-006",
@@ -658,11 +639,10 @@
     "prix_a_partir_de": false,
     "unite_prix": "CARTON",
     "badge_format": null,
-    "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "visuel_illustratif": true,
+    "image": "assets/img/catalogue/viande-hachee.webp",
     "designation_referentiel": "Viande Hachée",
-    "lot_partage_unites": null,
-    "visuel_a_venir": true
+    "lot_partage_unites": null
   },
   {
     "reference": "VIA-007",
@@ -674,11 +654,10 @@
     "prix_a_partir_de": false,
     "unite_prix": "CARTON",
     "badge_format": null,
-    "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "visuel_illustratif": true,
+    "image": "assets/img/catalogue/tripes-boeuf.webp",
     "designation_referentiel": "Triples de Bœuf",
-    "lot_partage_unites": null,
-    "visuel_a_venir": true
+    "lot_partage_unites": null
   },
   {
     "reference": "EPI-028",
@@ -721,10 +700,9 @@
     "unite_prix": "CARTON",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "image": "assets/img/catalogue/lait-alix.webp",
     "designation_referentiel": "Lait Concentré sucré ALIX",
-    "lot_partage_unites": 24,
-    "visuel_a_venir": true
+    "lot_partage_unites": 24
   },
   {
     "reference": "EPI-004",
@@ -833,22 +811,6 @@
     "lot_partage_unites": 12
   },
   {
-    "reference": "EPI-012",
-    "nom": "Sucre blanc",
-    "famille": "Produits d’épicerie",
-    "ordre_famille": 6,
-    "conditionnement": "Lot de 25",
-    "prix_gros_fcfa": 18150,
-    "prix_a_partir_de": false,
-    "unite_prix": "LOT",
-    "badge_format": null,
-    "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
-    "designation_referentiel": "Sucre Blanc",
-    "lot_partage_unites": 25,
-    "visuel_a_venir": true
-  },
-  {
     "reference": "EPI-013",
     "nom": "Sucre blanc TATY",
     "famille": "Produits d’épicerie",
@@ -949,10 +911,9 @@
     "unite_prix": "LOT",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "image": "assets/img/catalogue/zwan.webp",
     "designation_referentiel": "ZWAN",
-    "lot_partage_unites": 12,
-    "visuel_a_venir": true
+    "lot_partage_unites": 12
   },
   {
     "reference": "EPI-024",
@@ -995,10 +956,9 @@
     "unite_prix": "LOT",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "image": "assets/img/catalogue/mayonnaise-gab.webp",
     "designation_referentiel": "Mayonnaise GAB Petit format",
-    "lot_partage_unites": 12,
-    "visuel_a_venir": true
+    "lot_partage_unites": 12
   },
   {
     "reference": "EPI-026",
@@ -1041,10 +1001,9 @@
     "unite_prix": "LOT",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "image": "assets/img/catalogue/spaghetti-la-rose-blanche.webp",
     "designation_referentiel": "Spaghetti La Rose Blanche 500g",
-    "lot_partage_unites": 20,
-    "visuel_a_venir": true
+    "lot_partage_unites": 20
   },
   {
     "reference": "EPI-031",
@@ -1056,11 +1015,10 @@
     "prix_a_partir_de": false,
     "unite_prix": "LOT",
     "badge_format": null,
-    "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "visuel_illustratif": true,
+    "image": "assets/img/catalogue/spaghetti-la-rose-blanche.webp",
     "designation_referentiel": "Spaghetti La Rose Blanche 250g",
-    "lot_partage_unites": 40,
-    "visuel_a_venir": true
+    "lot_partage_unites": 40
   },
   {
     "reference": "EPI-032",
@@ -1118,10 +1076,9 @@
     "unite_prix": "LOT",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "image": "assets/img/catalogue/farine-gourmet.webp",
     "designation_referentiel": "Farine Gourmet 1kg",
-    "lot_partage_unites": 10,
-    "visuel_a_venir": true
+    "lot_partage_unites": 10
   },
   {
     "reference": "EPI-036",
@@ -1209,10 +1166,9 @@
     "unite_prix": "LOT",
     "badge_format": null,
     "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "image": "assets/img/catalogue/concentre-cebon.webp",
     "designation_referentiel": "Concentré de tomate Cébon 400g",
-    "lot_partage_unites": 24,
-    "visuel_a_venir": true
+    "lot_partage_unites": 24
   },
   {
     "reference": "EPI-042",
@@ -1672,11 +1628,10 @@
     "prix_a_partir_de": false,
     "unite_prix": "LOT",
     "badge_format": null,
-    "visuel_illustratif": false,
-    "image": "assets/img/catalogue/visuel-a-venir.webp",
+    "visuel_illustratif": true,
+    "image": "assets/img/catalogue/manioc-obamba.webp",
     "designation_referentiel": "Manioc Obamba",
     "lot_partage_unites": 10,
-    "visuel_a_venir": true,
     "lot_partage_unite_label": "bâton"
   },
   {

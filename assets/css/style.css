@@ -223,7 +223,7 @@ section { padding: 72px 0; }
   right: 0;
   bottom: 0;
   width: 58%;
-  background: url("../img/caddie-produits.webp?v=20261118") center 70% / cover no-repeat;
+  background: url("../img/caddie-produits.webp?v=20261119") center 70% / cover no-repeat;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%), linear-gradient(0deg, transparent 0%, #000 22%);
   -webkit-mask-composite: source-in;
   mask-image: linear-gradient(90deg, transparent 0%, #000 45%), linear-gradient(0deg, transparent 0%, #000 22%);
