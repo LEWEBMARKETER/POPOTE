@@ -20,6 +20,7 @@ Site statique (HTML/CSS/JS), sans dépendance ni build. Aucune donnée n'est env
 - `assets/pdf/` — catalogue PDF illustré téléchargeable
 - `data/catalogue-produits.json` — produits du mois
 - `data/packs-alimentaires.json` — packs alimentaires (5 budgets × 3 propositions)
+- `outils/catalogue-pdf/` — générateur du catalogue PDF (ne pas mettre en ligne)
 
 ## Développement local
 
@@ -39,7 +40,14 @@ Puis ouvrez `http://localhost:8000`.
    - `image` (chemin dans `assets/img/catalogue/`) ;
    - `lot_partage_unites` : nombre d'unités pour le mode « Lot partagé » (`null` si non partageable).
 2. **Packs** — éditez `data/packs-alimentaires.json`. Chaque pack référence des produits par leur `reference`, qui doit exister dans `catalogue-produits.json`.
-3. **Catalogue PDF** — déposez le nouveau fichier dans `assets/pdf/` et mettez à jour le lien dans `catalogue.html`.
+3. **Catalogue PDF** — il est généré à partir de `data/catalogue-produits.json`. Mettez à jour la période (`MOIS`, `ANNEE`) et le calendrier (`CAL`) dans `outils/catalogue-pdf/generer_html.py`, puis :
+
+   ```bash
+   python3 outils/catalogue-pdf/generer_html.py /tmp/catalogue.html
+   node outils/catalogue-pdf/imprimer_pdf.js /tmp/catalogue.html assets/pdf/POPOTE_Catalogue_Mois_Annee.pdf
+   ```
+
+   Mettez ensuite à jour le lien du PDF dans `catalogue.html`. Un produit sans photo prend `visuel-a-venir.webp` avec `"visuel_a_venir": true`.
 4. **Images** — ajoutez les nouveaux visuels dans `assets/img/catalogue/`.
 
 ## Cache des navigateurs (`?v=`)
