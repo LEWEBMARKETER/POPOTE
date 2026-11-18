@@ -21,6 +21,7 @@ Site statique (HTML/CSS/JS), sans dépendance ni build. Aucune donnée n'est env
 - `data/catalogue-produits.json` — produits du mois
 - `data/packs-alimentaires.json` — packs alimentaires (5 budgets × 3 propositions)
 - `outils/catalogue-pdf/` — générateur du catalogue PDF (ne pas mettre en ligne)
+- `outils/site-mono-fichier/` — génère le site entier en un seul fichier HTML autonome (aperçu sans serveur) : `python3 outils/site-mono-fichier/generer.py /tmp/POPOTE-site-complet.html`
 
 ## Développement local
 
