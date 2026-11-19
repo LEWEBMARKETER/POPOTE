@@ -10,8 +10,8 @@
 <meta property="og:image" content="assets/img/catalogue/logo-popote.webp">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2306531c'/%3E%3Cpath d='M18 40 C18 24 34 14 50 12 C44 24 34 36 20 42 Z' fill='%231cb04c'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/style.css?v=20261121">
-<link rel="stylesheet" href="assets/css/catalogue.css?v=20261121">
+<link rel="stylesheet" href="assets/css/style.css?v=20261122">
+<link rel="stylesheet" href="assets/css/catalogue.css?v=20261122">
 </head>
 <body>
 
@@ -39,17 +39,58 @@
 
   <!-- HERO CATALOGUE -->
   <section class="cat-hero">
+    <span class="cat-hero-circle" aria-hidden="true"></span>
+    <span class="cat-hero-ring" aria-hidden="true"></span>
     <div class="container">
       <img class="cat-logo" src="assets/img/catalogue/logo-popote.webp" alt="Popote Libreville" width="220" height="113">
-      <h1>Catalogue Novembre 2026</h1>
+      <p class="cat-hero-kicker">Catalogue des achats groupés</p>
+      <h1>Catalogue <span>Novembre 2026</span></h1>
       <p class="slogan">Ensemble achetons mieux !</p>
+      <ul class="cat-hero-stats">
+        <li><strong id="cat-stat-products">109</strong> produits</li>
+        <li><strong id="cat-stat-families">9</strong> familles</li>
+        <li><strong id="cat-stat-packs">6</strong> packs prêts</li>
+        <li><strong>100</strong> personnes minimum</li>
+      </ul>
       <div class="cat-hero-actions">
-        <a class="btn btn-yellow" href="assets/pdf/POPOTE_Catalogue_Novembre_2026.pdf?v=20261121" target="_blank" rel="noopener">📄 Télécharger le catalogue PDF</a>
-        <a class="btn btn-green" data-wa-general href="#" target="_blank" rel="noopener" aria-label="Commander sur WhatsApp">
+        <a class="btn btn-yellow" href="assets/pdf/POPOTE_Catalogue_Novembre_2026.pdf?v=20261122" target="_blank" rel="noopener">📄 Télécharger le catalogue PDF</a>
+        <a class="btn btn-outline-light" data-wa-general href="#" target="_blank" rel="noopener" aria-label="Commander sur WhatsApp">
           <img src="assets/img/whatsapp-icon.png" alt="" aria-hidden="true"> Commander sur WhatsApp
         </a>
       </div>
-      <span class="cat-callout">Tarifs de gros négociés sur la base d'un groupage de 100 personnes minimum.</span>
+    </div>
+  </section>
+
+  <!-- BANNIÈRE PÉRIODE DU GROUPAGE (étape en cours calculée selon la date du jour) -->
+  <section class="cat-period" aria-labelledby="cat-period-title">
+    <div class="container">
+      <div class="cat-period-card">
+        <div class="cat-period-head">
+          <div>
+            <span class="cat-period-kicker">Groupage en cours</span>
+            <h2 id="cat-period-title">Novembre – Décembre 2026</h2>
+            <p class="cat-period-range">Du 20 novembre au 8 décembre 2026</p>
+          </div>
+          <p class="cat-period-status" id="cat-period-status">Précommandes du 20 au 25 novembre</p>
+        </div>
+        <ol class="cat-period-steps" id="cat-period-steps">
+          <li data-start="2026-11-20" data-end="2026-11-20" data-status="Catalogue disponible : les précommandes sont ouvertes jusqu'au 25 novembre">
+            <span class="dot" aria-hidden="true"></span><strong>20 nov.</strong><span>Envoi du catalogue</span>
+          </li>
+          <li data-start="2026-11-20" data-end="2026-11-25" data-status="Précommandes ouvertes jusqu'au 25 novembre">
+            <span class="dot" aria-hidden="true"></span><strong>20 – 25 nov.</strong><span>Précommandes sur le site</span>
+          </li>
+          <li data-start="2026-11-26" data-end="2026-11-30" data-status="Phase 1 : confirmation des commandes et paiement Airtel Money jusqu'au 30 novembre">
+            <span class="dot" aria-hidden="true"></span><strong>26 – 30 nov.</strong><span>Confirmation et paiement (phase 1)</span>
+          </li>
+          <li data-start="2026-12-01" data-end="2026-12-05" data-status="Phase 2 des paiements jusqu'au 5 décembre">
+            <span class="dot" aria-hidden="true"></span><strong>1er – 5 déc.</strong><span>Paiements (phase 2)</span>
+          </li>
+          <li data-start="2026-12-07" data-end="2026-12-08" data-status="Livraison des membres les 7 et 8 décembre">
+            <span class="dot" aria-hidden="true"></span><strong>7 – 8 déc.</strong><span>Livraison des membres</span>
+          </li>
+        </ol>
+      </div>
     </div>
   </section>
 
@@ -72,36 +113,8 @@
           <p>Le membre commande une partie du lot ; POPOTE la regroupe avec les commandes d'autres membres pour constituer un lot complet.</p>
         </div>
       </div>
-      <p class="cat-minimum">Panier minimum : 50 000 FCFA par ménage.</p>
+      <p class="cat-minimum"><span>Panier minimum</span> <strong>50&nbsp;000&nbsp;FCFA</strong> par ménage</p>
 
-      <h3 class="cat-timeline-title">Prochain groupage : novembre – décembre 2026</h3>
-      <div class="cat-timeline">
-        <div class="cat-timeline-item">
-          <div class="step-no">1</div>
-          <p class="cat-timeline-date">20 novembre</p>
-          <p>Envoi du catalogue.</p>
-        </div>
-        <div class="cat-timeline-item">
-          <div class="step-no">2</div>
-          <p class="cat-timeline-date">20 – 25 novembre</p>
-          <p>Précommandes sur www.popotelibreville.com.</p>
-        </div>
-        <div class="cat-timeline-item">
-          <div class="step-no">3</div>
-          <p class="cat-timeline-date">26 – 30 novembre</p>
-          <p>Phase 1 : confirmation des commandes et paiement via Airtel Money.</p>
-        </div>
-        <div class="cat-timeline-item">
-          <div class="step-no">4</div>
-          <p class="cat-timeline-date">1er – 5 décembre</p>
-          <p>Phase 2 des paiements.</p>
-        </div>
-        <div class="cat-timeline-item">
-          <div class="step-no">5</div>
-          <p class="cat-timeline-date">7 – 8 décembre</p>
-          <p>Livraison des membres.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -111,7 +124,7 @@
       <div class="section-head">
         <span class="eyebrow">Paniers prêts à commander</span>
         <h2>Packs alimentaires</h2>
-        <p>12 propositions de paniers pour 5 budgets, composées à partir du catalogue du mois. Le budget correspond aux produits du pack ; seul l'abonnement mensuel de 3&nbsp;500&nbsp;FCFA s'y ajoute.</p>
+        <p>6 propositions de paniers pour 3 budgets, composées à partir du catalogue du mois. Le budget correspond aux produits du pack ; seul l'abonnement mensuel de 3&nbsp;500&nbsp;FCFA s'y ajoute.</p>
       </div>
       <div class="cat-packs-tabs" id="cat-packs-tabs-root"></div>
       <div class="cat-packs-grid" id="cat-packs-grid-root"></div>
@@ -300,8 +313,8 @@
   <img src="assets/img/whatsapp-icon.png" alt="">
 </a>
 
-<script src="assets/js/vendor/jspdf.umd.min.js?v=20261121"></script>
-<script src="assets/js/main.js?v=20261121"></script>
-<script src="assets/js/catalogue.js?v=20261121"></script>
+<script src="assets/js/vendor/jspdf.umd.min.js?v=20261122"></script>
+<script src="assets/js/main.js?v=20261122"></script>
+<script src="assets/js/catalogue.js?v=20261122"></script>
 </body>
 </html>

@@ -6,8 +6,8 @@
   var PAIEMENT_NUMBER = "+241 74 12 82 48";
   var CATALOGUE_LABEL = "Catalogue Novembre 2026";
   var CAMPAGNE_LABEL = "Novembre 2026";
-  var DATA_URL = "data/catalogue-produits.json?v=20261121";
-  var PACKS_URL = "data/packs-alimentaires.json?v=20261121";
+  var DATA_URL = "data/catalogue-produits.json?v=20261122";
+  var PACKS_URL = "data/packs-alimentaires.json?v=20261122";
   var STORAGE_KEY = "popote_ma_liste_novembre_2026";
   var ADHERENTE_KEY = "popote_adherente_info";
   var REF_STATE_KEY = "popote_proforma_ref_state";
@@ -799,6 +799,48 @@
         });
     }
 
+    function setStat(id, value) {
+      var el = document.getElementById(id);
+      if (el) el.textContent = value;
+    }
+
+    // ---- Bannière de période : étape du groupage selon la date du jour ----
+    function renderPeriod() {
+      var steps = document.querySelectorAll("#cat-period-steps li");
+      var status = document.getElementById("cat-period-status");
+      if (!steps.length || !status) return;
+      var today = currentIsoDate();
+      var current = -1;
+      steps.forEach(function (li, i) {
+        if (li.getAttribute("data-start") <= today && today <= li.getAttribute("data-end")) current = i;
+      });
+      var firstStart = steps[0].getAttribute("data-start");
+      var lastEnd = steps[steps.length - 1].getAttribute("data-end");
+      steps.forEach(function (li, i) {
+        var done = current >= 0 ? i < current : li.getAttribute("data-end") < today;
+        li.classList.toggle("done", done);
+        li.classList.toggle("current", i === current);
+        if (i === current) li.setAttribute("aria-current", "step");
+      });
+      if (current >= 0) {
+        status.textContent = steps[current].getAttribute("data-status");
+      } else if (today < firstStart) {
+        status.textContent = "Ouverture des précommandes le 20 novembre";
+      } else if (today > lastEnd) {
+        status.textContent = "Groupage terminé : le prochain catalogue arrive bientôt";
+      } else {
+        var next = Array.prototype.find.call(steps, function (li) { return li.getAttribute("data-start") > today; });
+        status.textContent = "Prochaine étape : " + next.querySelector("span:last-child").textContent.toLowerCase() + " (" + next.querySelector("strong").textContent + ")";
+      }
+    }
+
+    function currentIsoDate() {
+      var d = new Date();
+      return d.getFullYear() + "-" + pad2(d.getMonth() + 1) + "-" + pad2(d.getDate());
+    }
+
+    renderPeriod();
+
     function init(products) {
       products.sort(function (a, b) { return a.ordre_famille - b.ordre_famille; });
       catalogueProducts = products;
@@ -812,6 +854,8 @@
       renderGrid(products, families);
       renderListUI();
       renderPacks();
+      setStat("cat-stat-products", products.length);
+      setStat("cat-stat-families", families.length);
 
       searchInput.addEventListener("input", function () {
         renderGrid(products, families, searchInput.value.trim().toLowerCase());
@@ -932,7 +976,9 @@
         if (!famProducts.length) return;
         var slug = FAMILY_SLUGS[fam] || fam.toLowerCase();
         html += '<section class="cat-family-section" id="' + slug + '">';
-        html += '<div class="cat-family-title"><span class="num">' + (famIndex + 1) + '</span><h2>' + fam + "</h2></div>";
+        var famCount = famProducts.length;
+        html += '<div class="cat-family-title"><span class="num">' + (famIndex + 1) + '</span><h2>' + fam + "</h2>" +
+          '<span class="count">' + famCount + " produit" + (famCount > 1 ? "s" : "") + "</span></div>";
         html += '<div class="cat-grid">';
         famProducts.forEach(function (p) { html += productCard(p); });
         html += "</div></section>";
@@ -968,6 +1014,7 @@
         .then(function (res) { return res.json(); })
         .then(function (packs) {
           packsData = packs;
+          setStat("cat-stat-packs", packs.length);
           var budgets = [];
           packs.forEach(function (p) {
             if (budgets.indexOf(p.budget) === -1) budgets.push(p.budget);
@@ -1090,13 +1137,13 @@
           "</div>" +
           illustratif +
           '<div class="cat-card-body">' +
-            '<span class="cat-ref">Réf. ' + ref + "</span>" +
-            '<span class="cat-cond">' + p.conditionnement + "</span>" +
+            '<div class="cat-card-meta"><span class="cat-ref">Réf. ' + ref + "</span>" +
+            '<span class="cat-cond">' + p.conditionnement + "</span></div>" +
             priceBox(p) +
             '<div class="cat-card-actions">' +
-              '<a class="cat-btn-order" href="' + waLink(productMessage(p)) + '" target="_blank" rel="noopener" aria-label="Commander ' + p.nom.replace(/"/g, "&quot;") + ' sur WhatsApp">' +
-                '<img src="assets/img/whatsapp-icon.png" alt="" aria-hidden="true"> Commander sur WhatsApp</a>' +
               '<button type="button" class="cat-btn-add" data-ref="' + (p.reference || "") + '" data-nom="' + p.nom.replace(/"/g, "&quot;") + '">+ Ajouter à ma liste</button>' +
+              '<a class="cat-btn-order" href="' + waLink(productMessage(p)) + '" target="_blank" rel="noopener" title="Commander sur WhatsApp" aria-label="Commander ' + p.nom.replace(/"/g, "&quot;") + ' sur WhatsApp">' +
+                '<img src="assets/img/whatsapp-icon.png" alt="" aria-hidden="true"></a>' +
             "</div>" +
           "</div>" +
         "</article>";
