@@ -1280,6 +1280,36 @@
     "lot_partage_unite_label": "bouteille"
   },
   {
+    "reference": "EPI-049",
+    "nom": "Chips de banane mûre POPOTE",
+    "famille": "Produits d’épicerie",
+    "ordre_famille": 6,
+    "conditionnement": "Le sachet",
+    "prix_gros_fcfa": 1000,
+    "prix_a_partir_de": false,
+    "unite_prix": "SACHET",
+    "badge_format": null,
+    "visuel_illustratif": false,
+    "image": "assets/img/catalogue/chips-banane-mure.webp",
+    "designation_referentiel": "Chips de banane mûre",
+    "lot_partage_unites": null
+  },
+  {
+    "reference": "EPI-050",
+    "nom": "Chips de banane verte POPOTE",
+    "famille": "Produits d’épicerie",
+    "ordre_famille": 6,
+    "conditionnement": "Le sachet",
+    "prix_gros_fcfa": 1000,
+    "prix_a_partir_de": false,
+    "unite_prix": "SACHET",
+    "badge_format": null,
+    "visuel_illustratif": false,
+    "image": "assets/img/catalogue/chips-banane-verte.webp",
+    "designation_referentiel": "Chips de banane verte",
+    "lot_partage_unites": null
+  },
+  {
     "reference": "ENT-007",
     "nom": "Savon de Marseille bleu",
     "famille": "Produits d’entretien",

@@ -133,9 +133,8 @@ for k, pg in enumerate(pages, 2):
 
 # --- Dernière page : fonctionnement ---
 people = ''.join('<span class="pers"><i class="h"></i><i class="b"></i><span class="n">10</span></span>' for _ in range(5))
-CAL = [('20 nov.', 'Envoi du catalogue'), ('20 – 25 nov.', 'Précommandes sur www.popotelibreville.com'),
-       ('26 – 30 nov.', 'Phase 1 : confirmation des commandes et paiement via Airtel Money'),
-       ('1er – 5 déc.', 'Phase 2 des paiements'), ('7 – 8 déc.', 'Livraison des membres')]
+CAL = [('20 nov.', 'Sortie du catalogue'), ('20 – 25 nov.', 'Précommandes sur www.popotelibreville.com'),
+       ('25 nov. – 5 déc.', 'Paiements via Airtel Money'), ('7 – 8 déc.', 'Livraisons')]
 tiles = ''.join(f'<div class="tile"><span class="tt">{e(a)}</span><span class="td">{e(b)}</span></div>' for a, b in CAL)
 body.append(f'''
 <section class="page last">

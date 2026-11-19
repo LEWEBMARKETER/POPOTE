@@ -6,8 +6,8 @@
   var PAIEMENT_NUMBER = "+241 74 12 82 48";
   var CATALOGUE_LABEL = "Catalogue Novembre 2026";
   var CAMPAGNE_LABEL = "Novembre 2026";
-  var DATA_URL = "data/catalogue-produits.json?v=20261122";
-  var PACKS_URL = "data/packs-alimentaires.json?v=20261122";
+  var DATA_URL = "data/catalogue-produits.json?v=20261123";
+  var PACKS_URL = "data/packs-alimentaires.json?v=20261123";
   var STORAGE_KEY = "popote_ma_liste_novembre_2026";
   var ADHERENTE_KEY = "popote_adherente_info";
   var REF_STATE_KEY = "popote_proforma_ref_state";
